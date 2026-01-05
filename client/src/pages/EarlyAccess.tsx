@@ -70,7 +70,6 @@ export default function EarlyAccess() {
       if (data.valid) {
         toast.success("VIP Code validated! Welcome to ATHLYNX!");
         setShowVipModal(false);
-        // Redirect to portal or dashboard
         window.location.href = "/portal";
       } else {
         toast.error(data.error || "Invalid VIP code");
@@ -111,696 +110,602 @@ export default function EarlyAccess() {
   const sports = ["Baseball", "Football", "Basketball", "Soccer", "Track & Field", "Volleyball"];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-100 via-slate-50 to-white text-slate-800">
-      {/* Diagonal Stripes Background - matching screenshot exactly */}
-      <div className="fixed inset-0 pointer-events-none"
-           style={{
-             backgroundImage: `repeating-linear-gradient(
-               45deg,
-               rgba(100, 116, 139, 0.03) 0px,
-               rgba(100, 116, 139, 0.03) 1px,
-               transparent 1px,
-               transparent 20px
-             )`
-           }}>
-      </div>
-
-      {/* STICKY HEADER - Exact match to screenshot */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
-        {/* Top Bar - THE FUTURE OF ATHLETE SUCCESS */}
-        <div className="bg-slate-700 text-white text-center py-2 text-xs tracking-[0.2em] font-medium">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white">
+      {/* STICKY HEADER */}
+      <header className="sticky top-0 z-50">
+        {/* Top Bar */}
+        <div className="bg-slate-800 text-cyan-400 text-center py-2 text-xs tracking-[0.2em] font-medium">
           THE FUTURE OF ATHLETE SUCCESS
         </div>
         
         {/* Main Header Row */}
-        <div className="bg-white border-b border-slate-200">
+        <div className="bg-gradient-to-r from-slate-900 to-blue-900 border-b border-slate-700">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            {/* ATHLYNX Logo Box - Blue gradient with yellow dot */}
+            {/* ATHLYNX Logo Box */}
             <div className="relative">
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl px-5 py-3 flex items-center gap-3 shadow-lg">
-                <img src="/athlynx-logo-icon.png" alt="ATHLYNX" className="w-8 h-8" />
+              <div className="bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl px-4 py-2 flex items-center gap-3 shadow-lg">
+                <img src="/athlynx-logo-icon.png" alt="ATHLYNX" className="w-10 h-10" />
                 <div>
-                  <h1 className="text-white font-bold text-xl tracking-wide">ATHLYNX</h1>
+                  <h1 className="text-white font-bold text-lg tracking-wide">ATHLYNX</h1>
                   <p className="text-blue-100 text-[10px] tracking-wider">THE ATHLETE'S PLAYBOOK</p>
                 </div>
               </div>
-              {/* Yellow dot indicator */}
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full border-2 border-white"></div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full border-2 border-slate-900"></div>
             </div>
 
-            {/* Parent Company Badge */}
-            <div className="hidden md:flex items-center gap-2 bg-slate-100 rounded-full px-5 py-2.5 border border-slate-200">
-              <span className="text-blue-600 font-bold text-sm">👥</span>
-              <span className="text-slate-600 text-sm font-medium">PARENT COMPANY: Dozier Holdings Group</span>
-            </div>
+            {/* Founders Button */}
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold px-5 py-2.5 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
+              <span>👥</span> Found...
+            </button>
 
-            {/* Action Buttons */}
-            <div className="flex items-center gap-3">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm flex items-center gap-2 transition-colors shadow-md">
-                <span>👥</span> Founders
-              </button>
-              <button className="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold px-5 py-2.5 rounded-lg text-sm flex items-center gap-2 transition-colors">
-                <span>◎</span> Portal Login
-              </button>
-            </div>
+            {/* Portal Login */}
+            <button className="bg-slate-800 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 font-semibold px-5 py-2.5 rounded-lg text-sm flex items-center gap-2 transition-colors">
+              <span>◎</span> Portal Login
+            </button>
           </div>
         </div>
 
         {/* Blue Status Bar */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-2.5 px-4 flex items-center justify-center gap-4 text-sm font-medium">
+        <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-2.5 px-4 flex items-center justify-center gap-4 text-sm font-medium">
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
             LIVE PLATFORM
           </span>
-          <span className="text-blue-200">•</span>
+          <span className="text-blue-300">•</span>
           <span>HIPAA-compliant</span>
-          <span className="text-blue-200">•</span>
+          <span className="text-blue-300">•</span>
           <span>Protecting our precious cargo</span>
         </div>
       </header>
 
       {/* MAIN CONTENT */}
       <main className="relative">
-        {/* Site Updating Notice - Yellow/Amber */}
-        <div className="bg-amber-50 border-b border-amber-200 py-3 px-4 text-center">
-          <span className="text-amber-700 font-medium text-sm">
+        {/* Site Updating Notice */}
+        <div className="bg-amber-400 py-3 px-4 text-center">
+          <span className="text-slate-900 font-medium text-sm">
             ⚠️ SITE UPDATING LIVE DAILY - Please be patient with us while we add future updates and apps!
           </span>
         </div>
 
+        {/* Hero Section with ATHLYNX Box */}
+        <section className="py-12 px-4">
+          <div className="max-w-md mx-auto">
+            {/* ATHLYNX THE ATHLETE'S PLAYBOOK Box */}
+            <div className="bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl p-8 text-center shadow-2xl relative overflow-hidden">
+              <div className="absolute top-2 right-2 w-3 h-3 bg-yellow-400 rounded-full"></div>
+              <h2 className="text-slate-900 font-black text-3xl tracking-wide mb-2">ATHLYNX</h2>
+              <p className="text-blue-900 font-semibold text-sm tracking-wider">THE ATHLETE'S PLAYBOOK</p>
+            </div>
+          </div>
+        </section>
+
         {/* VIP Code Section */}
-        <section className="py-16 px-4">
+        <section className="py-8 px-4">
           <div className="max-w-md mx-auto">
             <div 
               onClick={() => setShowVipModal(true)}
-              className="bg-slate-600 hover:bg-slate-500 rounded-2xl p-10 text-center cursor-pointer transition-all shadow-xl hover:shadow-2xl"
+              className="bg-slate-800/80 hover:bg-slate-700/80 rounded-2xl p-8 text-center cursor-pointer transition-all shadow-xl border border-slate-700"
             >
-              <img src="/athlynx-logo-icon.png" alt="ATHLYNX" className="w-14 h-14 mx-auto mb-5 opacity-70" />
               <h2 className="text-white font-bold text-xl mb-2 tracking-wide">HAVE A VIP CODE?</h2>
-              <p className="text-slate-300 text-sm tracking-wider">TAP HERE TO ENTER</p>
+              <p className="text-cyan-400 text-sm tracking-wider underline">TAP HERE TO ENTER</p>
             </div>
           </div>
         </section>
 
-        {/* HEAVYWEIGHT CHAMPION Section - Blue gradient background */}
-        <section className="bg-gradient-to-b from-slate-700 via-blue-900 to-slate-800 py-20 px-4 relative overflow-hidden">
-          {/* Diagonal stripes overlay */}
-          <div className="absolute inset-0 opacity-10"
-               style={{
-                 backgroundImage: `repeating-linear-gradient(45deg, white 0px, white 1px, transparent 1px, transparent 15px)`
-               }}>
+        {/* Heavyweight Champion Banner */}
+        <section className="py-4 px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-gradient-to-r from-amber-500 to-yellow-500 rounded-2xl py-4 px-6 text-center shadow-xl">
+              <p className="text-slate-900 font-bold text-lg tracking-wide">
+                🏆 HEAVYWEIGHT CHAMPION OF THE WORLD 🏆
+              </p>
+            </div>
           </div>
-          
-          <div className="max-w-4xl mx-auto text-center relative">
-            {/* Champion Banner - Cyan/Blue pill */}
-            <div className="inline-block bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full px-8 py-3 mb-10 shadow-lg">
-              <span className="text-white font-bold tracking-wider text-sm">🏆 HEAVYWEIGHT CHAMPION OF THE WORLD 🏆</span>
+        </section>
+
+        {/* DHG Crab Shield */}
+        <section className="py-8 px-4">
+          <div className="max-w-xs mx-auto">
+            <div className="bg-slate-800 rounded-xl p-4 border border-slate-600">
+              <p className="text-white text-sm font-medium mb-3">DHG Crab Shield</p>
+              <img src="/dhg-crab-shield.jpeg" alt="DHG Crab Shield" className="w-full rounded-lg" />
             </div>
+          </div>
+        </section>
 
-            {/* DHG Crab Shield */}
-            <div className="flex justify-center mb-10">
-              <div className="relative">
-                <div className="absolute inset-0 bg-cyan-400 blur-3xl opacity-20"></div>
-                <img 
-                  src="/dhg-crab-shield.jpeg" 
-                  alt="DHG Crab Shield" 
-                  className="relative w-36 h-36 rounded-2xl shadow-2xl border-4 border-cyan-400/30"
-                />
-              </div>
+        {/* Parent Company Badge */}
+        <section className="py-4 px-4">
+          <div className="max-w-sm mx-auto">
+            <div className="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-xl py-3 px-6 text-center border border-amber-300">
+              <p className="text-slate-600 text-xs font-medium">PARENT COMPANY</p>
+              <p className="text-amber-700 font-bold text-lg">Dozier Holdings Group</p>
             </div>
+          </div>
+        </section>
 
-            {/* THE UNDEFEATED CHAMPION */}
-            <h2 className="text-cyan-400 text-2xl font-bold tracking-wider mb-10">THE UNDEFEATED CHAMPION</h2>
-
-            {/* Stats Row - 3 boxes */}
-            <div className="flex justify-center gap-6 mb-14">
-              <div className="bg-slate-800/80 backdrop-blur rounded-xl px-10 py-5 border border-slate-600">
-                <div className="text-4xl mb-2 text-white">∞</div>
-                <div className="text-slate-400 text-sm font-bold tracking-wider">UNDEFEATED</div>
-              </div>
-              <div className="bg-slate-800/80 backdrop-blur rounded-xl px-10 py-5 border border-slate-600">
-                <div className="text-4xl mb-2">🥊</div>
-                <div className="text-slate-400 text-sm font-bold tracking-wider">KNOCKOUTS</div>
-              </div>
-              <div className="bg-slate-800/80 backdrop-blur rounded-xl px-10 py-5 border border-slate-600">
-                <div className="text-4xl mb-2">👑</div>
-                <div className="text-slate-400 text-sm font-bold tracking-wider">CHAMPION</div>
-              </div>
-            </div>
-
-            {/* THE LEGENDARY TRAINER Box - with cyan corner dots */}
-            <div className="relative max-w-2xl mx-auto mb-10">
+        {/* THE LEGENDARY TRAINER Section */}
+        <section className="py-8 px-4">
+          <div className="max-w-lg mx-auto">
+            <div className="bg-gradient-to-br from-slate-800 to-blue-900 rounded-2xl p-8 border border-cyan-500/30 relative">
               {/* Corner dots */}
-              <div className="absolute -top-2 -left-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
-              <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full"></div>
+              <div className="absolute top-3 left-3 w-2 h-2 bg-cyan-400 rounded-full"></div>
+              <div className="absolute top-3 right-3 w-2 h-2 bg-cyan-400 rounded-full"></div>
+              <div className="absolute bottom-3 left-3 w-2 h-2 bg-cyan-400 rounded-full"></div>
+              <div className="absolute bottom-3 right-3 w-2 h-2 bg-cyan-400 rounded-full"></div>
               
-              <div className="border-2 border-cyan-400/50 rounded-2xl p-10 bg-slate-800/60 backdrop-blur">
-                <div className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full px-6 py-2 mb-5">
-                  <span className="text-white font-bold text-sm tracking-wider">THE LEGENDARY TRAINER</span>
-                </div>
-                <div className="flex items-center justify-center gap-4 mb-5">
-                  <img src="/athlynx-logo-icon.png" alt="ATHLYNX" className="w-12 h-12" />
-                  <div>
-                    <h3 className="text-white font-bold text-3xl">ATHLYNX</h3>
-                    <p className="text-slate-400 text-sm">THE ATHLETE'S PLAYBOOK</p>
-                  </div>
-                </div>
-                <p className="text-slate-300 text-lg leading-relaxed">
-                  The mastermind behind the champion. <span className="text-cyan-400">Building champions</span>, <span className="text-pink-400">training winners</span>, and <span className="text-cyan-400">creating empires</span>.
+              <div className="text-center">
+                <img src="/athlynx-logo-icon.png" alt="ATHLYNX" className="w-16 h-16 mx-auto mb-4" />
+                <h3 className="text-white font-black text-2xl mb-1">ATHLYNX</h3>
+                <p className="text-cyan-400 font-semibold text-sm tracking-wider mb-4">THE ATHLETE'S PLAYBOOK</p>
+                <p className="text-slate-300 text-sm mb-4">
+                  The mastermind behind the champion.<br/>
+                  <span className="text-cyan-400 font-semibold">Building champions</span>, 
+                  <span className="text-amber-400 font-semibold"> training winners</span>, 
+                  and <span className="text-green-400 font-semibold">creating empires</span>.
                 </p>
-              </div>
-            </div>
-
-            {/* THE EMPIRE Box - Light colored */}
-            <div className="max-w-md mx-auto">
-              <div className="bg-slate-200/95 backdrop-blur rounded-2xl p-6 text-slate-800 shadow-xl">
-                <h4 className="text-blue-600 font-bold text-sm mb-4 tracking-wider">THE EMPIRE</h4>
-                <div className="flex justify-center gap-4 mb-3">
-                  <span className="text-3xl">🏆</span>
-                  <span className="text-3xl">💰</span>
-                  <span className="text-3xl">⏱️</span>
-                  <span className="text-3xl">🏢</span>
-                  <span className="text-3xl">📈</span>
+                
+                {/* THE EMPIRE Box */}
+                <div className="bg-slate-700/50 rounded-xl p-4 mt-4 border border-slate-600">
+                  <p className="text-cyan-400 font-bold text-sm mb-2">THE EMPIRE</p>
+                  <div className="flex justify-center gap-3 text-2xl mb-2">
+                    <span>🏆</span>
+                    <span>💰</span>
+                    <span>⏱️</span>
+                    <span>🏢</span>
+                    <span>📈</span>
+                  </div>
+                  <p className="text-slate-400 text-xs">PASSIVE INCOME EMPIRE</p>
                 </div>
-                <p className="text-slate-600 text-sm font-bold tracking-wider">PASSIVE INCOME EMPIRE</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 10 POWERFUL APPS Section - Cool Gradient Background */}
-        <section className="py-16 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
-          {/* Animated background effects */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full filter blur-[120px] animate-pulse"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-[120px] animate-pulse" style={{animationDelay: '1s'}}></div>
-            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-400 rounded-full filter blur-[100px] animate-pulse" style={{animationDelay: '2s'}}></div>
-          </div>
+        {/* 10 Apps Section */}
+        <section className="py-12 px-4 bg-gradient-to-b from-slate-900/50 to-blue-950/50">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-center text-cyan-400 font-medium text-lg mb-10 tracking-wide relative z-10">
+            <h2 className="text-center text-cyan-400 font-medium text-lg mb-10 tracking-wide">
               10 Powerful Apps. One Platform. Unlimited Potential.
             </h2>
             
-            {/* Apps Grid - 5x2 with Pitch Sequence Style */}
-            <div className="grid grid-cols-5 gap-6 mb-8 relative z-10">
-              {/* Row 1 - Portal (Cyan Glow) - YOUR HUB */}
+            {/* Apps Grid - 5x2 */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-8">
+              {/* Portal */}
               <div className="flex flex-col items-center group cursor-pointer" onClick={() => window.location.href='/portal'}>
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(6,182,212,0.8)] group-hover:bg-gradient-to-br group-hover:from-cyan-900/80 group-hover:to-blue-900/80 border border-slate-700/50 group-hover:border-cyan-400">
-                  {/* LIVE Badge */}
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-green-400 to-emerald-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-lg animate-pulse z-20">LIVE</div>
-                  {/* Glow layers */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                  {/* Sparkle effect */}
-                  <div className="absolute top-1 left-1 w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
-                  <img src="/nil-portal-icon-final.jpeg" alt="Portal" className="w-16 h-16 rounded-xl object-cover relative z-10 transition-all duration-300 group-hover:rotate-6 group-hover:scale-105" />
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 bg-green-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full z-20">LIVE</div>
+                  <div className="bg-slate-800 rounded-2xl p-3 shadow-lg border border-slate-700 group-hover:border-cyan-400 transition-all">
+                    <img src="/nil-portal-icon-final.jpeg" alt="Portal" className="w-14 h-14 rounded-xl object-cover" />
+                  </div>
                 </div>
-                <p className="text-slate-300 text-xs mt-3 text-center font-bold group-hover:text-cyan-400 transition-colors duration-300">🏠 Portal</p>
-                <p className="text-[10px] text-slate-500 group-hover:text-cyan-300 transition-colors opacity-0 group-hover:opacity-100 -mt-1">Your Command Center</p>
+                <p className="text-slate-300 text-xs mt-2 text-center font-medium">🏠 Portal</p>
               </div>
               
-              {/* Messenger (Purple Glow) - CONNECT */}
+              {/* Messenger */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(168,85,247,0.8)] group-hover:bg-gradient-to-br group-hover:from-purple-900/80 group-hover:to-pink-900/80 border border-slate-700/50 group-hover:border-purple-400">
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-green-400 to-emerald-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-lg animate-pulse z-20">LIVE</div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                  <div className="absolute top-1 right-1 w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
-                  <img src="/messenger-icon-final.jpeg" alt="Messenger" className="w-16 h-16 rounded-xl object-cover relative z-10 transition-all duration-300 group-hover:rotate-6 group-hover:scale-105" />
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 bg-green-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full z-20">LIVE</div>
+                  <div className="bg-slate-800 rounded-2xl p-3 shadow-lg border border-slate-700 group-hover:border-cyan-400 transition-all">
+                    <img src="/messenger-icon-final.jpeg" alt="Messenger" className="w-14 h-14 rounded-xl object-cover" />
+                  </div>
                 </div>
-                <p className="text-slate-300 text-xs mt-3 text-center font-bold group-hover:text-purple-400 transition-colors duration-300">💬 Messenger</p>
-                <p className="text-[10px] text-slate-500 group-hover:text-purple-300 transition-colors opacity-0 group-hover:opacity-100 -mt-1">Connect & Network</p>
+                <p className="text-slate-300 text-xs mt-2 text-center font-medium">💬 Messenger</p>
               </div>
               
-              {/* Diamond Grind (Blue Glow) - TRAIN */}
+              {/* Diamond Grind */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(59,130,246,0.8)] group-hover:bg-gradient-to-br group-hover:from-blue-900/80 group-hover:to-indigo-900/80 border border-slate-700/50 group-hover:border-blue-400">
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-lg z-20">💎 ELITE</div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-blue-400 to-indigo-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                  <img src="/diamond-grind-app-icon.png" alt="Diamond Grind" className="w-16 h-16 rounded-xl object-cover relative z-10 transition-all duration-300 group-hover:rotate-6 group-hover:scale-105" />
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 bg-purple-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full z-20 flex items-center gap-1">💎 ELITE</div>
+                  <div className="bg-slate-800 rounded-2xl p-3 shadow-lg border border-slate-700 group-hover:border-purple-400 transition-all">
+                    <img src="/diamond-grind-app-icon.png" alt="Diamond Grind" className="w-14 h-14 rounded-xl object-cover" />
+                  </div>
                 </div>
-                <p className="text-slate-300 text-xs mt-3 text-center font-bold group-hover:text-blue-400 transition-colors duration-300">💪 Diamond Grind</p>
-                <p className="text-[10px] text-slate-500 group-hover:text-blue-300 transition-colors opacity-0 group-hover:opacity-100 -mt-1">Train Like a Pro</p>
+                <p className="text-slate-300 text-xs mt-2 text-center font-medium">💪 Diamond Grind</p>
               </div>
               
-              {/* Warriors Playbook (Green Glow) - STRATEGIZE */}
+              {/* Warriors Playbook */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(34,197,94,0.8)] group-hover:bg-gradient-to-br group-hover:from-green-900/80 group-hover:to-emerald-900/80 border border-slate-700/50 group-hover:border-green-400">
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-lg z-20">⚔️ NEW</div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-500 opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-green-400 to-emerald-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                  <img src="/warriors-playbook-icon.png" alt="Warriors Playbook" className="w-16 h-16 rounded-xl object-cover relative z-10 transition-all duration-300 group-hover:rotate-6 group-hover:scale-105" />
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 bg-blue-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full z-20 flex items-center gap-1">⚔️ NEW</div>
+                  <div className="bg-slate-800 rounded-2xl p-3 shadow-lg border border-slate-700 group-hover:border-blue-400 transition-all">
+                    <img src="/warriors-playbook-icon.png" alt="Warriors Playbook" className="w-14 h-14 rounded-xl object-cover" />
+                  </div>
                 </div>
-                <p className="text-slate-300 text-xs mt-3 text-center font-bold group-hover:text-green-400 transition-colors duration-300">📖 Warriors Playbook</p>
-                <p className="text-[10px] text-slate-500 group-hover:text-green-300 transition-colors opacity-0 group-hover:opacity-100 -mt-1">Master Strategy</p>
+                <p className="text-slate-300 text-xs mt-2 text-center font-medium">📖 Warriors Playbook</p>
               </div>
               
-              {/* Transfer Portal (Orange Glow) - OPPORTUNITY */}
+              {/* Transfer Portal */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(249,115,22,0.8)] group-hover:bg-gradient-to-br group-hover:from-orange-900/80 group-hover:to-amber-900/80 border border-slate-700/50 group-hover:border-orange-400">
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-lg animate-bounce z-20">🔥 HOT</div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-orange-400 to-amber-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                  <img src="/transfer-portal-app-icon.png" alt="Transfer Portal" className="w-16 h-16 rounded-xl object-cover relative z-10 transition-all duration-300 group-hover:rotate-6 group-hover:scale-105" />
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full z-20 flex items-center gap-1">🔥 HOT</div>
+                  <div className="bg-slate-800 rounded-2xl p-3 shadow-lg border border-slate-700 group-hover:border-orange-400 transition-all">
+                    <img src="/transfer-portal-app-icon.png" alt="Transfer Portal" className="w-14 h-14 rounded-xl object-cover" />
+                  </div>
                 </div>
-                <p className="text-slate-300 text-xs mt-3 text-center font-bold group-hover:text-orange-400 transition-colors duration-300">🚀 Transfer Portal</p>
-                <p className="text-[10px] text-slate-500 group-hover:text-orange-300 transition-colors opacity-0 group-hover:opacity-100 -mt-1">Find Your Next Move</p>
+                <p className="text-slate-300 text-xs mt-2 text-center font-medium">🚀 Transfer Portal</p>
               </div>
               
-              {/* Row 2 - NIL Vault (Gold Glow) - EARN */}
+              {/* NIL Vault */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(234,179,8,0.8)] group-hover:bg-gradient-to-br group-hover:from-yellow-900/80 group-hover:to-amber-900/80 border border-slate-700/50 group-hover:border-yellow-400">
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-amber-500 text-black text-[8px] font-bold px-2 py-0.5 rounded-full shadow-lg z-20">💰 $$$</div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-500 to-amber-500 opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-yellow-400 to-amber-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                  <img src="/nil-portal-app-icon.jpeg" alt="NIL Vault" className="w-16 h-16 rounded-xl object-cover relative z-10 transition-all duration-300 group-hover:rotate-6 group-hover:scale-105" />
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 bg-emerald-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full z-20 flex items-center gap-1">💰 $$$</div>
+                  <div className="bg-slate-800 rounded-2xl p-3 shadow-lg border border-slate-700 group-hover:border-emerald-400 transition-all">
+                    <img src="/nil-portal-app-icon.jpeg" alt="NIL Vault" className="w-14 h-14 rounded-xl object-cover" />
+                  </div>
                 </div>
-                <p className="text-slate-300 text-xs mt-3 text-center font-bold group-hover:text-yellow-400 transition-colors duration-300">🏆 NIL Vault</p>
-                <p className="text-[10px] text-slate-500 group-hover:text-yellow-300 transition-colors opacity-0 group-hover:opacity-100 -mt-1">Secure Your Bag</p>
+                <p className="text-slate-300 text-xs mt-2 text-center font-medium">🏆 NIL Vault</p>
               </div>
               
-              {/* AI Sales (Pink Glow - AI Wizard) */}
+              {/* AI Sales */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(236,72,153,0.8)] group-hover:bg-gradient-to-br group-hover:from-pink-900/80 group-hover:to-rose-900/80 border border-slate-700/50 group-hover:border-pink-400">
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-lg animate-pulse z-20">🧙 AI</div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-pink-400 to-rose-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                  {/* Magic sparkles */}
-                  <div className="absolute top-0 right-0 w-3 h-3 bg-pink-400 rounded-full animate-ping opacity-75"></div>
-                  <div className="absolute bottom-0 left-0 w-2 h-2 bg-rose-400 rounded-full animate-ping opacity-75" style={{animationDelay: '0.5s'}}></div>
-                  <img src="/athlynx-app-icon.png" alt="AI Sales" className="w-16 h-16 rounded-xl object-cover relative z-10 transition-all duration-300 group-hover:rotate-6 group-hover:scale-105" />
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 bg-violet-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full z-20 flex items-center gap-1">🧙 AI</div>
+                  <div className="bg-slate-800 rounded-2xl p-3 shadow-lg border border-slate-700 group-hover:border-violet-400 transition-all">
+                    <img src="/athlynx-app-icon.png" alt="AI Sales" className="w-14 h-14 rounded-xl object-cover" />
+                  </div>
                 </div>
-                <p className="text-slate-300 text-xs mt-3 text-center font-bold group-hover:text-pink-400 transition-colors duration-300">🧙 AI Sales Wizard</p>
-                <p className="text-[10px] text-slate-500 group-hover:text-pink-300 transition-colors opacity-0 group-hover:opacity-100 -mt-1">Close Deals Faster</p>
+                <p className="text-slate-300 text-xs mt-2 text-center font-medium">🧙 AI Sales Wizard</p>
               </div>
               
-              {/* Faith (Violet Glow) - BELIEVE */}
+              {/* Faith */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(139,92,246,0.8)] group-hover:bg-gradient-to-br group-hover:from-violet-900/80 group-hover:to-purple-900/80 border border-slate-700/50 group-hover:border-violet-400">
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-violet-500 to-purple-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-lg z-20">✝️ BLESSED</div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-violet-500 to-purple-500 opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-violet-400 to-purple-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                  <img src="/faith-app-icon.png" alt="Faith" className="w-16 h-16 rounded-xl object-cover relative z-10 transition-all duration-300 group-hover:rotate-6 group-hover:scale-105" />
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 bg-pink-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full z-20 flex items-center gap-1">✝️ BLESSED</div>
+                  <div className="bg-slate-800 rounded-2xl p-3 shadow-lg border border-slate-700 group-hover:border-pink-400 transition-all">
+                    <img src="/faith-app-icon.png" alt="Faith" className="w-14 h-14 rounded-xl object-cover" />
+                  </div>
                 </div>
-                <p className="text-slate-300 text-xs mt-3 text-center font-bold group-hover:text-violet-400 transition-colors duration-300">🙏 Faith</p>
-                <p className="text-[10px] text-slate-500 group-hover:text-violet-300 transition-colors opacity-0 group-hover:opacity-100 -mt-1">Stay Grounded</p>
+                <p className="text-slate-300 text-xs mt-2 text-center font-medium">🙏 Faith</p>
               </div>
               
-              {/* AI Recruiter (Teal Glow - AI Trainer) */}
+              {/* AI Recruiter */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(20,184,166,0.8)] group-hover:bg-gradient-to-br group-hover:from-teal-900/80 group-hover:to-cyan-900/80 border border-slate-700/50 group-hover:border-teal-400">
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-lg animate-pulse z-20">🤖 AI</div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-teal-500 to-cyan-500 opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-teal-400 to-cyan-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                  {/* Robot sparkles */}
-                  <div className="absolute top-0 right-0 w-3 h-3 bg-teal-400 rounded-full animate-ping opacity-75"></div>
-                  <div className="absolute bottom-0 left-0 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-75" style={{animationDelay: '0.5s'}}></div>
-                  <img src="/athlynx-app-icon.png" alt="AI Recruiter" className="w-16 h-16 rounded-xl object-cover relative z-10 transition-all duration-300 group-hover:rotate-6 group-hover:scale-105" />
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 bg-rose-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full z-20 flex items-center gap-1">🤖 AI</div>
+                  <div className="bg-slate-800 rounded-2xl p-3 shadow-lg border border-slate-700 group-hover:border-rose-400 transition-all">
+                    <img src="/athlynx-app-icon.png" alt="AI Recruiter" className="w-14 h-14 rounded-xl object-cover" />
+                  </div>
                 </div>
-                <p className="text-slate-300 text-xs mt-3 text-center font-bold group-hover:text-teal-400 transition-colors duration-300">🤖 AI Recruiter</p>
-                <p className="text-[10px] text-slate-500 group-hover:text-teal-300 transition-colors opacity-0 group-hover:opacity-100 -mt-1">Get Discovered</p>
+                <p className="text-slate-300 text-xs mt-2 text-center font-medium">🤖 AI Recruiter</p>
               </div>
               
-              {/* AI Content (Indigo Glow - AI Wizard) */}
+              {/* AI Content */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_50px_rgba(99,102,241,0.8)] group-hover:bg-gradient-to-br group-hover:from-indigo-900/80 group-hover:to-blue-900/80 border border-slate-700/50 group-hover:border-indigo-400">
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-indigo-500 to-blue-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full shadow-lg animate-pulse z-20">✨ AI</div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500 to-blue-500 opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-indigo-400 to-blue-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
-                  {/* Magic sparkles */}
-                  <div className="absolute top-0 right-0 w-3 h-3 bg-indigo-400 rounded-full animate-ping opacity-75"></div>
-                  <div className="absolute bottom-0 left-0 w-2 h-2 bg-blue-400 rounded-full animate-ping opacity-75" style={{animationDelay: '0.5s'}}></div>
-                  <img src="/athlynx-app-icon.png" alt="AI Content" className="w-16 h-16 rounded-xl object-cover relative z-10 transition-all duration-300 group-hover:rotate-6 group-hover:scale-105" />
+                <div className="relative">
+                  <div className="absolute -top-2 -right-2 bg-amber-500 text-white text-[8px] font-bold px-2 py-0.5 rounded-full z-20 flex items-center gap-1">✨ AI</div>
+                  <div className="bg-slate-800 rounded-2xl p-3 shadow-lg border border-slate-700 group-hover:border-amber-400 transition-all">
+                    <img src="/athlynx-app-icon.png" alt="AI Content" className="w-14 h-14 rounded-xl object-cover" />
+                  </div>
                 </div>
-                <p className="text-slate-300 text-xs mt-3 text-center font-bold group-hover:text-indigo-400 transition-colors duration-300">✨ AI Content</p>
-                <p className="text-[10px] text-slate-500 group-hover:text-indigo-300 transition-colors opacity-0 group-hover:opacity-100 -mt-1">Create Viral Content</p>
+                <p className="text-slate-300 text-xs mt-2 text-center font-medium">✨ AI Content</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ATHLYNX Launch Section */}
-        <section className="py-16 px-4 bg-gradient-to-b from-white to-slate-50">
+        {/* Countdown Section */}
+        <section className="py-12 px-4 bg-gradient-to-b from-blue-950 to-slate-900">
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-blue-600 text-sm font-medium tracking-wider mb-4">THE FUTURE OF ATHLETE SUCCESS</p>
-            <h2 className="text-5xl font-bold text-slate-800 mb-3 tracking-tight">ATHLYNX</h2>
-            <p className="text-slate-500 text-lg mb-10">THE ATHLETE'S PLAYBOOK</p>
-
-            {/* VIP Early Access Button */}
-            <button className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold px-10 py-5 rounded-xl shadow-lg mb-10 transition-all">
-              <div className="text-sm tracking-wider">VIP EARLY ACCESS</div>
-              <div className="text-xl font-bold">6 MONTHS FREE</div>
-            </button>
-
+            <p className="text-cyan-400 text-sm tracking-wider mb-2">THE FUTURE OF ATHLETE SUCCESS</p>
+            <h2 className="text-white font-black text-4xl mb-2">ATHLYNX</h2>
+            <p className="text-cyan-400 font-semibold tracking-wider mb-8">THE ATHLETE'S PLAYBOOK</p>
+            
+            <p className="text-slate-400 text-sm mb-2">LAUNCHING IN</p>
+            <p className="text-amber-400 font-bold text-xl mb-6">FEBRUARY 1, 2026</p>
+            
             {/* Countdown Timer */}
-            <div className="mb-6">
-              <p className="text-slate-500 text-sm mb-4 tracking-wider">LAUNCHING IN</p>
-              <div className="flex justify-center gap-4">
-                <div className="bg-slate-800 text-white rounded-xl px-6 py-5 min-w-[85px]">
-                  <div className="text-4xl font-bold">{timeLeft.days}</div>
-                  <div className="text-xs text-slate-400 tracking-wider">DAYS</div>
-                </div>
-                <div className="bg-slate-800 text-white rounded-xl px-6 py-5 min-w-[85px]">
-                  <div className="text-4xl font-bold">{timeLeft.hours}</div>
-                  <div className="text-xs text-slate-400 tracking-wider">HRS</div>
-                </div>
-                <div className="bg-slate-800 text-white rounded-xl px-6 py-5 min-w-[85px]">
-                  <div className="text-4xl font-bold">{timeLeft.minutes}</div>
-                  <div className="text-xs text-slate-400 tracking-wider">MIN</div>
-                </div>
-                <div className="bg-slate-800 text-white rounded-xl px-6 py-5 min-w-[85px]">
-                  <div className="text-4xl font-bold">{timeLeft.seconds}</div>
-                  <div className="text-xs text-slate-400 tracking-wider">SEC</div>
-                </div>
+            <div className="flex justify-center gap-4 mb-8">
+              <div className="bg-slate-800 rounded-xl px-6 py-4 border border-slate-700">
+                <p className="text-white font-black text-3xl">{timeLeft.days}</p>
+                <p className="text-slate-400 text-xs">DAYS</p>
               </div>
-              <p className="text-blue-600 font-medium mt-4 tracking-wider">FEBRUARY 1, 2026</p>
+              <div className="bg-slate-800 rounded-xl px-6 py-4 border border-slate-700">
+                <p className="text-white font-black text-3xl">{timeLeft.hours}</p>
+                <p className="text-slate-400 text-xs">HRS</p>
+              </div>
+              <div className="bg-slate-800 rounded-xl px-6 py-4 border border-slate-700">
+                <p className="text-white font-black text-3xl">{timeLeft.minutes}</p>
+                <p className="text-slate-400 text-xs">MIN</p>
+              </div>
+              <div className="bg-slate-800 rounded-xl px-6 py-4 border border-slate-700">
+                <p className="text-white font-black text-3xl">{timeLeft.seconds}</p>
+                <p className="text-slate-400 text-xs">SEC</p>
+              </div>
             </div>
+            
+            <p className="text-slate-500 text-sm">FOUNDING MEMBER SPOTS</p>
+            <p className="text-amber-400 font-bold text-2xl">LIMITED TO 10,000</p>
           </div>
         </section>
 
-        {/* FOUNDING MEMBER SPOTS Section */}
-        <section className="py-10 px-4">
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-slate-800 rounded-2xl p-8 text-center text-white">
-              <p className="text-sm text-slate-400 mb-2 tracking-wider">FOUNDING MEMBER SPOTS</p>
-              <h3 className="text-4xl font-bold mb-4">LIMITED TO 10,000</h3>
-              {/* Progress bar */}
-              <div className="h-3 bg-slate-700 rounded-full overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 w-[65%]"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* SIGNUP FORM Section */}
-        <section className="py-10 px-4">
-          <div className="max-w-lg mx-auto">
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label className="block text-slate-700 text-sm font-bold mb-2 tracking-wider">FULL NAME *</label>
+        {/* Signup Form Section */}
+        <section className="py-12 px-4 bg-slate-900">
+          <div className="max-w-md mx-auto">
+            <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
+              <h3 className="text-white font-bold text-xl text-center mb-6">Join the VIP Waitlist</h3>
+              
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <input
                   type="text"
+                  placeholder="Full Name"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  placeholder="Your full name"
-                  className="w-full px-4 py-4 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-slate-800"
-                  required
+                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400"
                 />
-              </div>
-              <div>
-                <label className="block text-slate-700 text-sm font-bold mb-2 tracking-wider">EMAIL ADDRESS *</label>
                 <input
                   type="email"
+                  placeholder="Email Address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your@email.com"
-                  className="w-full px-4 py-4 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-slate-800"
-                  required
+                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400"
                 />
-              </div>
-              <div>
-                <label className="block text-slate-700 text-sm font-bold mb-2 tracking-wider">PHONE NUMBER *</label>
                 <input
                   type="tel"
+                  placeholder="Phone Number"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="Phone Number (Required)"
-                  className="w-full px-4 py-4 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-slate-800"
-                  required
+                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400"
                 />
-              </div>
-              
-              {/* Role Selection */}
-              <div>
-                <label className="block text-slate-700 text-sm font-bold mb-3 tracking-wider">I AM A...</label>
-                <div className="flex flex-wrap gap-3">
+                <select
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400"
+                >
+                  <option value="">Select Your Role</option>
                   {roles.map((r) => (
-                    <button
-                      key={r}
-                      type="button"
-                      onClick={() => setRole(r)}
-                      className={`px-6 py-3 rounded-full border-2 font-medium transition-all ${
-                        role === r
-                          ? "bg-blue-600 border-blue-600 text-white"
-                          : "bg-white border-slate-300 text-slate-600 hover:border-blue-400"
-                      }`}
-                    >
-                      {r}
-                    </button>
+                    <option key={r} value={r}>{r}</option>
                   ))}
-                </div>
-              </div>
-
-              {/* Sport Selection */}
-              <div>
-                <label className="block text-slate-700 text-sm font-bold mb-3 tracking-wider">PRIMARY SPORT</label>
-                <div className="flex flex-wrap gap-3">
+                </select>
+                <select
+                  value={sport}
+                  onChange={(e) => setSport(e.target.value)}
+                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400"
+                >
+                  <option value="">Select Your Sport</option>
                   {sports.map((s) => (
-                    <button
-                      key={s}
-                      type="button"
-                      onClick={() => setSport(s)}
-                      className={`px-5 py-2.5 rounded-full border-2 font-medium text-sm transition-all ${
-                        sport === s
-                          ? "bg-blue-600 border-blue-600 text-white"
-                          : "bg-white border-slate-300 text-slate-600 hover:border-blue-400"
-                      }`}
-                    >
-                      {s}
-                    </button>
+                    <option key={s} value={s}>{s}</option>
                   ))}
-                </div>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting || submitted}
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold py-4 rounded-lg shadow-lg transition-all text-lg tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? "SUBMITTING..." : submitted ? "✓ SPOT CLAIMED!" : "CLAIM MY VIP SPOT"}
-              </button>
+                </select>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 rounded-lg transition-all shadow-lg disabled:opacity-50"
+                >
+                  {isSubmitting ? "JOINING..." : "CLAIM MY VIP SPOT"}
+                </button>
+              </form>
               
-              <p className="text-center text-slate-500 text-xs">
+              <p className="text-slate-500 text-xs text-center mt-4">
                 No credit card required. By signing up, you agree to receive updates about ATHLYNX.
               </p>
-              <p className="text-center text-slate-600 text-sm">
-                Join athletes from 500+ schools already on the waitlist
-              </p>
-              <p className="text-center text-blue-600 text-sm font-medium">
-                SEC • ACC • Big Ten • Big 12 • Pac-12
-              </p>
-            </form>
+            </div>
           </div>
         </section>
 
-        {/* ALREADY A VIP MEMBER Section */}
-        <section className="py-10 px-4">
+        {/* Already VIP Member Section */}
+        <section className="py-8 px-4 bg-slate-900">
           <div className="max-w-md mx-auto">
-            <div className="bg-slate-800 rounded-2xl p-8 text-center text-white">
-              <h3 className="font-bold text-xl mb-2">ALREADY A VIP MEMBER?</h3>
-              <p className="text-slate-400 text-sm mb-5">Enter your access code to unlock all 6 apps</p>
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-cyan-500/30 text-center">
+              <h3 className="text-white font-bold text-lg mb-2">ALREADY A VIP MEMBER?</h3>
+              <p className="text-slate-400 text-sm mb-4">Enter your access code to unlock all 6 apps</p>
               <button 
                 onClick={() => setShowVipModal(true)}
-                className="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-3 rounded-lg transition-colors tracking-wider"
+                className="bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-6 py-2 rounded-lg transition-colors"
               >
-                ENTER ACCESS CODE
+                Enter VIP Code
               </button>
             </div>
           </div>
         </section>
 
         {/* Preview the App Section */}
-        <section className="py-10 px-4 border-t border-slate-200">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-blue-600 text-sm font-medium mb-8">Preview the App →</p>
-            <div className="flex justify-center gap-10">
-              <div className="flex flex-col items-center">
-                <span className="text-4xl mb-3">👥</span>
-                <span className="text-slate-600 text-xs">✓ Social Network</span>
+        <section className="py-8 px-4 bg-slate-900">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-slate-400 text-sm mb-4">Preview the App →</p>
+            <div className="flex justify-center gap-6 flex-wrap">
+              <div className="flex items-center gap-2 text-slate-300 text-sm">
+                <span>👥</span>
+                <span className="text-green-400">✓</span>
+                <span>Social Network</span>
               </div>
-              <div className="flex flex-col items-center">
-                <span className="text-4xl mb-3">🤝</span>
-                <span className="text-slate-600 text-xs">✓ NIL Deals</span>
+              <div className="flex items-center gap-2 text-slate-300 text-sm">
+                <span>🤝</span>
+                <span className="text-green-400">✓</span>
+                <span>NIL Deals</span>
               </div>
-              <div className="flex flex-col items-center">
-                <span className="text-4xl mb-3">💬</span>
-                <span className="text-slate-600 text-xs">✓ Messaging</span>
+              <div className="flex items-center gap-2 text-slate-300 text-sm">
+                <span>💬</span>
+                <span className="text-green-400">✓</span>
+                <span>Messaging</span>
               </div>
-              <div className="flex flex-col items-center">
-                <span className="text-4xl mb-3">📊</span>
-                <span className="text-slate-600 text-xs">✓ Analytics</span>
+              <div className="flex items-center gap-2 text-slate-300 text-sm">
+                <span>📊</span>
+                <span className="text-green-400">✓</span>
+                <span>Analytics</span>
               </div>
-              <div className="flex flex-col items-center">
-                <span className="text-4xl mb-3">🛡️</span>
-                <span className="text-slate-600 text-xs">✓ Compliance</span>
+              <div className="flex items-center gap-2 text-slate-300 text-sm">
+                <span>🛡️</span>
+                <span className="text-green-400">✓</span>
+                <span>Compliance</span>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      {/* FOOTER - Matching screenshot exactly */}
-      <footer className="bg-gradient-to-b from-slate-100 to-slate-200 pt-14 pb-10">
-        <div className="max-w-6xl mx-auto px-4">
-          {/* Footer Grid - 5 columns */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10">
-            {/* ATHLYNX Column */}
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <img src="/athlynx-logo-icon.png" alt="ATHLYNX" className="w-8 h-8" />
-                <span className="font-bold text-slate-800 text-lg">ATHLYNX</span>
+      {/* FOOTER - Black Background with Full Organization Info */}
+      <footer className="bg-black text-white py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Top Section - Logo and Company Info */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            {/* Company Info */}
+            <div className="col-span-1 md:col-span-2">
+              <div className="flex items-center gap-3 mb-4">
+                <img src="/athlynx-logo-icon.png" alt="ATHLYNX" className="w-12 h-12" />
+                <div>
+                  <h3 className="text-white font-bold text-xl">ATHLYNX</h3>
+                  <p className="text-gray-400 text-sm">THE ATHLETE'S PLAYBOOK</p>
+                </div>
               </div>
-              <p className="text-slate-600 text-sm mb-3 leading-relaxed">
-                The Complete Athlete Ecosystem. One platform for NIL deals, training, recruiting, and more.
+              <p className="text-gray-400 text-sm mb-4">
+                The comprehensive platform for athlete development, NIL management, recruiting, and career success.
               </p>
-              <p className="text-orange-500 text-xs font-bold mb-2">
-                🔥 PERPETUAL MOTION - THE PROMISE THAT NEVER STOPS
-              </p>
-              <p className="text-slate-500 text-xs">A Dozier Holdings Group Company</p>
-              <p className="text-slate-500 text-xs">Dreams Do Come True 2026</p>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-gray-500 text-sm">Parent Company:</span>
+                <span className="text-amber-400 font-semibold">Dozier Holdings Group, LLC</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-gray-500 text-sm">Subsidiary:</span>
+                <span className="text-cyan-400 font-semibold">Athlynx AI Corporation</span>
+              </div>
             </div>
 
-            {/* PLATFORM Column */}
+            {/* Quick Links */}
             <div>
-              <h4 className="font-bold text-slate-800 mb-4 tracking-wider">PLATFORM</h4>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li className="hover:text-blue-600 cursor-pointer">VIP Access</li>
-                <li className="hover:text-blue-600 cursor-pointer">Athlete Dashboard</li>
-                <li className="hover:text-blue-600 cursor-pointer">NIL Marketplace</li>
-                <li className="hover:text-blue-600 cursor-pointer">Transfer Portal</li>
-                <li className="hover:text-blue-600 cursor-pointer">Messages</li>
+              <h4 className="text-white font-bold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Home</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Features</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Pricing</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Contact</a></li>
               </ul>
             </div>
 
-            {/* RESOURCES Column */}
+            {/* Legal */}
             <div>
-              <h4 className="font-bold text-slate-800 mb-4 tracking-wider">RESOURCES</h4>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li className="hover:text-blue-600 cursor-pointer">Founder Story</li>
-                <li className="hover:text-blue-600 cursor-pointer">Founder Dedication</li>
-                <li className="hover:text-blue-600 cursor-pointer">Quick Links Hub</li>
-                <li className="hover:text-blue-600 cursor-pointer">Pricing</li>
-                <li className="hover:text-blue-600 cursor-pointer">Store</li>
+              <h4 className="text-white font-bold mb-4">Legal</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Cookie Policy</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">HIPAA Compliance</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Data Protection</a></li>
               </ul>
-            </div>
-
-            {/* APPS Column */}
-            <div>
-              <h4 className="font-bold text-slate-800 mb-4 tracking-wider">APPS</h4>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li className="hover:text-blue-600 cursor-pointer">NIL Portal</li>
-                <li className="hover:text-blue-600 cursor-pointer">Diamond Grind</li>
-                <li className="hover:text-blue-600 cursor-pointer">Warriors Playbook</li>
-                <li className="hover:text-blue-600 cursor-pointer">Messenger</li>
-                <li className="hover:text-blue-600 cursor-pointer">All Apps</li>
-              </ul>
-              <h4 className="font-bold text-slate-800 mt-5 mb-3 tracking-wider">LEGAL & COMPLIANCE</h4>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li className="hover:text-blue-600 cursor-pointer">Privacy Policy</li>
-                <li className="hover:text-blue-600 cursor-pointer">Terms of Service</li>
-                <li className="text-blue-600">legal@dozierholdingsgroup.com</li>
-              </ul>
-            </div>
-
-            {/* COMPANY Column */}
-            <div>
-              <h4 className="font-bold text-slate-800 mb-4 tracking-wider">COMPANY</h4>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li className="hover:text-blue-600 cursor-pointer">DHG Empire</li>
-                <li className="hover:text-blue-600 cursor-pointer">Softmor Inc</li>
-                <li className="hover:text-blue-600 cursor-pointer">Team</li>
-                <li className="hover:text-blue-600 cursor-pointer">Investor Hub</li>
-                <li className="hover:text-blue-600 cursor-pointer">Careers</li>
-                <li className="hover:text-blue-600 cursor-pointer">Founder Story</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Contact Row */}
-          <div className="flex flex-wrap items-center justify-between border-t border-slate-300 pt-6 mb-6">
-            <div className="flex items-center gap-6 text-sm text-slate-600">
-              <span>📧 cdozier14@athlynx.ai</span>
-              <span>📞 +1 (601) 498-5282</span>
-              <span>🌐 athlynx.ai</span>
-            </div>
-            <div className="flex items-center gap-4 text-slate-500 text-lg">
-              <span className="cursor-pointer hover:text-blue-600">📊</span>
-              <span className="cursor-pointer hover:text-blue-600">📘</span>
-              <span className="cursor-pointer hover:text-blue-600">🐦</span>
-              <span className="cursor-pointer hover:text-blue-600">📷</span>
-              <span className="cursor-pointer hover:text-blue-600">▶️</span>
             </div>
           </div>
 
           {/* Chad A. Dozier Section */}
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">CD</div>
-            <div>
-              <p className="font-bold text-slate-800">Chad A. Dozier</p>
-              <p className="text-slate-500 text-sm">Founder & CEO • @CDozier14</p>
+          <div className="border-t border-gray-800 pt-8 mb-8">
+            <div className="bg-gray-900 rounded-xl p-6">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                  CAD
+                </div>
+                <div className="text-center md:text-left">
+                  <h4 className="text-white font-bold text-xl mb-1">Chad A. Dozier</h4>
+                  <p className="text-cyan-400 font-semibold mb-2">Founder & CEO</p>
+                  <p className="text-gray-400 text-sm max-w-xl">
+                    Visionary entrepreneur and athlete advocate dedicated to revolutionizing how athletes manage their careers, 
+                    NIL opportunities, and professional development through cutting-edge technology.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <p className="text-slate-500 text-sm italic mb-8">"Look Ma and Nanny, I Made It"</p>
 
-          {/* Security & Legal Compliance - Dark Section */}
-          <div className="bg-slate-900 -mx-8 px-8 py-10 mt-8">
-            <h4 className="text-cyan-400 font-bold mb-6 flex items-center gap-2 tracking-wider">
-              ◎ SECURITY & LEGAL COMPLIANCE
-            </h4>
-            <div className="grid md:grid-cols-3 gap-8 text-sm text-slate-300 mb-8">
-              <div>
-                <h5 className="font-bold text-white mb-2">HIPAA Compliant</h5>
-                <p className="leading-relaxed">All athlete health data, medical records, and personal information are encrypted and stored in compliance with enterprise-grade security standards.</p>
+          {/* Social Media Links */}
+          <div className="border-t border-gray-800 pt-8 mb-8">
+            <h4 className="text-white font-bold text-center mb-6">Connect With Us</h4>
+            <div className="flex justify-center gap-6">
+              <a href="https://twitter.com/athlynx" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://instagram.com/athlynx" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://facebook.com/athlynx" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://linkedin.com/company/athlynx" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://youtube.com/@athlynx" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://tiktok.com/@athlynx" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Security & Legal Compliance */}
+          <div className="border-t border-gray-800 pt-8 mb-8">
+            <h4 className="text-white font-bold text-center mb-6">Security & Legal Compliance</h4>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className="bg-gray-900 rounded-lg p-4">
+                <span className="text-2xl mb-2 block">🔒</span>
+                <p className="text-gray-400 text-xs">256-bit SSL Encryption</p>
               </div>
-              <div>
-                <h5 className="font-bold text-white mb-2">Data Collection</h5>
-                <p className="leading-relaxed">We aggregate publicly available information from authorized sources. All web scraping complies with robots.txt and applicable laws.</p>
+              <div className="bg-gray-900 rounded-lg p-4">
+                <span className="text-2xl mb-2 block">🏥</span>
+                <p className="text-gray-400 text-xs">HIPAA Compliant</p>
               </div>
-              <div>
-                <h5 className="font-bold text-white mb-2">Precious Cargo Protection</h5>
-                <p className="leading-relaxed">Athlete data is our most valuable asset. We employ 256-bit SSL encryption, SOC 2 compliance standards, and regular security audits.</p>
+              <div className="bg-gray-900 rounded-lg p-4">
+                <span className="text-2xl mb-2 block">🛡️</span>
+                <p className="text-gray-400 text-xs">SOC 2 Type II</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4">
+                <span className="text-2xl mb-2 block">🌐</span>
+                <p className="text-gray-400 text-xs">GDPR Ready</p>
               </div>
             </div>
-            <p className="text-slate-400 text-xs mb-6">
-              By using this platform, you acknowledge our use of AI automation and agree to our data collection practices. Platform updated daily in real-time. For questions, contact <a href="mailto:legal@dozierholdingsgroup.com" className="text-cyan-400 hover:underline">legal@dozierholdingsgroup.com</a>
+          </div>
+
+          {/* Contact Info */}
+          <div className="border-t border-gray-800 pt-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <p className="text-gray-500 text-sm">Email</p>
+                <p className="text-cyan-400">support@athlynx.ai</p>
+              </div>
+              <div>
+                <p className="text-gray-500 text-sm">Phone</p>
+                <p className="text-cyan-400">(601) 498-5282</p>
+              </div>
+              <div>
+                <p className="text-gray-500 text-sm">Address</p>
+                <p className="text-gray-400 text-sm">19039 Cloyanna Lane, Humble, TX 77346</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="border-t border-gray-800 pt-8 text-center">
+            <p className="text-gray-500 text-sm">
+              © 2026 Athlynx AI Corporation. All rights reserved.
             </p>
-          </div>
-
-          {/* Copyright - Dark */}
-          <div className="bg-slate-950 -mx-8 px-8 py-6 text-center text-slate-400 text-sm">
-            © 2025-2026 Dozier Holdings Group, LLC. All Rights Reserved.
+            <p className="text-gray-600 text-xs mt-2">
+              A subsidiary of Dozier Holdings Group, LLC
+            </p>
           </div>
         </div>
       </footer>
 
       {/* VIP Code Modal */}
       {showVipModal && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl">
-            <h3 className="text-2xl font-bold text-slate-800 mb-5">Enter VIP Code</h3>
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+          <div className="bg-slate-800 rounded-2xl p-8 max-w-md w-full border border-slate-700">
+            <h3 className="text-white font-bold text-xl text-center mb-6">Enter VIP Code</h3>
             <input
               type="text"
+              placeholder="Enter your VIP code"
               value={vipCode}
-              onChange={(e) => setVipCode(e.target.value)}
-              placeholder="Enter your VIP access code"
-              className="w-full px-4 py-4 border border-slate-300 rounded-lg mb-5 text-slate-800"
+              onChange={(e) => setVipCode(e.target.value.toUpperCase())}
+              className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 text-center text-lg tracking-wider mb-4"
             />
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <button
                 onClick={() => setShowVipModal(false)}
-                className="flex-1 px-4 py-3 border border-slate-300 rounded-lg text-slate-600 font-medium hover:bg-slate-50"
+                className="flex-1 bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 rounded-lg transition-colors"
               >
                 Cancel
               </button>
               <button
                 onClick={handleVipSubmit}
-                disabled={validateVip.isPending}
-                className="flex-1 px-4 py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-500 disabled:opacity-50"
+                className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold py-3 rounded-lg transition-all"
               >
-                {validateVip.isPending ? "Validating..." : "Submit"}
+                Submit
               </button>
             </div>
           </div>
