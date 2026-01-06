@@ -151,26 +151,16 @@ export default function EarlyAccess() {
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full border-2 border-slate-900"></div>
             </div>
 
-            {/* Navigation Links */}
+            {/* Navigation Links - Streamlined for Launch */}
             <div className="hidden md:flex items-center gap-3">
               <Link href="/our-story">
                 <button className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
                   <span>❤️</span> Our Story
                 </button>
               </Link>
-              <Link href="/veterans">
-                <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
-                  <span>🎖️</span> Veterans
-                </button>
-              </Link>
-              <Link href="/blue-collar">
-                <button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
-                  <span>🔧</span> Blue Collar
-                </button>
-              </Link>
-              <Link href="/robot-companions">
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
-                  <span>🤖</span> Robots
+              <Link href="/pricing">
+                <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
+                  <span>💰</span> Pricing
                 </button>
               </Link>
               <Link href="/manus">
