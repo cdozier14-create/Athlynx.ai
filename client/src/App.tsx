@@ -26,6 +26,15 @@ import {
   CareerWizard 
 } from "@/pages/wizards";
 
+// 10 ATHLYNX Apps
+import DiamondGrind from "@/pages/DiamondGrind";
+import WarriorsPlaybook from "@/pages/WarriorsPlaybook";
+import NILVault from "@/pages/NILVault";
+import AISales from "@/pages/AISales";
+import Faith from "@/pages/Faith";
+import AIRecruiter from "@/pages/AIRecruiter";
+import AIContent from "@/pages/AIContent";
+
 function Router() {
   return (
     <Switch>
@@ -64,6 +73,29 @@ function Router() {
       <Route path="/wizard/transfer" component={TransferWizard} />
       <Route path="/wizard/life" component={LifeWizard} />
       <Route path="/wizard/career" component={CareerWizard} />
+      
+      {/* 10 ATHLYNX Apps */}
+      <Route path="/diamond-grind" component={DiamondGrind} />
+      <Route path="/training" component={DiamondGrind} />
+      <Route path="/workout" component={DiamondGrind} />
+      <Route path="/warriors-playbook" component={WarriorsPlaybook} />
+      <Route path="/playbook" component={WarriorsPlaybook} />
+      <Route path="/strategy" component={WarriorsPlaybook} />
+      <Route path="/nil-vault" component={NILVault} />
+      <Route path="/vault" component={NILVault} />
+      <Route path="/deals" component={NILVault} />
+      <Route path="/ai-sales" component={AISales} />
+      <Route path="/brand-deals" component={AISales} />
+      <Route path="/outreach" component={AISales} />
+      <Route path="/faith" component={Faith} />
+      <Route path="/spiritual" component={Faith} />
+      <Route path="/wellness" component={Faith} />
+      <Route path="/ai-recruiter" component={AIRecruiter} />
+      <Route path="/recruiting" component={AIRecruiter} />
+      <Route path="/schools" component={AIRecruiter} />
+      <Route path="/ai-content" component={AIContent} />
+      <Route path="/content" component={AIContent} />
+      <Route path="/create" component={AIContent} />
       
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />

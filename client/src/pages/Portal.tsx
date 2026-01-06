@@ -8,17 +8,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 
 // App icons data
+// ALL 10 ATHLYNX APPS - ACTIVATED!
 const apps = [
   { id: "portal", name: "Portal", icon: "/app-portal.png", href: "/portal", active: true },
   { id: "messenger", name: "Messenger", icon: "/app-messenger.png", href: "/messenger", active: true },
-  { id: "diamond-grind", name: "Diamond Grind", icon: "/app-diamond-grind.png", href: "/diamond-grind", active: false },
-  { id: "warriors-playbook", name: "Warriors Playbook", icon: "/app-warriors-playbook.png", href: "/warriors-playbook", active: false },
-  { id: "transfer-portal", name: "Transfer Portal", icon: "/app-transfer-portal.png", href: "/transfer-portal", active: false },
-  { id: "nil-vault", name: "NIL Vault", icon: "/app-nil-vault.png", href: "/nil-vault", active: false },
-  { id: "ai-sales", name: "AI Sales", icon: "/app-ai-sales.png", href: "/ai-sales", active: false },
-  { id: "faith", name: "Faith", icon: "/app-faith.png", href: "/faith", active: false },
-  { id: "ai-recruiter", name: "AI Recruiter", icon: "/app-ai-recruiter.png", href: "/ai-recruiter", active: false },
-  { id: "ai-content", name: "AI Content", icon: "/app-ai-content.png", href: "/ai-content", active: false },
+  { id: "diamond-grind", name: "Diamond Grind", icon: "/app-diamond-grind.png", href: "/diamond-grind", active: true },
+  { id: "warriors-playbook", name: "Warriors Playbook", icon: "/app-warriors-playbook.png", href: "/warriors-playbook", active: true },
+  { id: "transfer-portal", name: "Transfer Portal", icon: "/app-transfer-portal.png", href: "/transfer-portal", active: true },
+  { id: "nil-vault", name: "NIL Vault", icon: "/app-nil-vault.png", href: "/nil-vault", active: true },
+  { id: "ai-sales", name: "AI Sales", icon: "/app-ai-sales.png", href: "/ai-sales", active: true },
+  { id: "faith", name: "Faith", icon: "/app-faith.png", href: "/faith", active: true },
+  { id: "ai-recruiter", name: "AI Recruiter", icon: "/app-ai-recruiter.png", href: "/ai-recruiter", active: true },
+  { id: "ai-content", name: "AI Content", icon: "/app-ai-content.png", href: "/ai-content", active: true },
 ];
 
 export default function Portal() {
