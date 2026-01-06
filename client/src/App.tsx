@@ -13,6 +13,11 @@ import AIAgents from "@/pages/AIAgents";
 import Music from "@/pages/Music";
 import Marketplace from "@/pages/Marketplace";
 import Stories from "@/pages/Stories";
+import WarriorsPlaybook from "@/pages/WarriorsPlaybook";
+import TransferPortal from "@/pages/TransferPortal";
+import NILVault from "@/pages/NILVault";
+import Faith from "@/pages/Faith";
+import AdminDashboard from "@/pages/AdminDashboard";
 
 function Router() {
   return (
@@ -29,6 +34,16 @@ function Router() {
       <Route path="/marketplace" component={Marketplace} />
       <Route path="/stories" component={Stories} />
       <Route path="/reels" component={Stories} />
+      <Route path="/playbook" component={WarriorsPlaybook} />
+      <Route path="/warriors-playbook" component={WarriorsPlaybook} />
+      <Route path="/transfer-portal" component={TransferPortal} />
+      <Route path="/transfer" component={TransferPortal} />
+      <Route path="/nil-vault" component={NILVault} />
+      <Route path="/nil" component={NILVault} />
+      <Route path="/faith" component={Faith} />
+      <Route path="/admin" component={AdminDashboard} />
+      <Route path="/admin-dashboard" component={AdminDashboard} />
+      <Route path="/revenue" component={AdminDashboard} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
