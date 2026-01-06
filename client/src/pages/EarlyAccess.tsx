@@ -173,6 +173,11 @@ export default function EarlyAccess() {
                   <span>🤖</span> Robots
                 </button>
               </Link>
+              <Link href="/manus">
+                <button className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-400 hover:to-purple-600 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
+                  <span>🤖</span> Manus AI
+                </button>
+              </Link>
             </div>
 
             {/* Portal Login */}

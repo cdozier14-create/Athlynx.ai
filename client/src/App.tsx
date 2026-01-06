@@ -11,6 +11,8 @@ import RobotCompanions from "@/pages/RobotCompanions";
 import Veterans from "@/pages/Veterans";
 import BlueCollar from "@/pages/BlueCollar";
 import CRMDashboard from "@/pages/CRMDashboard";
+import ManusPartnership from "@/pages/ManusPartnership";
+import Pricing from "@/pages/Pricing";
 
 function Router() {
   return (
@@ -29,6 +31,12 @@ function Router() {
       <Route path="/crm" component={CRMDashboard} />
       <Route path="/dashboard" component={CRMDashboard} />
       <Route path="/partner-dashboard" component={CRMDashboard} />
+      <Route path="/manus" component={ManusPartnership} />
+      <Route path="/partnership" component={ManusPartnership} />
+      <Route path="/ai-partner" component={ManusPartnership} />
+      <Route path="/pricing" component={Pricing} />
+      <Route path="/plans" component={Pricing} />
+      <Route path="/subscribe" component={Pricing} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

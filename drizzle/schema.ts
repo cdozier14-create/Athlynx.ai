@@ -436,3 +436,107 @@ export const milestones = mysqlTable("milestones", {
 
 export type Milestone = typeof milestones.$inferSelect;
 export type InsertMilestone = typeof milestones.$inferInsert;
+
+
+// ==================== AI CREDIT SYSTEM (Powered by Manus) ====================
+
+export const userCredits = mysqlTable("user_credits", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().unique(),
+  balance: int("balance").default(0).notNull(),
+  lifetimeEarned: int("lifetimeEarned").default(0).notNull(),
+  lifetimeSpent: int("lifetimeSpent").default(0).notNull(),
+  monthlyAllocation: int("monthlyAllocation").default(0).notNull(),
+  lastMonthlyReset: timestamp("lastMonthlyReset"),
+  subscriptionTier: varchar("subscriptionTier", { length: 32 }),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type UserCredits = typeof userCredits.$inferSelect;
+export type InsertUserCredits = typeof userCredits.$inferInsert;
+
+export const creditTransactions = mysqlTable("credit_transactions", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(),
+  amount: int("amount").notNull(), // Positive = earned, Negative = spent
+  balanceAfter: int("balanceAfter").notNull(),
+  transactionType: mysqlEnum("transactionType", [
+    "purchase",      // Bought credits
+    "subscription",  // Monthly allocation from subscription
+    "bonus",         // Bonus credits (signup, referral, etc.)
+    "usage",         // Used credits for AI feature
+    "refund",        // Refunded credits
+    "gift",          // Gifted credits
+    "admin",         // Admin adjustment
+  ]).notNull(),
+  description: varchar("description", { length: 255 }),
+  featureUsed: varchar("featureUsed", { length: 64 }), // For usage transactions
+  referenceId: varchar("referenceId", { length: 64 }), // Stripe payment ID, etc.
+  metadata: json("metadata"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type CreditTransaction = typeof creditTransactions.$inferSelect;
+export type InsertCreditTransaction = typeof creditTransactions.$inferInsert;
+
+export const creditPackagePurchases = mysqlTable("credit_package_purchases", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(),
+  packageId: varchar("packageId", { length: 32 }).notNull(),
+  credits: int("credits").notNull(),
+  amountPaid: decimal("amountPaid", { precision: 10, scale: 2 }).notNull(),
+  currency: varchar("currency", { length: 3 }).default("USD").notNull(),
+  stripePaymentIntentId: varchar("stripePaymentIntentId", { length: 64 }),
+  status: mysqlEnum("status", ["pending", "completed", "failed", "refunded"]).default("pending").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type CreditPackagePurchase = typeof creditPackagePurchases.$inferSelect;
+export type InsertCreditPackagePurchase = typeof creditPackagePurchases.$inferInsert;
+
+// ==================== STRIPE INTEGRATION ====================
+
+export const stripeCustomers = mysqlTable("stripe_customers", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().unique(),
+  stripeCustomerId: varchar("stripeCustomerId", { length: 64 }).notNull().unique(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type StripeCustomer = typeof stripeCustomers.$inferSelect;
+export type InsertStripeCustomer = typeof stripeCustomers.$inferInsert;
+
+export const subscriptions = mysqlTable("subscriptions", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(),
+  stripeSubscriptionId: varchar("stripeSubscriptionId", { length: 64 }).notNull().unique(),
+  tierId: varchar("tierId", { length: 32 }).notNull(),
+  tierName: varchar("tierName", { length: 64 }),
+  status: mysqlEnum("status", ["active", "canceled", "past_due", "unpaid", "trialing"]).default("active").notNull(),
+  billingCycle: mysqlEnum("billingCycle", ["monthly", "yearly"]).default("monthly").notNull(),
+  currentPeriodStart: timestamp("currentPeriodStart"),
+  currentPeriodEnd: timestamp("currentPeriodEnd"),
+  cancelAtPeriodEnd: boolean("cancelAtPeriodEnd").default(false).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Subscription = typeof subscriptions.$inferSelect;
+export type InsertSubscription = typeof subscriptions.$inferInsert;
+
+export const payments = mysqlTable("payments", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(),
+  stripePaymentIntentId: varchar("stripePaymentIntentId", { length: 64 }).notNull().unique(),
+  amount: decimal("amount", { precision: 10, scale: 2 }).notNull(),
+  currency: varchar("currency", { length: 3 }).default("USD").notNull(),
+  status: mysqlEnum("status", ["pending", "succeeded", "failed", "refunded"]).default("pending").notNull(),
+  paymentType: mysqlEnum("paymentType", ["subscription", "one_time", "credits"]).notNull(),
+  description: varchar("description", { length: 255 }),
+  metadata: json("metadata"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type Payment = typeof payments.$inferSelect;
+export type InsertPayment = typeof payments.$inferInsert;

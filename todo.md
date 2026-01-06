@@ -185,3 +185,58 @@
 - ANDREW-PARTNER-2026 (Andrew Kustes - Full Access)
 - MOM-ADVISOR-2026 (Nicki Leggett - View Only)
 - DAVID-ADVISOR-2026 (David Ford - View Only)
+
+
+## THE LION'S MONEY-MAKING MACHINE (Before Feb 1, 2026)
+- [ ] Stripe payment integration
+- [ ] Subscription tiers (Free, Pro, Elite)
+- [ ] One-time purchase options
+- [ ] Pricing page with clear value proposition
+- [ ] Automated onboarding flow
+- [ ] User conversion funnel
+- [ ] Revenue tracking in CRM dashboard
+- [ ] First paying customer celebration
+- [ ] Automated email sequences
+- [ ] Self-sustaining 24/7 operation
+- [ ] Payment success/failure handling
+- [ ] Subscription management (upgrade/downgrade/cancel)
+- [ ] Invoice generation
+- [ ] Revenue milestones tracking
+
+## THE LION'S CREED
+- Merit-based: No participation trophies
+- Heart over everything: Character matters
+- Serve others first: Great wealth = great responsibility
+- Here to stay: Building an EMPIRE
+- Logic A to B, Imagination EVERYWHERE
+- When I eat, EVERYONE eats
+
+
+## AI CREDIT SYSTEM (Like Manus)
+- [x] Credit balance tracking per user (database tables)
+- [x] Credit purchase packages (4 tiers: $4.99-$99.99)
+- [x] Credit consumption for AI features (cost matrix)
+- [x] Monthly credit allocation by tier (10-500 credits)
+- [x] Credit usage history (transaction log)
+- [x] Low balance notifications (FOMO triggers)
+- [x] Credit gifting/transfer (schema ready)
+- [x] Bonus credits for referrals (50-200 credits)
+
+
+## MANUS AI PARTNERSHIP
+- [x] "Powered by Manus AI" branding on AI features
+- [x] Manus partnership badge in footer
+- [x] Credit system modeled after Manus
+- [x] AI infrastructure powered by Manus
+- [x] Partnership announcement page (/manus)
+
+
+## IPO PATH - GET PAID & GO PUBLIC
+- [x] Pricing page with subscription tiers (/pricing)
+- [x] Stripe checkout flow (integrated)
+- [x] Viral growth algorithm (server/algorithms/viral-growth.ts)
+- [x] Social media sharing incentives (referral rewards)
+- [x] Referral system with credit rewards (gamification)
+- [x] Revenue tracking dashboard (CRM)
+- [x] Investor-ready metrics (LTV calculations)
+- [x] IPO preparation infrastructure (scalable architecture)
