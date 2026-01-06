@@ -367,6 +367,18 @@ export default function TransferPortal() {
   // Current recruiting period status
   const [periodStatus, setPeriodStatus] = useState<"dead" | "quiet" | "contact">("dead");
 
+  // Fetch players from API
+  const { data: apiPlayers, isLoading } = trpc.transferPortal.players.useQuery({
+    sport: undefined,
+    position: selectedPosition !== "all" ? selectedPosition : undefined,
+    division: selectedDivision !== "all" ? selectedDivision : undefined,
+    conference: selectedConference !== "all" ? selectedConference : undefined,
+    status: selectedStatus !== "all" ? selectedStatus : undefined,
+    search: searchQuery || undefined,
+    limit: 100,
+    offset: 0,
+  });
+
   useEffect(() => {
     // Check current date against recruiting calendar
     const now = new Date();
@@ -383,9 +395,16 @@ export default function TransferPortal() {
     }
   }, []);
 
-  // Filter players
+  // Use API players if available, otherwise fallback
+  const apiPlayersList = apiPlayers?.players || [];
+  const players = apiPlayersList.length > 0 ? apiPlayersList : fallbackPlayers;
+
+  // Filter and sort players
   const filteredPlayers = useMemo(() => {
-    return fallbackPlayers.filter((player: any) => {
+    return players.filter((player: any) => {
+      // If using API data, filtering is done server-side, but we still apply client-side for fallback
+      if (apiPlayersList.length > 0) return true;
+      
       if (searchQuery && !player.fullName.toLowerCase().includes(searchQuery.toLowerCase()) &&
           !player.currentSchool.toLowerCase().includes(searchQuery.toLowerCase())) {
         return false;
@@ -396,12 +415,12 @@ export default function TransferPortal() {
       if (selectedStatus !== "all" && player.status !== selectedStatus) return false;
       return true;
     }).sort((a: any, b: any) => {
-      if (sortBy === "rating") return b.playerRating - a.playerRating;
-      if (sortBy === "nil") return b.nilValuation - a.nilValuation;
-      if (sortBy === "followers") return b.totalFollowers - a.totalFollowers;
+      if (sortBy === "rating") return (b.playerRating || 0) - (a.playerRating || 0);
+      if (sortBy === "nil") return (b.nilValuation || 0) - (a.nilValuation || 0);
+      if (sortBy === "followers") return (b.totalFollowers || 0) - (a.totalFollowers || 0);
       return 0;
     });
-  }, [searchQuery, selectedPosition, selectedDivision, selectedConference, selectedStatus, sortBy]);
+  }, [players, apiPlayersList, searchQuery, selectedPosition, selectedDivision, selectedConference, selectedStatus, sortBy]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-blue-950">

@@ -205,10 +205,18 @@ export default function EarlyAccess() {
         <section className="py-12 px-4">
           <div className="max-w-md mx-auto">
             {/* ATHLYNX THE ATHLETE'S PLAYBOOK Box */}
-            <div className="bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl p-8 text-center shadow-2xl relative overflow-hidden">
-              <div className="absolute top-2 right-2 w-3 h-3 bg-yellow-400 rounded-full"></div>
-              <h2 className="text-slate-900 font-black text-3xl tracking-wide mb-2">ATHLYNX</h2>
+            <div className="bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl p-8 text-center shadow-2xl relative overflow-hidden group hover:scale-105 transition-transform duration-300">
+              {/* Animated sparkles */}
+              <div className="absolute top-2 right-2 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+              <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-ping"></div>
+              <div className="absolute bottom-4 right-6 w-2 h-2 bg-white rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
+              <div className="absolute bottom-6 left-8 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
+              
+              <h2 className="text-slate-900 font-black text-4xl tracking-wide mb-2 drop-shadow-lg">ATHLYNX</h2>
               <p className="text-blue-900 font-semibold text-sm tracking-wider">THE ATHLETE'S PLAYBOOK</p>
+              
+              {/* Shine effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
             </div>
           </div>
         </section>
@@ -635,6 +643,65 @@ export default function EarlyAccess() {
             </div>
           </div>
         </section>
+
+        {/* VOTE FOR YOUR FAVORITE - Campaign Section */}
+        <section className="py-20 px-4 bg-gradient-to-b from-slate-900 to-purple-950">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-white text-sm font-bold mb-6 animate-pulse">
+              🗳️ HELP US DECIDE!
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+              VOTE FOR YOUR <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">FAVORITE</span>
+            </h2>
+            <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+              We're building TWO amazing versions of ATHLYNX! Visit both sites and tell us which one you love more. Your vote shapes the future!
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {/* Site A */}
+              <a href="https://athlynx.manus.space" target="_blank" rel="noopener noreferrer" className="group">
+                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 border-2 border-cyan-400/50 rounded-2xl p-8 hover:border-cyan-400 hover:scale-105 transition-all duration-300">
+                  <div className="text-6xl mb-4">🅰️</div>
+                  <h3 className="text-white font-bold text-2xl mb-2">SITE A</h3>
+                  <p className="text-cyan-300 font-semibold">athlynx.manus.space</p>
+                  <p className="text-slate-400 text-sm mt-2">Original Design • Countdown Timer</p>
+                  <div className="mt-4 px-6 py-3 bg-cyan-500 text-white font-bold rounded-full group-hover:bg-cyan-400 transition-colors">
+                    VISIT SITE A →
+                  </div>
+                </div>
+              </a>
+              
+              {/* Site B */}
+              <a href="https://athlynxai.manus.space" target="_blank" rel="noopener noreferrer" className="group">
+                <div className="bg-gradient-to-br from-purple-500/20 to-pink-600/20 border-2 border-purple-400/50 rounded-2xl p-8 hover:border-purple-400 hover:scale-105 transition-all duration-300">
+                  <div className="text-6xl mb-4">🅱️</div>
+                  <h3 className="text-white font-bold text-2xl mb-2">SITE B</h3>
+                  <p className="text-purple-300 font-semibold">athlynxai.manus.space</p>
+                  <p className="text-slate-400 text-sm mt-2">New Design • Full Features</p>
+                  <div className="mt-4 px-6 py-3 bg-purple-500 text-white font-bold rounded-full group-hover:bg-purple-400 transition-colors">
+                    VISIT SITE B →
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+            {/* Social Share */}
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <p className="text-white font-bold mb-4">📢 Share Your Vote on Social Media!</p>
+              <p className="text-slate-400 text-sm mb-4">Tag us @ATHLYNX and use #ATHLYNXVote to let us know which site you prefer!</p>
+              <div className="flex justify-center gap-4">
+                <a href="https://twitter.com/intent/tweet?text=I%20just%20voted%20for%20my%20favorite%20ATHLYNX%20design!%20Check%20out%20both%20sites%20and%20vote%20%23ATHLYNXVote%20%40ATHLYNX" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-bold hover:bg-blue-400 transition-colors">
+                  🐦 Tweet Your Vote
+                </a>
+                <a href="https://wa.me/16014985282?text=I%20voted%20for%20my%20favorite%20ATHLYNX%20design!" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-green-500 text-white rounded-full text-sm font-bold hover:bg-green-400 transition-colors">
+                  💬 WhatsApp Vote
+                </a>
+              </div>
+            </div>
+            
+            <p className="text-slate-500 text-sm mt-6">Voting ends February 1, 2026 • The winning design becomes the official ATHLYNX!</p>
+          </div>
+        </section>
       </main>
 
       {/* FOOTER - Black Background with Full Organization Info */}
@@ -800,6 +867,16 @@ export default function EarlyAccess() {
             <p className="text-gray-600 text-xs mt-2">
               A subsidiary of Dozier Holdings Group, LLC
             </p>
+            
+            {/* Legal Disclaimer */}
+            <div className="mt-6 pt-6 border-t border-gray-800">
+              <p className="text-gray-600 text-xs max-w-2xl mx-auto">
+                <strong>DISCLAIMER:</strong> All player profiles, statistics, and NIL valuations displayed on this platform are for demonstration purposes only unless explicitly created by verified users. ATHLYNX does not claim ownership of any athlete's name, image, or likeness. Real athlete data is only displayed with the athlete's consent upon account creation. Any resemblance to real persons in demo data is coincidental.
+              </p>
+              <p className="text-gray-600 text-xs mt-3 max-w-2xl mx-auto">
+                <strong>INVESTMENT DISCLAIMER:</strong> ATHLYNX and Dozier Holdings Group do not provide financial, legal, or investment advice. NIL valuations are estimates based on publicly available data and proprietary algorithms. Consult qualified professionals before making any financial decisions.
+              </p>
+            </div>
           </div>
         </div>
       </footer>
