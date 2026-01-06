@@ -85,6 +85,33 @@ export default function FounderStory() {
         </div>
       </section>
 
+      {/* THE VISION VIDEO SECTION */}
+      <section className="py-16 px-4 bg-gradient-to-b from-slate-900 to-blue-950">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-8">
+            <span className="text-amber-400 text-4xl">🎬</span>
+            <h2 className="text-3xl font-bold text-white mt-4 mb-2">The Vision</h2>
+            <p className="text-cyan-400 tracking-wider">DREAMS DO TRULY COME TRUE</p>
+          </div>
+          
+          {/* Video Player */}
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-cyan-400/30">
+            <video 
+              controls 
+              className="w-full aspect-video bg-black"
+              poster="/athlynx-logo-icon.png"
+            >
+              <source src="/final_clean.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+          <p className="text-slate-400 text-center mt-6">
+            <span className="text-cyan-400">★</span> The Founder's Journey <span className="text-cyan-400">★</span>
+          </p>
+        </div>
+      </section>
+
       {/* The Story Section */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">

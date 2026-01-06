@@ -214,6 +214,42 @@ export default function EarlyAccess() {
           </div>
         </section>
 
+        {/* EPIC LAUNCH VIDEO SECTION */}
+        <section className="py-12 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative group">
+              {/* Outer glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-amber-500 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+              
+              {/* Video container */}
+              <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 rounded-3xl p-6 border-2 border-cyan-400/30 shadow-2xl">
+                <div className="text-center mb-6">
+                  <span className="text-amber-400 text-3xl">🎬</span>
+                  <h3 className="text-white font-black text-2xl mt-2">THE VISION</h3>
+                  <p className="text-cyan-400 text-sm tracking-wider">DREAMS DO COME TRUE</p>
+                </div>
+                
+                {/* Video Player */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-cyan-400/20">
+                  <video 
+                    controls 
+                    className="w-full aspect-video bg-black"
+                    poster="/athlynx-logo-icon.png"
+                  >
+                    <source src="/NIL_Portal_Epic_Launch.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                
+                {/* Video caption */}
+                <p className="text-slate-400 text-center text-sm mt-4">
+                  <span className="text-cyan-400">★</span> ATHLYNX: The Perfect Storm Launch <span className="text-cyan-400">★</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* VIP Code Section */}
         <section className="py-8 px-4">
           <div className="max-w-md mx-auto">
@@ -238,12 +274,54 @@ export default function EarlyAccess() {
           </div>
         </section>
 
-        {/* DHG Crab Shield */}
-        <section className="py-8 px-4">
-          <div className="max-w-xs mx-auto">
-            <div className="bg-slate-800 rounded-xl p-4 border border-slate-600">
-              <p className="text-white text-sm font-medium mb-3">DHG Crab Shield</p>
-              <img src="/dhg-crab-shield.jpeg" alt="DHG Crab Shield" className="w-full rounded-lg" />
+        {/* ATHLYNX Star Logo with Glow */}
+        <section className="py-12 px-4">
+          <div className="max-w-md mx-auto">
+            <div className="relative group">
+              {/* Outer glow ring */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-3xl blur-xl opacity-40 group-hover:opacity-70 transition-all duration-500 animate-pulse"></div>
+              
+              {/* Main card */}
+              <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 rounded-3xl p-8 border-2 border-cyan-400/50 group-hover:border-cyan-400 transition-all duration-300 shadow-2xl">
+                {/* Stars decoration */}
+                <div className="absolute top-4 left-4 text-yellow-400 text-2xl animate-pulse">⭐</div>
+                <div className="absolute top-4 right-4 text-yellow-400 text-2xl animate-pulse delay-100">⭐</div>
+                <div className="absolute bottom-4 left-4 text-yellow-400 text-xl animate-pulse delay-200">✨</div>
+                <div className="absolute bottom-4 right-4 text-yellow-400 text-xl animate-pulse delay-300">✨</div>
+                
+                {/* Logo container with glow */}
+                <div className="flex flex-col items-center">
+                  <div className="relative mb-6">
+                    {/* Logo glow */}
+                    <div className="absolute inset-0 bg-cyan-400 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-all"></div>
+                    <img 
+                      src="/athlynx-logo-icon.png" 
+                      alt="ATHLYNX" 
+                      className="relative w-32 h-32 drop-shadow-[0_0_25px_rgba(34,211,238,0.5)] group-hover:drop-shadow-[0_0_35px_rgba(34,211,238,0.8)] transition-all duration-300 group-hover:scale-110" 
+                    />
+                  </div>
+                  
+                  {/* Brand text */}
+                  <h3 className="text-white font-black text-4xl tracking-wider mb-2 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">ATHLYNX</h3>
+                  <p className="text-cyan-400 font-bold text-lg tracking-[0.3em] mb-4">THE ATHLETE'S PLAYBOOK</p>
+                  
+                  {/* Star rating */}
+                  <div className="flex items-center gap-1 mb-4">
+                    <span className="text-yellow-400 text-3xl drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">★</span>
+                    <span className="text-yellow-400 text-3xl drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">★</span>
+                    <span className="text-yellow-400 text-3xl drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">★</span>
+                    <span className="text-yellow-400 text-3xl drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">★</span>
+                    <span className="text-yellow-400 text-3xl drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">★</span>
+                  </div>
+                  
+                  {/* Tagline */}
+                  <p className="text-slate-300 text-center text-sm">
+                    <span className="text-cyan-400 font-semibold">Dreams</span> • 
+                    <span className="text-amber-400 font-semibold"> Do</span> • 
+                    <span className="text-green-400 font-semibold"> Come True</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

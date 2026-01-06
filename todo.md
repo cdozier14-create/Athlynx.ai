@@ -240,3 +240,20 @@
 - [x] Revenue tracking dashboard (CRM)
 - [x] Investor-ready metrics (LTV calculations)
 - [x] IPO preparation infrastructure (scalable architecture)
+
+
+## INVESTOR PRESENTATIONS (Each DHG Company)
+- [ ] DHG Holdings Overall Presentation (Full Empire)
+- [ ] ATHLYNX AI Corporation Presentation
+- [ ] VC Technologies, LLC Presentation
+- [ ] VC Data Centers, LLC Presentation
+- [ ] The VIRT, LLC (Crypto) Presentation
+- [ ] VC Energy, LLC Presentation
+- [ ] Uma Real Estate Investment, LLC Presentation
+- [ ] Villa Agape, LLC Presentation
+- [ ] Compassionate Care, LLC Presentation
+- [ ] Pisces Resort, LLC Presentation
+- [ ] Venus Venue & Vineyard, LLC Presentation
+- [ ] Pomodoro Restaurant, LLC Presentation
+- [ ] The Silk Road Trading, LLC Presentation
+- [ ] Investor Portal page on website
