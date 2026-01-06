@@ -18,6 +18,11 @@ import TransferPortal from "@/pages/TransferPortal";
 import NILVault from "@/pages/NILVault";
 import Faith from "@/pages/Faith";
 import AdminDashboard from "@/pages/AdminDashboard";
+import BrandDeals from "@/pages/BrandDeals";
+import WebsiteBuilder from "@/pages/WebsiteBuilder";
+import Infrastructure from "@/pages/Infrastructure";
+import MarketingServices from "@/pages/MarketingServices";
+import DHGEmpire from "@/pages/DHGEmpire";
 
 function Router() {
   return (
@@ -44,6 +49,26 @@ function Router() {
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/admin-dashboard" component={AdminDashboard} />
       <Route path="/revenue" component={AdminDashboard} />
+      {/* Phase 10 - Advertisement & Infrastructure */}
+      <Route path="/brand-deals" component={BrandDeals} />
+      <Route path="/ads" component={BrandDeals} />
+      <Route path="/advertising" component={BrandDeals} />
+      <Route path="/sponsors" component={BrandDeals} />
+      <Route path="/website-builder" component={WebsiteBuilder} />
+      <Route path="/builder" component={WebsiteBuilder} />
+      <Route path="/hosting" component={WebsiteBuilder} />
+      <Route path="/cloud" component={WebsiteBuilder} />
+      <Route path="/infrastructure" component={Infrastructure} />
+      <Route path="/data-centers" component={Infrastructure} />
+      <Route path="/domains" component={Infrastructure} />
+      <Route path="/marketing-services" component={MarketingServices} />
+      <Route path="/marketing" component={MarketingServices} />
+      <Route path="/agency" component={MarketingServices} />
+      {/* The Empire */}
+      <Route path="/empire" component={DHGEmpire} />
+      <Route path="/dhg" component={DHGEmpire} />
+      <Route path="/dozier-holdings-group" component={DHGEmpire} />
+      <Route path="/crown" component={DHGEmpire} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
