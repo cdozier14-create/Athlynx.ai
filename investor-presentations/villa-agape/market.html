@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #1a1814 0%, #2a2520 50%, #1a1814 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Playfair Display', serif;
+      }
+      .organic-shape {
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(ellipse, rgba(212, 165, 116, 0.08) 0%, transparent 70%);
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #d4a574;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px; /* reduced from 50 to save vertical space */
+        padding: 15px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      /* Refresh layout: make market tiers flow in two columns to cut vertical height */
+      .market-sizing {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px; /* smaller internal gaps */
+      }
+      .market-tier {
+        background: rgba(212, 165, 116, 0.04);
+        padding: 18px 22px;
+        border-left: 4px solid #d4a574;
+      }
+      .market-tier:nth-child(2) { border-left-color: #7c9885; }
+      .market-tier:nth-child(3) { border-left-color: #c9a87c; }
+      .tier-label {
+        font-size: 12px;
+        color: #a09080;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'Lato', sans-serif;
+        margin-bottom: 5px;
+      }
+      .tier-value {
+        font-size: 48px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #d4a574 0%, #c9a87c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+      }
+      .market-tier:nth-child(2) .tier-value {
+        background: linear-gradient(135deg, #7c9885 0%, #d4a574 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .market-tier:nth-child(3) .tier-value {
+        background: linear-gradient(135deg, #c9a87c 0%, #7c9885 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .tier-desc {
+        font-size: 14px;
+        color: #f5f0eb;
+        margin-top: 8px;
+      }
+      .tier-growth {
+        font-size: 13px;
+        color: #7c9885;
+        font-family: 'Lato', sans-serif;
+        margin-top: 5px;
+      }
+      .drivers-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; /* slightly reduced */
+      }
+      .drivers-section h3 {
+        font-size: 20px;
+        color: #d4a574;
+        margin-bottom: 5px;
+      }
+      .driver-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(124, 152, 133, 0.06);
+        padding: 12px 16px; /* slightly reduced */
+      }
+      .driver-icon {
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #7c9885 0%, #d4a574 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: #1a1814;
+        flex-shrink: 0;
+      }
+      .driver-content h4 {
+        font-size: 15px;
+        color: #f5f0eb;
+        margin-bottom: 3px;
+      }
+      .driver-content p {
+        font-size: 12px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+      }
+      .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 12px 60px; /* reduced vertical padding from 20 to 12 */
+        position: relative;
+        z-index: 10;
+        margin-top: 10px;
+      }
+      .stat-box {
+        background: rgba(212, 165, 116, 0.08);
+        border-top: 2px solid #d4a574;
+        padding: 12px 18px; /* slightly reduced */
+        text-align: center;
+      }
+      .stat-box:nth-child(2) { border-top-color: #7c9885; }
+      .stat-box:nth-child(3) { border-top-color: #c9a87c; }
+      .stat-number {
+        font-size: 32px;
+        font-weight: 700;
+        color: #d4a574;
+      }
+      .stat-box:nth-child(2) .stat-number { color: #7c9885; }
+      .stat-box:nth-child(3) .stat-number { color: #c9a87c; }
+      .stat-label {
+        font-size: 13px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+        margin-top: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="organic-shape"></div>
+        
+        <div class="header">
+            <div class="page-title">Market Opportunity</div>
+            <div class="page-subtitle">Massive &amp; Growing Demand for Premium Wellness</div>
+        </div>
+        
+        <div class="content">
+            <div class="market-sizing">
+                <div class="market-tier">
+                    <div class="tier-label">Total Addressable Market</div>
+                    <div class="tier-value">$4.5T</div>
+                    <div class="tier-desc">Global Wellness Economy</div>
+                    <div class="tier-growth">Growing 9.9% annually through 2028</div>
+                </div>
+                
+                <div class="market-tier">
+                    <div class="tier-label">Serviceable Addressable Market</div>
+                    <div class="tier-value">$1.2T</div>
+                    <div class="tier-desc">Medical Tourism + Luxury Wellness</div>
+                    <div class="tier-growth">Growing 12.1% annually</div>
+                </div>
+                
+                <div class="market-tier">
+                    <div class="tier-label">Serviceable Obtainable Market</div>
+                    <div class="tier-value">$500M</div>
+                    <div class="tier-desc">Premium Wellness Retreats (US)</div>
+                    <div class="tier-growth">Target: 2% market share = $10M ARR</div>
+                </div>
+            </div>
+            
+            <div class="drivers-section">
+                <h3>Market Drivers</h3>
+                
+                <div class="driver-item">
+                    <div class="driver-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="driver-content">
+                        <h4>Post-Pandemic Wellness Boom</h4>
+                        <p>Mental health awareness at all-time high</p>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <div class="driver-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="driver-content">
+                        <h4>Executive Burnout Epidemic</h4>
+                        <p>76% of executives report burnout symptoms</p>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <div class="driver-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="driver-content">
+                        <h4>Wealth Transfer Generation</h4>
+                        <p>$84T transferring to health-conscious millennials</p>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <div class="driver-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div class="driver-content">
+                        <h4>Preventive Healthcare Shift</h4>
+                        <p>From sick care to proactive wellness</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-bar">
+            <div class="stat-box">
+                <div class="stat-number">14M+</div>
+                <div class="stat-label">Americans seeking addiction treatment annually</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-number">$280B</div>
+                <div class="stat-label">US mental health market by 2030</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-number">65%</div>
+                <div class="stat-label">HNWIs prioritize wellness travel</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

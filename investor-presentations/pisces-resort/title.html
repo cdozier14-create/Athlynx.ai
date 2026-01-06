@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(180deg, #0c2340 0%, #1a3a5c 50%, #0c2340 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Cormorant Garamond', serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .wave-shape-1 {
+        position: absolute;
+        top: -50px;
+        right: -100px;
+        width: 500px;
+        height: 300px;
+        background: radial-gradient(ellipse, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
+      }
+      .wave-shape-2 {
+        position: absolute;
+        bottom: -50px;
+        left: -100px;
+        width: 400px;
+        height: 250px;
+        background: radial-gradient(ellipse, rgba(255, 107, 53, 0.08) 0%, transparent 70%);
+      }
+      .content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .icon-container {
+        width: 110px;
+        height: 110px;
+        background: linear-gradient(135deg, #00b4d8 0%, #f4e8c1 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+        font-size: 50px;
+        color: #0c2340;
+      }
+      .company-name {
+        font-size: 68px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #00b4d8 0%, #f4e8c1 50%, #ff6b35 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 15px;
+        letter-spacing: 3px;
+      }
+      .tagline {
+        font-size: 22px;
+        color: #f8f9fa;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        margin-bottom: 35px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+      .parent-company {
+        font-size: 14px;
+        color: #6b8fa3;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-family: 'Inter', sans-serif;
+      }
+      .parent-company span {
+        color: #00b4d8;
+        font-weight: 500;
+      }
+      .amenities-bar {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 50px;
+        z-index: 10;
+      }
+      .amenity-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .amenity-icon {
+        font-size: 18px;
+        color: #00b4d8;
+      }
+      .amenity-text {
+        font-size: 12px;
+        color: #6b8fa3;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="wave-shape-1"></div>
+        <div class="wave-shape-2"></div>
+        
+        <div class="content">
+            <div class="icon-container">
+                <i class="fas fa-anchor"></i>
+            </div>
+            <div class="company-name">Pisces Resort</div>
+            <div class="tagline">Luxury Waterfront Destination</div>
+            <div class="parent-company">A <span>Dozier Holdings Group</span> Company</div>
+        </div>
+        
+        <div class="amenities-bar">
+            <div class="amenity-item">
+                <i class="fas fa-ship amenity-icon"></i>
+                <span class="amenity-text">Marina</span>
+            </div>
+            <div class="amenity-item">
+                <i class="fas fa-spa amenity-icon" style="color: #f4e8c1;"></i>
+                <span class="amenity-text">Spa</span>
+            </div>
+            <div class="amenity-item">
+                <i class="fas fa-utensils amenity-icon" style="color: #ff6b35;"></i>
+                <span class="amenity-text">Dining</span>
+            </div>
+            <div class="amenity-item">
+                <i class="fas fa-water amenity-icon"></i>
+                <span class="amenity-text">Water Sports</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

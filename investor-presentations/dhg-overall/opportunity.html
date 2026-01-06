@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px; /* keep as required */
+        background: linear-gradient(135deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+      }
+      .header {
+        padding: 40px 60px 0 60px; /* do not change upper padding */
+        text-align: center;
+      }
+      .page-label {
+        font-size: 14px;
+        color: #fbbf24;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+      }
+      .big-number {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 96px;
+        font-weight: 900;
+        color: #00d4ff;
+        text-shadow: 0 0 60px rgba(0, 212, 255, 0.5);
+      }
+      .big-label {
+        font-size: 24px;
+        color: #e2e8f0;
+        margin-top: -10px;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px; /* reduced gap */
+        padding: 20px 60px; /* reduced vertical padding */
+      }
+      .stat-box {
+        background: rgba(59, 130, 246, 0.1);
+        border-top: 3px solid #3b82f6;
+        padding: 12px; /* reduced inner padding */
+        text-align: center;
+      }
+      .stat-number {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 36px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 8px;
+      }
+      .stat-label {
+        font-size: 14px;
+        color: #e2e8f0;
+        line-height: 1.4;
+      }
+      .nil-section {
+        padding: 0 60px;
+        margin-top: 8px; /* reduced top margin */
+      }
+      .section-header {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: #fbbf24;
+        margin-bottom: 12px;
+      }
+      .nil-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px; /* reduced gap */
+      }
+      .nil-stat {
+        background: rgba(251, 191, 36, 0.1);
+        border-left: 3px solid #fbbf24;
+        padding: 12px; /* reduced padding */
+      }
+      .nil-number {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        font-weight: 800;
+        color: #fbbf24;
+      }
+      .nil-label {
+        font-size: 14px;
+        color: #e2e8f0;
+        margin-top: 4px;
+      }
+      .gap-insight {
+        margin: 16px 60px; /* reduced margins */
+        background: linear-gradient(90deg, rgba(239, 68, 68, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+        padding: 12px 24px; /* reduced padding */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px; /* reduced gap between items */
+      }
+      .gap-stat {
+        text-align: center;
+      }
+      .gap-number {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        font-weight: 900;
+      }
+      .gap-number.red { color: #ef4444; }
+      .gap-number.green { color: #22c55e; }
+      .gap-label {
+        font-size: 14px;
+        color: #e2e8f0;
+      }
+      .gap-arrow {
+        font-size: 28px; /* slightly reduced arrow size */
+        color: #64748b;
+      }
+      .gap-insight-text {
+        font-size: 16px;
+        color: #fbbf24;
+        font-weight: 600;
+      }
+      .slide-number {
+        position: absolute;
+        bottom: 12px; /* reduced distance from bottom */
+        right: 40px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <p class="page-label">The Opportunity</p>
+            <h1 class="big-number">$40 BILLION</h1>
+            <p class="big-label">Youth Sports Industry</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-box">
+                <p class="stat-number">45M</p>
+                <p class="stat-label">American children in organized sports</p>
+            </div>
+            <div class="stat-box">
+                <p class="stat-number">$693</p>
+                <p class="stat-label">Average family spending per year</p>
+            </div>
+            <div class="stat-box">
+                <p class="stat-number">$100K+</p>
+                <p class="stat-label">Elite family spending per year</p>
+            </div>
+            <div class="stat-box">
+                <p class="stat-number">$5B+</p>
+                <p class="stat-label">Projected NIL market by 2030</p>
+            </div>
+        </div>
+        
+        <div class="nil-section">
+            <h3 class="section-header">NIL Market Explosion</h3>
+            <div class="nil-stats">
+                <div class="nil-stat">
+                    <p class="nil-number">$1.17B</p>
+                    <p class="nil-label">NIL deals in 2023</p>
+                </div>
+                <div class="nil-stat">
+                    <p class="nil-number">500K+</p>
+                    <p class="nil-label">College athletes eligible</p>
+                </div>
+                <div class="nil-stat">
+                    <p class="nil-number">99%</p>
+                    <p class="nil-label">Have no representation</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gap-insight">
+            <div class="gap-stat">
+                <p class="gap-number red">83%</p>
+                <p class="gap-label">Parents believe child will play college</p>
+            </div>
+            <span class="gap-arrow">→</span>
+            <div class="gap-stat">
+                <p class="gap-number green">7%</p>
+                <p class="gap-label">Actually do</p>
+            </div>
+            <span class="gap-arrow">→</span>
+            <p class="gap-insight-text">MASSIVE gap in preparation</p>
+        </div>
+        
+        <div class="slide-number">3 / 12</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(180deg, #0c2340 0%, #1a3a5c 50%, #0c2340 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Cormorant Garamond', serif;
+      }
+      .wave-shape-1 {
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(ellipse, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
+      }
+      .wave-shape-2 {
+        position: absolute;
+        bottom: -100px;
+        left: -100px;
+        width: 350px;
+        height: 350px;
+        background: radial-gradient(ellipse, rgba(255, 107, 53, 0.08) 0%, transparent 70%);
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #00b4d8;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 15px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .ask-section {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .ask-label {
+        font-size: 14px;
+        color: #6b8fa3;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+        font-family: 'Inter', sans-serif;
+      }
+      .ask-amount {
+        font-size: 96px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #00b4d8 0%, #f4e8c1 50%, #ff6b35 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+      }
+      .ask-type {
+        font-size: 28px;
+        color: #f8f9fa;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+      .valuation-box {
+        background: rgba(0, 180, 216, 0.15);
+        border: 2px solid #00b4d8;
+        padding: 16px 32px;
+        margin-top: 25px;
+        display: inline-block;
+      }
+      .valuation-text {
+        font-size: 18px;
+        color: #00b4d8;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+      }
+      .funds-section h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #f8f9fa;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .fund-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 14px;
+      }
+      .fund-bar-container {
+        flex: 1;
+        height: 36px;
+        background: rgba(0, 180, 216, 0.05);
+        position: relative;
+      }
+      .fund-bar {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+      }
+      .fund-bar.property { width: 50%; background: linear-gradient(90deg, #00b4d8, rgba(0, 180, 216, 0.4)); }
+      .fund-bar.construction { width: 30%; background: linear-gradient(90deg, #f4e8c1, rgba(244, 232, 193, 0.4)); }
+      .fund-bar.ops { width: 12%; background: linear-gradient(90deg, #ff6b35, rgba(255, 107, 53, 0.4)); }
+      .fund-bar.marketing { width: 8%; background: linear-gradient(90deg, #6b8fa3, rgba(107, 143, 163, 0.4)); }
+      .fund-label {
+        font-size: 13px;
+        color: #0c2340;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        white-space: nowrap;
+      }
+      .fund-amount {
+        width: 80px;
+        text-align: right;
+        font-size: 14px;
+        color: #f8f9fa;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+      }
+      .fund-percent {
+        width: 50px;
+        text-align: right;
+        font-size: 14px;
+        color: #6b8fa3;
+        font-family: 'Inter', sans-serif;
+      }
+      .contact-section {
+        position: relative;
+        z-index: 10;
+        margin: 25px 60px 0;
+        background: rgba(0, 180, 216, 0.05);
+        border: 1px solid rgba(0, 180, 216, 0.3);
+        padding: 22px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 15px;
+        color: #f8f9fa;
+        font-family: 'Inter', sans-serif;
+      }
+      .contact-item i {
+        color: #00b4d8;
+        font-size: 18px;
+      }
+      .tagline {
+        font-size: 18px;
+        font-weight: 700;
+        color: #ff6b35;
+        font-style: italic;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="wave-shape-1"></div>
+        <div class="wave-shape-2"></div>
+        
+        <div class="header">
+            <div class="page-title">The Ask</div>
+        </div>
+        
+        <div class="content">
+            <div class="ask-section">
+                <div class="ask-label">Seeking Investment</div>
+                <div class="ask-amount">$15M</div>
+                <div class="ask-type">Series A</div>
+                <div class="valuation-box">
+                    <div class="valuation-text">$50M Pre-Money Valuation</div>
+                </div>
+            </div>
+            
+            <div class="funds-section">
+                <h3>Use of Funds</h3>
+                
+                <div class="fund-item">
+                    <div class="fund-bar-container">
+                        <div class="fund-bar property">
+                            <span class="fund-label">Property Acquisition</span>
+                        </div>
+                    </div>
+                    <div class="fund-amount">$7.5M</div>
+                    <div class="fund-percent">50%</div>
+                </div>
+                
+                <div class="fund-item">
+                    <div class="fund-bar-container">
+                        <div class="fund-bar construction">
+                            <span class="fund-label">Construction</span>
+                        </div>
+                    </div>
+                    <div class="fund-amount">$4.5M</div>
+                    <div class="fund-percent">30%</div>
+                </div>
+                
+                <div class="fund-item">
+                    <div class="fund-bar-container">
+                        <div class="fund-bar ops">
+                            <span class="fund-label">Operations</span>
+                        </div>
+                    </div>
+                    <div class="fund-amount">$1.8M</div>
+                    <div class="fund-percent">12%</div>
+                </div>
+                
+                <div class="fund-item">
+                    <div class="fund-bar-container">
+                        <div class="fund-bar marketing">
+                            <span class="fund-label">Marketing</span>
+                        </div>
+                    </div>
+                    <div class="fund-amount">$1.2M</div>
+                    <div class="fund-percent">8%</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    cdozier14@athlynx.ai
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    piscesresort.com
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-building"></i>
+                    Dozier Holdings Group
+                </div>
+            </div>
+            <div class="tagline">"Dreams Do Come True"</div>
+        </div>
+    </div>
+</body>
+</html>

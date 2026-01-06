@@ -14,6 +14,9 @@ import CRMDashboard from "@/pages/CRMDashboard";
 import CRMCommandCenter from "@/pages/CRMCommandCenter";
 import ManusPartnership from "@/pages/ManusPartnership";
 import Pricing from "@/pages/Pricing";
+import PaymentSuccess from "@/pages/PaymentSuccess";
+import NILCalculator from "@/pages/NILCalculator";
+import AthleteWebsiteBuilder from "@/pages/AthleteWebsiteBuilder";
 import TransferPortal from "@/pages/TransferPortal";
 import WizardHub from "@/pages/WizardHub";
 import AgentWizard from "@/pages/wizards/AgentWizard";
@@ -35,6 +38,7 @@ import AISales from "@/pages/AISales";
 import Faith from "@/pages/Faith";
 import AIRecruiter from "@/pages/AIRecruiter";
 import AIContent from "@/pages/AIContent";
+import InfrastructureManager from "@/pages/InfrastructureManager";
 
 function Router() {
   return (
@@ -66,6 +70,15 @@ function Router() {
       <Route path="/find-players" component={TransferPortal} />
       <Route path="/plans" component={Pricing} />
       <Route path="/subscribe" component={Pricing} />
+      <Route path="/payment/success" component={PaymentSuccess} />
+      <Route path="/checkout/success" component={PaymentSuccess} />
+      <Route path="/nil-calculator" component={NILCalculator} />
+      <Route path="/infrastructure" component={InfrastructureManager} />
+      <Route path="/calculator" component={NILCalculator} />
+      <Route path="/valuation" component={NILCalculator} />
+      <Route path="/website-builder" component={AthleteWebsiteBuilder} />
+      <Route path="/build-website" component={AthleteWebsiteBuilder} />
+      <Route path="/athlete-site" component={AthleteWebsiteBuilder} />
       
       {/* AI Wizard Hub & Individual Wizards */}
       <Route path="/wizards" component={WizardHub} />

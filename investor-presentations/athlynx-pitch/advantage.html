@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2744 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .grid-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 20px;
+        color: #10b981;
+        font-weight: 600;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .advantages-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .advantage-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .advantage-number {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #00d4ff 0%, #10b981 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 800;
+        color: #0a1628;
+        flex-shrink: 0;
+      }
+      .advantage-content h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #e2e8f0;
+        margin-bottom: 6px;
+      }
+      .advantage-content p {
+        font-size: 14px;
+        color: #94a3b8;
+        line-height: 1.5;
+        font-family: 'Inter', sans-serif;
+      }
+      .comparison-section h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e2e8f0;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .comparison-table th {
+        padding: 12px 16px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 600;
+        color: #64748b;
+        border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+      }
+      .comparison-table th:first-child {
+        width: 40%;
+      }
+      .comparison-table th.athlynx {
+        color: #00d4ff;
+        text-align: center;
+      }
+      .comparison-table th.others {
+        color: #94a3b8;
+        text-align: center;
+      }
+      .comparison-table td {
+        padding: 14px 16px;
+        font-size: 14px;
+        color: #e2e8f0;
+        border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+        font-family: 'Inter', sans-serif;
+      }
+      .comparison-table td:not(:first-child) {
+        text-align: center;
+      }
+      .check {
+        color: #10b981;
+        font-size: 20px;
+      }
+      .x-mark {
+        color: #ef4444;
+        font-size: 20px;
+      }
+      .partial {
+        color: #f59e0b;
+        font-size: 14px;
+      }
+      .moat-badge {
+        margin-top: 20px;
+        background: rgba(16, 185, 129, 0.1);
+        border: 2px solid #10b981;
+        padding: 16px 24px;
+        text-align: center;
+      }
+      .moat-badge h4 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #10b981;
+        margin-bottom: 6px;
+      }
+      .moat-badge p {
+        font-size: 13px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">Competitive Advantage</div>
+            <div class="page-subtitle">Why We Win</div>
+        </div>
+        
+        <div class="content">
+            <div class="advantages-list">
+                <div class="advantage-item">
+                    <div class="advantage-number">1</div>
+                    <div class="advantage-content">
+                        <h3>AI-First Platform</h3>
+                        <p>Built from ground up with AI — not retrofitted. Every feature leverages machine learning.</p>
+                    </div>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-number">2</div>
+                    <div class="advantage-content">
+                        <h3>Full Journey Coverage</h3>
+                        <p>Only platform covering youth to pro. Competitors focus on single segments.</p>
+                    </div>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-number">3</div>
+                    <div class="advantage-content">
+                        <h3>Parent-Focused Marketing</h3>
+                        <p>We target the decision makers — parents spending $3K-$35K annually on their kids.</p>
+                    </div>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-number">4</div>
+                    <div class="advantage-content">
+                        <h3>Proprietary NIL Algorithm</h3>
+                        <p>Patent-pending valuation model with 50+ data points for accurate athlete pricing.</p>
+                    </div>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-number">5</div>
+                    <div class="advantage-content">
+                        <h3>First-Mover Advantage</h3>
+                        <p>No unified platform exists. We're building the category leader.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <h3>Feature Comparison</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="athlynx">ATHLYNX</th>
+                            <th class="others">Others</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AI-Powered Platform</td>
+                            <td><span class="check"><i class="fas fa-check-circle"></i></span></td>
+                            <td><span class="partial">Limited</span></td>
+                        </tr>
+                        <tr>
+                            <td>Youth to Pro Coverage</td>
+                            <td><span class="check"><i class="fas fa-check-circle"></i></span></td>
+                            <td><span class="x-mark"><i class="fas fa-times-circle"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>NIL Valuation</td>
+                            <td><span class="check"><i class="fas fa-check-circle"></i></span></td>
+                            <td><span class="partial">Basic</span></td>
+                        </tr>
+                        <tr>
+                            <td>Transfer Portal AI</td>
+                            <td><span class="check"><i class="fas fa-check-circle"></i></span></td>
+                            <td><span class="x-mark"><i class="fas fa-times-circle"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Content Generation</td>
+                            <td><span class="check"><i class="fas fa-check-circle"></i></span></td>
+                            <td><span class="x-mark"><i class="fas fa-times-circle"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Athlete Websites</td>
+                            <td><span class="check"><i class="fas fa-check-circle"></i></span></td>
+                            <td><span class="partial">Limited</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="moat-badge">
+                    <h4><i class="fas fa-shield-alt"></i> DEFENSIBLE MOAT</h4>
+                    <p>Network effects + proprietary data + AI models = sustainable competitive advantage</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

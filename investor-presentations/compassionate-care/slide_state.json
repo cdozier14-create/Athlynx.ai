@@ -1,0 +1,36 @@
+{
+  "project_info": {
+    "title": "Compassionate Care, LLC",
+    "created": 1767739159.3203497,
+    "last_updated": 1767739248.4879043,
+    "total_slides": 3
+  },
+  "slides": {
+    "title": "edited",
+    "services": "edited",
+    "ask": "edited"
+  },
+  "outline": [
+    {
+      "id": "title",
+      "title": "Compassionate Care, LLC",
+      "summary": "Premium home healthcare and senior care services",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "services",
+      "title": "Our Services",
+      "summary": "Home health, hospice, memory care, companion care",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "ask",
+      "title": "The Ask",
+      "summary": "$3M Series A for expansion and licensing",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    }
+  ]
+}

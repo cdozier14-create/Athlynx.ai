@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(180deg, #0a0a12 0%, #12121f 50%, #0a0a12 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .grid-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(rgba(0, 255, 136, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 255, 136, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+      .header {
+        padding: 40px 60px 15px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #00ff88;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+      }
+      .revenue-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        padding: 15px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .revenue-stream {
+        background: rgba(0, 255, 136, 0.03);
+        border-top: 3px solid #00ff88;
+        padding: 18px 14px;
+        text-align: center;
+      }
+      .revenue-stream:nth-child(2) { border-top-color: #8b5cf6; }
+      .revenue-stream:nth-child(3) { border-top-color: #00d4ff; }
+      .revenue-stream:nth-child(4) { border-top-color: #8b5cf6; }
+      .stream-icon {
+        width: 55px;
+        height: 55px;
+        margin: 0 auto 12px;
+        background: linear-gradient(135deg, #00ff88 0%, #8b5cf6 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #0a0a12;
+      }
+      .revenue-stream:nth-child(2) .stream-icon { background: linear-gradient(135deg, #8b5cf6 0%, #00d4ff 100%); }
+      .revenue-stream:nth-child(3) .stream-icon { background: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%); }
+      .revenue-stream:nth-child(4) .stream-icon { background: linear-gradient(135deg, #8b5cf6 0%, #00ff88 100%); }
+      .stream-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #e2e8f0;
+        margin-bottom: 8px;
+      }
+      .stream-fee {
+        font-size: 28px;
+        font-weight: 700;
+        color: #00ff88;
+        margin-bottom: 5px;
+      }
+      .revenue-stream:nth-child(2) .stream-fee { color: #8b5cf6; }
+      .revenue-stream:nth-child(3) .stream-fee { color: #00d4ff; }
+      .revenue-stream:nth-child(4) .stream-fee { color: #8b5cf6; }
+      .stream-unit {
+        font-size: 11px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 10px;
+      }
+      .stream-features {
+        list-style: none;
+        text-align: left;
+      }
+      .stream-features li {
+        font-size: 11px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 4px;
+        padding-left: 12px;
+        position: relative;
+      }
+      .stream-features li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #00ff88;
+        font-size: 10px;
+      }
+      .projections {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 18px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .projection-box {
+        background: rgba(139, 92, 246, 0.08);
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        padding: 16px 18px;
+        text-align: center;
+      }
+      .projection-year {
+        font-size: 12px;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+        font-family: 'Inter', sans-serif;
+      }
+      .projection-value {
+        font-size: 34px;
+        font-weight: 700;
+        color: #8b5cf6;
+      }
+      .projection-label {
+        font-size: 12px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+        margin-top: 4px;
+      }
+      .margin-note {
+        position: relative;
+        z-index: 10;
+        margin: 12px 60px 0;
+        background: rgba(0, 255, 136, 0.05);
+        border: 1px solid rgba(0, 255, 136, 0.3);
+        padding: 14px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+      .margin-note i {
+        color: #00ff88;
+        font-size: 18px;
+      }
+      .margin-note span {
+        font-size: 15px;
+        color: #e2e8f0;
+        font-family: 'Inter', sans-serif;
+      }
+      .margin-note strong {
+        color: #00ff88;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">Revenue Model</div>
+            <div class="page-subtitle">Multiple High-Margin Revenue Streams</div>
+        </div>
+        
+        <div class="revenue-grid">
+            <div class="revenue-stream">
+                <div class="stream-icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="stream-title">Trading Fees</div>
+                <div class="stream-fee">0.1-0.5%</div>
+                <div class="stream-unit">per trade</div>
+                <ul class="stream-features">
+                    <li>Spot & futures trading</li>
+                    <li>Volume-based discounts</li>
+                    <li>Maker/taker model</li>
+                </ul>
+            </div>
+            
+            <div class="revenue-stream">
+                <div class="stream-icon"><i class="fas fa-palette"></i></div>
+                <div class="stream-title">NFT Royalties</div>
+                <div class="stream-fee">2.5%</div>
+                <div class="stream-unit">marketplace fee</div>
+                <ul class="stream-features">
+                    <li>Primary sales</li>
+                    <li>Secondary royalties</li>
+                    <li>Creator partnerships</li>
+                </ul>
+            </div>
+            
+            <div class="revenue-stream">
+                <div class="stream-icon"><i class="fas fa-coins"></i></div>
+                <div class="stream-title">Staking Rewards</div>
+                <div class="stream-fee">15-25%</div>
+                <div class="stream-unit">revenue share</div>
+                <ul class="stream-features">
+                    <li>Validator operations</li>
+                    <li>Liquidity provision</li>
+                    <li>Yield optimization</li>
+                </ul>
+            </div>
+            
+            <div class="revenue-stream">
+                <div class="stream-icon"><i class="fas fa-building"></i></div>
+                <div class="stream-title">Enterprise</div>
+                <div class="stream-fee">$50K+</div>
+                <div class="stream-unit">per contract</div>
+                <ul class="stream-features">
+                    <li>White-label solutions</li>
+                    <li>API access</li>
+                    <li>Custom integrations</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="projections">
+            <div class="projection-box">
+                <div class="projection-year">Year 1</div>
+                <div class="projection-value">$2M</div>
+                <div class="projection-label">Annual Revenue</div>
+            </div>
+            
+            <div class="projection-box">
+                <div class="projection-year">Year 3</div>
+                <div class="projection-value">$15M</div>
+                <div class="projection-label">Annual Revenue</div>
+            </div>
+            
+            <div class="projection-box">
+                <div class="projection-year">Year 5</div>
+                <div class="projection-value">$50M</div>
+                <div class="projection-label">Annual Revenue</div>
+            </div>
+        </div>
+        
+        <div class="margin-note">
+            <i class="fas fa-chart-line"></i>
+            <span>Blended Gross Margin: <strong>85%</strong> | Target Trading Volume: <strong>$1B/month by Year 3</strong></span>
+        </div>
+    </div>
+</body>
+</html>

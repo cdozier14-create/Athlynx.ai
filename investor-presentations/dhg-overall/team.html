@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+      }
+      .header {
+        padding: 40px 60px 0 60px;
+        text-align: center;
+      }
+      .page-label {
+        font-size: 14px;
+        color: #fbbf24;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+      }
+      .page-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        color: #00d4ff;
+      }
+      .founder-section {
+        display: flex;
+        justify-content: center;
+        padding: 24px 60px 16px 60px;
+      }
+      .founder-card {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(59, 130, 246, 0.1) 100%);
+        border-top: 4px solid #00d4ff;
+        padding: 20px 40px;
+        max-width: 600px;
+      }
+      .founder-avatar {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .founder-avatar i {
+        font-size: 36px;
+        color: white;
+      }
+      .founder-info {
+        flex: 1;
+      }
+      .founder-name {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 4px;
+      }
+      .founder-role {
+        font-size: 14px;
+        color: #00d4ff;
+        margin-bottom: 4px;
+      }
+      .founder-equity {
+        font-size: 12px;
+        color: #fbbf24;
+        font-weight: 600;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        padding: 0 60px;
+      }
+      .team-member {
+        background: rgba(59, 130, 246, 0.08);
+        border-top: 3px solid #3b82f6;
+        padding: 16px;
+        text-align: center;
+      }
+      .member-avatar {
+        width: 56px;
+        height: 56px;
+        background: rgba(59, 130, 246, 0.3);
+        margin: 0 auto 12px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .member-avatar i {
+        font-size: 24px;
+        color: #3b82f6;
+      }
+      .member-name {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 4px;
+      }
+      .member-role {
+        font-size: 12px;
+        color: #94a3b8;
+        margin-bottom: 4px;
+      }
+      .member-equity {
+        font-size: 11px;
+        color: #fbbf24;
+        font-weight: 600;
+      }
+      .advisors-section {
+        padding: 24px 60px 0 60px;
+      }
+      .advisors-header {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #fbbf24;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .advisors-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .advisor-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: rgba(251, 191, 36, 0.08);
+        border-left: 3px solid #fbbf24;
+        padding: 12px 16px;
+      }
+      .advisor-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(251, 191, 36, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .advisor-icon i {
+        font-size: 18px;
+        color: #fbbf24;
+      }
+      .advisor-info {
+        flex: 1;
+      }
+      .advisor-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+      }
+      .advisor-role {
+        font-size: 12px;
+        color: #94a3b8;
+      }
+      .slide-number {
+        position: absolute;
+        bottom: 12px;
+        right: 40px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <p class="page-label">The Perfect Storm</p>
+            <h1 class="page-title">Leadership Team</h1>
+        </div>
+        
+        <div class="founder-section">
+            <div class="founder-card">
+                <div class="founder-avatar">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="founder-info">
+                    <h3 class="founder-name">Chad Allen Dozier Sr.</h3>
+                    <p class="founder-role">Founder & CEO</p>
+                    <p class="founder-equity">51% Controlling Interest • Super Voting Rights</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar"><i class="fas fa-cogs"></i></div>
+                <h4 class="member-name">Glenn Tse</h4>
+                <p class="member-role">COO / Secretary</p>
+                <p class="member-equity">15% Class B</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar"><i class="fas fa-code"></i></div>
+                <h4 class="member-name">Lee Byas</h4>
+                <p class="member-role">CTO</p>
+                <p class="member-equity">10% Class B</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar"><i class="fas fa-chart-pie"></i></div>
+                <h4 class="member-name">Jimmy Nguyen</h4>
+                <p class="member-role">CFO</p>
+                <p class="member-equity">10% Class B</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar"><i class="fas fa-bullhorn"></i></div>
+                <h4 class="member-name">Andy Nguyen</h4>
+                <p class="member-role">CMO</p>
+                <p class="member-equity">10% Class B</p>
+            </div>
+        </div>
+        
+        <div class="advisors-section">
+            <h3 class="advisors-header">Board Advisors</h3>
+            <div class="advisors-grid">
+                <div class="advisor-card">
+                    <div class="advisor-icon"><i class="fas fa-gavel"></i></div>
+                    <div class="advisor-info">
+                        <h4 class="advisor-name">David Roland Ford Sr.</h4>
+                        <p class="advisor-role">Legal Advisor • Board Director</p>
+                    </div>
+                </div>
+                <div class="advisor-card">
+                    <div class="advisor-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="advisor-info">
+                        <h4 class="advisor-name">Nicki Simpson Leggett</h4>
+                        <p class="advisor-role">Successor Trustee • Board Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-number">9 / 12</div>
+    </div>
+</body>
+</html>

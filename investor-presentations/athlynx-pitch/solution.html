@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2744 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .grid-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+      .header {
+        padding: 40px 60px 8px; /* keep top padding (40) per requirement, reduce bottom */
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 10px;
+      }
+      .page-subtitle {
+        font-size: 24px;
+        color: #e2e8f0;
+        font-weight: 600;
+      }
+      .tagline {
+        font-size: 16px;
+        color: #10b981;
+        margin-top: 8px;
+        font-family: 'Inter', sans-serif;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px; /* reduced gap to save vertical space */
+        padding: 20px 60px; /* reduced vertical padding */
+        position: relative;
+        z-index: 10;
+      }
+      .feature-item {
+        background: rgba(0, 212, 255, 0.05);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        padding: 16px; /* reduced inner padding */
+        text-align: center;
+      }
+      .feature-icon {
+        width: 56px; /* slightly smaller icon container */
+        height: 56px;
+        margin: 0 auto 12px; /* reduced bottom margin */
+        background: linear-gradient(135deg, #00d4ff 0%, #10b981 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px; /* font-size kept the same */
+        color: #0a1628;
+      }
+      .feature-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #e2e8f0;
+        margin-bottom: 8px; /* slightly reduced */
+      }
+      .feature-desc {
+        font-size: 14px;
+        color: #94a3b8;
+        line-height: 1.5;
+        font-family: 'Inter', sans-serif;
+      }
+      .journey-bar {
+        position: relative;
+        z-index: 10;
+        margin: 8px 60px 0; /* reduced top margin to tighten layout */
+        background: rgba(0, 212, 255, 0.1);
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .journey-step {
+        text-align: center;
+        flex: 1;
+      }
+      .journey-step .age {
+        font-size: 24px;
+        font-weight: 700;
+        color: #00d4ff;
+      }
+      .journey-step .label {
+        font-size: 12px;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .journey-arrow {
+        color: #f59e0b;
+        font-size: 24px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">Our Solution</div>
+            <div class="page-subtitle">ATHLYNX: One Platform, Entire Journey</div>
+            <div class="tagline">From age 6 to retirement — we're there every step</div>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                <div class="feature-title">AI NIL Valuation</div>
+                <div class="feature-desc">Proprietary algorithm calculates athlete market value based on performance, social reach, and market factors</div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="feature-title">Transfer Portal</div>
+                <div class="feature-desc">AI-powered matching connects athletes with programs that fit their skills, academics, and goals</div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                <div class="feature-title">Recruiting Websites</div>
+                <div class="feature-desc">Professional athlete profiles with highlight reels, stats, and direct coach connections</div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-magic"></i></div>
+                <div class="feature-title">Content Generation</div>
+                <div class="feature-desc">AI creates social media content, press releases, and marketing materials automatically</div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="feature-title">Career Management</div>
+                <div class="feature-desc">Contract tracking, financial planning, and business development for athlete brands</div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+                <div class="feature-title">Performance Analytics</div>
+                <div class="feature-desc">Track stats, compare to peers, identify improvement areas with data-driven insights</div>
+            </div>
+        </div>
+        
+        <div class="journey-bar">
+            <div class="journey-step">
+                <div class="age">6-14</div>
+                <div class="label">Youth Sports</div>
+            </div>
+            <div class="journey-arrow"><i class="fas fa-chevron-right"></i></div>
+            <div class="journey-step">
+                <div class="age">14-18</div>
+                <div class="label">High School</div>
+            </div>
+            <div class="journey-arrow"><i class="fas fa-chevron-right"></i></div>
+            <div class="journey-step">
+                <div class="age">18-23</div>
+                <div class="label">College + NIL</div>
+            </div>
+            <div class="journey-arrow"><i class="fas fa-chevron-right"></i></div>
+            <div class="journey-step">
+                <div class="age">23+</div>
+                <div class="label">Pro & Beyond</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

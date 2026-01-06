@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #1a1814 0%, #2a2520 50%, #1a1814 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Playfair Display', serif;
+      }
+      .organic-shape {
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(ellipse, rgba(212, 165, 116, 0.08) 0%, transparent 70%);
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #d4a574;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .vision-statement {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+      .vision-text {
+        font-size: 22px;
+        color: #f5f0eb;
+        line-height: 1.6;
+        font-style: italic;
+        border-left: 3px solid #d4a574;
+        padding-left: 25px;
+      }
+      .pillars {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .pillar {
+        background: rgba(212, 165, 116, 0.05);
+        border-top: 2px solid #d4a574;
+        padding: 18px 15px;
+        text-align: center;
+      }
+      .pillar:nth-child(2) { border-top-color: #7c9885; }
+      .pillar:nth-child(3) { border-top-color: #c9a87c; }
+      .pillar:nth-child(4) { border-top-color: #d4a574; }
+      .pillar-icon {
+        font-size: 28px;
+        color: #d4a574;
+        margin-bottom: 10px;
+      }
+      .pillar:nth-child(2) .pillar-icon { color: #7c9885; }
+      .pillar:nth-child(3) .pillar-icon { color: #c9a87c; }
+      .pillar-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #f5f0eb;
+        margin-bottom: 5px;
+      }
+      .pillar-desc {
+        font-size: 12px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+      }
+      .target-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .target-section h3 {
+        font-size: 20px;
+        color: #d4a574;
+        margin-bottom: 5px;
+      }
+      .target-item {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        background: rgba(124, 152, 133, 0.08);
+        padding: 18px 20px;
+        border-left: 3px solid #7c9885;
+      }
+      .target-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #7c9885 0%, #d4a574 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #1a1814;
+      }
+      .target-content h4 {
+        font-size: 17px;
+        color: #f5f0eb;
+        margin-bottom: 4px;
+      }
+      .target-content p {
+        font-size: 13px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+      }
+      .differentiator {
+        background: rgba(212, 165, 116, 0.1);
+        border: 1px solid rgba(212, 165, 116, 0.3);
+        padding: 20px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .differentiator-text {
+        font-size: 18px;
+        color: #d4a574;
+        font-weight: 600;
+      }
+      .differentiator-sub {
+        font-size: 13px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+        margin-top: 8px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="organic-shape"></div>
+        
+        <div class="header">
+            <div class="page-title">The Vision</div>
+            <div class="page-subtitle">Where Luxury Meets Healing</div>
+        </div>
+        
+        <div class="content">
+            <div class="vision-statement">
+                <div class="vision-text">
+                    "A sanctuary where world-class hospitality meets cutting-edge healthcare—
+                    transforming lives through holistic wellness, advanced medicine, and 
+                    the healing power of unconditional love."
+                </div>
+                
+                <div class="pillars">
+                    <div class="pillar">
+                        <div class="pillar-icon"><i class="fas fa-crown"></i></div>
+                        <div class="pillar-title">Luxury</div>
+                        <div class="pillar-desc">5-star hospitality experience</div>
+                    </div>
+                    
+                    <div class="pillar">
+                        <div class="pillar-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="pillar-title">Wellness</div>
+                        <div class="pillar-desc">Mind, body, spirit balance</div>
+                    </div>
+                    
+                    <div class="pillar">
+                        <div class="pillar-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="pillar-title">Healthcare</div>
+                        <div class="pillar-desc">Medical-grade treatments</div>
+                    </div>
+                    
+                    <div class="pillar">
+                        <div class="pillar-icon"><i class="fas fa-robot"></i></div>
+                        <div class="pillar-title">Technology</div>
+                        <div class="pillar-desc">AI & robot companions</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="target-section">
+                <h3>Target Market</h3>
+                
+                <div class="target-item">
+                    <div class="target-icon"><i class="fas fa-gem"></i></div>
+                    <div class="target-content">
+                        <h4>High-Net-Worth Individuals</h4>
+                        <p>Seeking exclusive, private wellness experiences</p>
+                    </div>
+                </div>
+                
+                <div class="target-item">
+                    <div class="target-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="target-content">
+                        <h4>C-Suite Executives</h4>
+                        <p>Executive burnout recovery and optimization</p>
+                    </div>
+                </div>
+                
+                <div class="target-item">
+                    <div class="target-icon"><i class="fas fa-medal"></i></div>
+                    <div class="target-content">
+                        <h4>Professional Athletes</h4>
+                        <p>Recovery, performance, and mental health</p>
+                    </div>
+                </div>
+                
+                <div class="differentiator">
+                    <div class="differentiator-text">"Agape" = Unconditional Love</div>
+                    <div class="differentiator-sub">The highest form of love—our foundation for healing</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

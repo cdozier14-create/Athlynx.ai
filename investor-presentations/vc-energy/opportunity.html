@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1f1a 0%, #0f2d25 50%, #0a1f1a 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .organic-shape {
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(ellipse, rgba(34, 197, 94, 0.08) 0%, transparent 70%);
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #22c55e;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #6b7280;
+        font-family: 'Inter', sans-serif;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 15px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .stats-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .big-stat {
+        background: rgba(34, 197, 94, 0.05);
+        border-left: 4px solid #22c55e;
+        padding: 16px 20px;
+      }
+      .big-stat:nth-child(2) { border-left-color: #3b82f6; }
+      .big-stat:nth-child(3) { border-left-color: #fbbf24; }
+      .stat-number {
+        font-size: 48px;
+        font-weight: 700;
+        color: #22c55e;
+        line-height: 1;
+      }
+      .big-stat:nth-child(2) .stat-number { color: #3b82f6; }
+      .big-stat:nth-child(3) .stat-number { color: #fbbf24; }
+      .stat-label {
+        font-size: 16px;
+        color: #f0fdf4;
+        margin-top: 8px;
+        font-weight: 600;
+      }
+      .stat-desc {
+        font-size: 13px;
+        color: #6b7280;
+        font-family: 'Inter', sans-serif;
+        margin-top: 4px;
+      }
+      .drivers-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .drivers-section h3 {
+        font-size: 20px;
+        color: #22c55e;
+        margin-bottom: 5px;
+      }
+      .driver-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(59, 130, 246, 0.05);
+        padding: 14px 16px;
+        border-left: 3px solid #3b82f6;
+      }
+      .driver-icon {
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #22c55e 0%, #3b82f6 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: #0a1f1a;
+      }
+      .driver-content h4 {
+        font-size: 15px;
+        color: #f0fdf4;
+        margin-bottom: 3px;
+      }
+      .driver-content p {
+        font-size: 12px;
+        color: #6b7280;
+        font-family: 'Inter', sans-serif;
+      }
+      .incentives-bar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 15px 60px;
+        position: relative;
+        z-index: 10;
+        margin-top: 10px;
+      }
+      .incentive-box {
+        background: rgba(251, 191, 36, 0.08);
+        border-top: 2px solid #fbbf24;
+        padding: 14px 16px;
+        text-align: center;
+      }
+      .incentive-value {
+        font-size: 28px;
+        font-weight: 700;
+        color: #fbbf24;
+      }
+      .incentive-label {
+        font-size: 12px;
+        color: #6b7280;
+        font-family: 'Inter', sans-serif;
+        margin-top: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="organic-shape"></div>
+        
+        <div class="header">
+            <div class="page-title">The Opportunity</div>
+            <div class="page-subtitle">Clean Energy Transition is Accelerating</div>
+        </div>
+        
+        <div class="content">
+            <div class="stats-section">
+                <div class="big-stat">
+                    <div class="stat-number">$1.5T</div>
+                    <div class="stat-label">Clean Energy Market by 2030</div>
+                    <div class="stat-desc">Growing at 16.5% CAGR</div>
+                </div>
+                
+                <div class="big-stat">
+                    <div class="stat-number">$369B</div>
+                    <div class="stat-label">Inflation Reduction Act Investment</div>
+                    <div class="stat-desc">Largest climate investment in US history</div>
+                </div>
+                
+                <div class="big-stat">
+                    <div class="stat-number">2050</div>
+                    <div class="stat-label">Net Zero Target</div>
+                    <div class="stat-desc">140+ countries committed</div>
+                </div>
+            </div>
+            
+            <div class="drivers-section">
+                <h3>Market Drivers</h3>
+                
+                <div class="driver-item">
+                    <div class="driver-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="driver-content">
+                        <h4>Corporate ESG Mandates</h4>
+                        <p>90% of S&P 500 now report ESG metrics</p>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <div class="driver-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="driver-content">
+                        <h4>Cost Parity Achieved</h4>
+                        <p>Solar now cheapest electricity source in history</p>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <div class="driver-icon"><i class="fas fa-car"></i></div>
+                    <div class="driver-content">
+                        <h4>EV Revolution</h4>
+                        <p>50% of new car sales will be EV by 2030</p>
+                    </div>
+                </div>
+                
+                <div class="driver-item">
+                    <div class="driver-icon"><i class="fas fa-home"></i></div>
+                    <div class="driver-content">
+                        <h4>Energy Independence</h4>
+                        <p>Consumers seeking grid independence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="incentives-bar">
+            <div class="incentive-box">
+                <div class="incentive-value">30%</div>
+                <div class="incentive-label">Solar Investment Tax Credit (ITC)</div>
+            </div>
+            
+            <div class="incentive-box">
+                <div class="incentive-value">$7,500</div>
+                <div class="incentive-label">EV Tax Credit per Vehicle</div>
+            </div>
+            
+            <div class="incentive-box">
+                <div class="incentive-value">10-Year</div>
+                <div class="incentive-label">Production Tax Credit Extension</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

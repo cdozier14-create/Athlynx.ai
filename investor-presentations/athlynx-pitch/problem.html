@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2744 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .grid-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+      .header {
+        padding: 40px 60px 30px;
+        position: relative;
+        z-index: 10;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding: 0 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .left-section {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+      .big-number {
+        font-size: 120px;
+        font-weight: 800;
+        background: linear-gradient(135deg, #00d4ff 0%, #10b981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+      }
+      .big-label {
+        font-size: 24px;
+        color: #e2e8f0;
+        font-weight: 600;
+        margin-top: -10px;
+      }
+      .problem-text {
+        font-size: 18px;
+        color: #94a3b8;
+        line-height: 1.6;
+        font-family: 'Inter', sans-serif;
+      }
+      .right-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .stat-card {
+        background: rgba(0, 212, 255, 0.05);
+        border-left: 4px solid #00d4ff;
+        padding: 20px 25px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .stat-card.amber {
+        border-left-color: #f59e0b;
+      }
+      .stat-card.emerald {
+        border-left-color: #10b981;
+      }
+      .stat-card.red {
+        border-left-color: #ef4444;
+      }
+      .stat-icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #00d4ff;
+      }
+      .stat-card.amber .stat-icon { color: #f59e0b; }
+      .stat-card.emerald .stat-icon { color: #10b981; }
+      .stat-card.red .stat-icon { color: #ef4444; }
+      .stat-content h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #e2e8f0;
+        margin-bottom: 4px;
+      }
+      .stat-content p {
+        font-size: 14px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+      }
+      .disconnect-box {
+        background: rgba(239, 68, 68, 0.1);
+        border: 2px solid #ef4444;
+        padding: 25px;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .disconnect-numbers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+      .disconnect-stat {
+        text-align: center;
+      }
+      .disconnect-stat .number {
+        font-size: 48px;
+        font-weight: 800;
+        color: #e2e8f0;
+      }
+      .disconnect-stat .label {
+        font-size: 12px;
+        color: #94a3b8;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .disconnect-arrow {
+        font-size: 32px;
+        color: #ef4444;
+      }
+      .disconnect-message {
+        margin-top: 15px;
+        font-size: 16px;
+        color: #ef4444;
+        font-weight: 600;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">The $40B Problem</div>
+            <div class="page-subtitle">Youth Sports Industry Crisis</div>
+        </div>
+        
+        <div class="content">
+            <div class="left-section">
+                <div>
+                    <div class="big-number">$40B</div>
+                    <div class="big-label">Youth Sports Market</div>
+                </div>
+                <p class="problem-text">
+                    Parents are spending unprecedented amounts on youth sports, 
+                    chasing college scholarships and professional dreams. Yet there's 
+                    no unified platform to guide them from youth leagues to college 
+                    recruitment to NIL opportunities.
+                </p>
+            </div>
+            
+            <div class="right-section">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="stat-content">
+                        <h3>$3K - $35K+</h3>
+                        <p>Annual spending per child on travel sports</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card amber">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-content">
+                        <h3>60 Million</h3>
+                        <p>Youth athletes in the United States</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card emerald">
+                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="stat-content">
+                        <h3>8% Annual Growth</h3>
+                        <p>Youth sports market expansion rate</p>
+                    </div>
+                </div>
+                
+                <div class="disconnect-box">
+                    <div class="disconnect-numbers">
+                        <div class="disconnect-stat">
+                            <div class="number">83%</div>
+                            <div class="label">Parents believe</div>
+                        </div>
+                        <div class="disconnect-arrow"><i class="fas fa-arrow-right"></i></div>
+                        <div class="disconnect-stat">
+                            <div class="number">7%</div>
+                            <div class="label">Actually play college</div>
+                        </div>
+                    </div>
+                    <div class="disconnect-message">THE EXPECTATION GAP</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

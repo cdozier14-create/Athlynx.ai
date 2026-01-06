@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a0f1a 0%, #0d1526 50%, #0a0f1a 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .circuit-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .header {
+        padding: 40px 60px 15px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 22px;
+        color: #e2e8f0;
+        font-weight: 600;
+      }
+      .tagline {
+        font-size: 16px;
+        color: #10b981;
+        margin-top: 8px;
+        font-family: 'Inter', sans-serif;
+      }
+      /* Reduced vertical padding to bring total height under 720px */
+      .solutions-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 13px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .solution-item {
+        background: rgba(0, 212, 255, 0.05);
+        border-top: 4px solid #00d4ff;
+        padding: 25px 20px;
+        text-align: center;
+      }
+      .solution-item:nth-child(2) { border-top-color: #8b5cf6; }
+      .solution-item:nth-child(3) { border-top-color: #10b981; }
+      .solution-item:nth-child(4) { border-top-color: #f59e0b; }
+      .solution-item:nth-child(5) { border-top-color: #ec4899; }
+      .solution-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 15px;
+        background: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: #0a0f1a;
+      }
+      .solution-item:nth-child(2) .solution-icon { background: linear-gradient(135deg, #8b5cf6 0%, #00d4ff 100%); }
+      .solution-item:nth-child(3) .solution-icon { background: linear-gradient(135deg, #10b981 0%, #00d4ff 100%); }
+      .solution-item:nth-child(4) .solution-icon { background: linear-gradient(135deg, #f59e0b 0%, #00d4ff 100%); }
+      .solution-item:nth-child(5) .solution-icon { background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); }
+      .solution-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e2e8f0;
+        margin-bottom: 10px;
+      }
+      .solution-desc {
+        font-size: 14px;
+        color: #94a3b8;
+        line-height: 1.5;
+        font-family: 'Inter', sans-serif;
+      }
+      .bottom-section {
+        position: relative;
+        z-index: 10;
+        margin: 15px 60px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .benefit-box {
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        padding: 20px 25px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .benefit-box.purple {
+        background: rgba(139, 92, 246, 0.1);
+        border-color: rgba(139, 92, 246, 0.3);
+      }
+      .benefit-icon {
+        font-size: 28px;
+        color: #10b981;
+      }
+      .benefit-box.purple .benefit-icon { color: #8b5cf6; }
+      .benefit-content h3 {
+        font-size: 22px;
+        font-weight: 800;
+        color: #e2e8f0;
+      }
+      .benefit-content p {
+        font-size: 14px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="circuit-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">Our Solution</div>
+            <div class="page-subtitle">Full-Stack Technology Services</div>
+            <div class="tagline">Enterprise-grade solutions at startup speed</div>
+        </div>
+        
+        <div class="solutions-grid">
+            <div class="solution-item">
+                <div class="solution-icon"><i class="fas fa-brain"></i></div>
+                <div class="solution-title">AI Integration</div>
+                <div class="solution-desc">Custom AI/ML solutions, LLM integration, computer vision, and predictive analytics</div>
+            </div>
+            
+            <div class="solution-item">
+                <div class="solution-icon"><i class="fas fa-cloud"></i></div>
+                <div class="solution-title">Cloud Architecture</div>
+                <div class="solution-desc">AWS, Azure, GCP expertise. Scalable infrastructure that grows with you</div>
+            </div>
+            
+            <div class="solution-item">
+                <div class="solution-icon"><i class="fas fa-code"></i></div>
+                <div class="solution-title">Custom Development</div>
+                <div class="solution-desc">Full-stack web, mobile, and enterprise applications built to spec</div>
+            </div>
+            
+            <div class="solution-item">
+                <div class="solution-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="solution-title">Security & Compliance</div>
+                <div class="solution-desc">SOC 2, HIPAA, GDPR compliance. Penetration testing and security audits</div>
+            </div>
+            
+            <div class="solution-item">
+                <div class="solution-icon"><i class="fas fa-chart-bar"></i></div>
+                <div class="solution-title">Data Analytics</div>
+                <div class="solution-desc">Business intelligence, data warehousing, and real-time dashboards</div>
+            </div>
+        </div>
+        
+        <div class="bottom-section">
+            <div class="benefit-box">
+                <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+                <div class="benefit-content">
+                    <h3>10x Faster Delivery</h3>
+                    <p>Weeks not years. AI-accelerated development</p>
+                </div>
+            </div>
+            <div class="benefit-box purple">
+                <div class="benefit-icon"><i class="fas fa-piggy-bank"></i></div>
+                <div class="benefit-content">
+                    <h3>50% Cost Reduction</h3>
+                    <p>Compared to traditional consulting firms</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

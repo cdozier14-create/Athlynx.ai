@@ -1,59 +1,107 @@
 {
   "project_info": {
-    "title": "DOZIER HOLDINGS GROUP, LLC",
-    "created": 1767685238.304778,
-    "last_updated": 1767685238.3047788,
-    "total_slides": 6
+    "title": "Dozier Holdings Group",
+    "created": 1767736600.482414,
+    "last_updated": 1767736850.5881462,
+    "total_slides": 12
   },
   "slides": {
-    "title": "edit_pending",
-    "vision": "edit_pending",
-    "leadership": "edit_pending",
-    "portfolio": "edit_pending",
-    "investment": "edit_pending",
-    "contact": "edit_pending"
+    "title": "edited",
+    "visionary": "edited",
+    "opportunity": "edited",
+    "solution": "edited",
+    "portfolio": "edited",
+    "revenue": "edited",
+    "traction": "edited",
+    "advantage": "edited",
+    "team": "edited",
+    "funds": "edited",
+    "exit": "edited",
+    "ask": "edited"
   },
   "outline": [
     {
       "id": "title",
-      "title": "DOZIER HOLDINGS GROUP, LLC",
-      "summary": "Building Tomorrow's Empire Today - A Diversified Holdings Company",
-      "image_plan": "/home/ubuntu/upload/pasted_file_CMai7m_image.png - Image 24 is the DHG Crab Shield logo, which is appropriate for the overall holding company title slide.",
+      "title": "Dozier Holdings Group",
+      "summary": "Title slide with company name, tagline 'Building Tomorrow's Champions Today', and founder quote",
+      "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
     {
-      "id": "vision",
-      "title": "One Empire. Twelve Companies. Unlimited Potential.",
-      "summary": "Technology, Real Estate, Trading divisions with $500B+ TAM",
-      "image_plan": "/home/ubuntu/upload/2ab9dfe08c10c06f2b68440e4ca21377.JPG - Image 11 shows a modern building with solar panels, representing the Technology and Real Estate divisions and the concept of \"Building Tomorrow's Empire Today.\"",
+      "id": "visionary",
+      "title": "The Visionary",
+      "summary": "Chad Allen Dozier Sr. profile - 20+ years experience, patent holder, philosophy and vision",
+      "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
     {
-      "id": "leadership",
-      "title": "The Founders",
-      "summary": "Chad A. Dozier Sr., Glenn Tse, Jimmy Boyd, Andrew Kustes",
-      "image_plan": "/home/ubuntu/upload/IMG_8735.jpeg - Image 10 is a group photo that appears to be the Dozier family/group, which is suitable for the \"Leadership Team\" slide, assuming the founders are part of this group.",
+      "id": "opportunity",
+      "title": "$40 Billion Opportunity",
+      "summary": "Youth sports market size, NIL explosion, the gap between parent expectations and reality",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "solution",
+      "title": "ATHLYNX - The Athlete's Playbook",
+      "summary": "One platform for entire athlete journey from youth to pro, key features",
+      "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
     {
       "id": "portfolio",
-      "title": "12 Companies. 4 Divisions. 1 Vision.",
-      "summary": "Technology, Real Estate, Dining, Trading divisions overview",
-      "image_plan": "/home/ubuntu/upload/0300a5bcb3d16c0774bc50adb9b43fa3.JPG; /home/ubuntu/upload/e714d3aabf18804b3062caaa337ba198.JPG; /home/ubuntu/upload/e2b038eadf2b3b7e50454f21ea54f20d.JPG; /home/ubuntu/upload/a0e6edb55f1edf8a06785212c1217c05.JPG - Images 16-22 are various shots of a data center (exterior, power panels, server racks, control room, cooling pipes, cooling towers), which directly illustrate the core business of VC Data Centers. Using multiple images provides a comprehensive view of the infrastructure.",
+      "title": "The DHG Portfolio",
+      "summary": "12 companies under DHG umbrella with status and focus areas",
+      "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
     {
-      "id": "investment",
-      "title": "Flexible Investment Options",
-      "summary": "Full Empire, Division, or Individual Company investment options",
-      "image_plan": "/home/ubuntu/upload/search_images/cBsWGg2QWgBb.jpg - Image 25 is a professional handshake overlayed with a city scape, symbolizing investment, partnership, and growth, which is perfect for the \"Investment Opportunity\" slide.",
+      "id": "revenue",
+      "title": "Revenue Model",
+      "summary": "Multiple revenue streams - subscriptions, partnerships, AI credits, transaction fees",
+      "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     },
     {
-      "id": "contact",
-      "title": "Ready to Build the Future?",
-      "summary": "Contact information and call to action",
-      "image_plan": "/home/ubuntu/upload/search_images/VA9a09mMaT2g.jpg - Image 26 is a double exposure of a handshake and financial data, symbolizing a successful investment partnership, ideal for the final contact slide which is an invitation to invest.",
+      "id": "traction",
+      "title": "Market Traction",
+      "summary": "Early validation metrics - platform live, partners, legal framework, IP secured",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "advantage",
+      "title": "Competitive Advantage",
+      "summary": "Why DHG wins - first-mover, AI-powered, authentic founder, diversified portfolio",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "team",
+      "title": "Leadership Team",
+      "summary": "The Perfect Storm team - Chad, Glenn, Lee, Jimmy, Andy, and advisors",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "funds",
+      "title": "Use of Funds",
+      "summary": "$1M seed round allocation and key milestones",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "exit",
+      "title": "Exit Strategy",
+      "summary": "Multiple paths to liquidity - acquisition targets, comparable exits, target valuation",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "ask",
+      "title": "The Ask",
+      "summary": "Investment terms - $1M seed, $5M valuation, why now, contact information",
+      "image_plan": "Use a suitable image if needed",
       "slide_template_key": ""
     }
   ]

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(180deg, #0f1419 0%, #1a1f2e 50%, #0f1419 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .rack-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(34, 211, 238, 0.03) 39px, rgba(34, 211, 238, 0.03) 40px);
+      }
+      .header {
+        padding: 40px 60px 15px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #22d3ee;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+      }
+      .solutions-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .solution-pillar {
+        background: rgba(34, 211, 238, 0.03);
+        border-top: 4px solid #22d3ee;
+        padding: 25px 20px;
+        text-align: center;
+      }
+      .solution-pillar:nth-child(2) { border-top-color: #a855f7; }
+      .solution-pillar:nth-child(3) { border-top-color: #22c55e; }
+      .pillar-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 15px;
+        background: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: #0f1419;
+      }
+      .solution-pillar:nth-child(2) .pillar-icon { background: linear-gradient(135deg, #a855f7 0%, #22d3ee 100%); }
+      .solution-pillar:nth-child(3) .pillar-icon { background: linear-gradient(135deg, #22c55e 0%, #22d3ee 100%); }
+      .pillar-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #f1f5f9;
+        margin-bottom: 12px;
+      }
+      .pillar-features {
+        list-style: none;
+        text-align: left;
+      }
+      .pillar-features li {
+        font-size: 14px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+      }
+      .pillar-features li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #22d3ee;
+      }
+      .solution-pillar:nth-child(2) .pillar-features li::before { color: #a855f7; }
+      .solution-pillar:nth-child(3) .pillar-features li::before { color: #22c55e; }
+      .differentiators {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .diff-item {
+        background: rgba(34, 197, 94, 0.05);
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        padding: 18px 15px;
+        text-align: center;
+      }
+      .diff-icon {
+        font-size: 24px;
+        color: #22c55e;
+        margin-bottom: 10px;
+      }
+      .diff-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #f1f5f9;
+        margin-bottom: 5px;
+      }
+      .diff-desc {
+        font-size: 12px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="rack-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">Our Solution</div>
+            <div class="page-subtitle">Strategic Partnerships + GPU-as-a-Service Model</div>
+        </div>
+        
+        <div class="solutions-grid">
+            <div class="solution-pillar">
+                <div class="pillar-icon"><i class="fas fa-cloud"></i></div>
+                <div class="pillar-title">Nebius AI Cloud</div>
+                <ul class="pillar-features">
+                    <li>NVIDIA H100/H200 GPU clusters</li>
+                    <li>AI Cloud 3.1 (Aether) platform</li>
+                    <li>$5K free compute credits</li>
+                    <li>Enterprise SLA guarantees</li>
+                    <li>Global edge locations</li>
+                </ul>
+            </div>
+            
+            <div class="solution-pillar">
+                <div class="pillar-icon"><i class="fas fa-server"></i></div>
+                <div class="pillar-title">ICC-USA Hardware</div>
+                <ul class="pillar-features">
+                    <li>Enterprise server solutions</li>
+                    <li>Custom rack configurations</li>
+                    <li>Colocation partnerships</li>
+                    <li>24/7 hardware support</li>
+                    <li>Rapid deployment</li>
+                </ul>
+            </div>
+            
+            <div class="solution-pillar">
+                <div class="pillar-icon"><i class="fas fa-microchip"></i></div>
+                <div class="pillar-title">GPU-as-a-Service</div>
+                <ul class="pillar-features">
+                    <li>On-demand GPU rental</li>
+                    <li>Reserved capacity plans</li>
+                    <li>Managed infrastructure</li>
+                    <li>Pay-per-compute pricing</li>
+                    <li>Auto-scaling capabilities</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="differentiators">
+            <div class="diff-item">
+                <div class="diff-icon"><i class="fas fa-bolt"></i></div>
+                <div class="diff-title">Instant Provisioning</div>
+                <div class="diff-desc">GPUs ready in hours, not months</div>
+            </div>
+            
+            <div class="diff-item">
+                <div class="diff-icon"><i class="fas fa-dollar-sign"></i></div>
+                <div class="diff-title">50% Cost Savings</div>
+                <div class="diff-desc">vs. building your own infrastructure</div>
+            </div>
+            
+            <div class="diff-item">
+                <div class="diff-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="diff-title">Enterprise Security</div>
+                <div class="diff-desc">SOC 2, HIPAA compliant</div>
+            </div>
+            
+            <div class="diff-item">
+                <div class="diff-icon"><i class="fas fa-headset"></i></div>
+                <div class="diff-title">24/7 Support</div>
+                <div class="diff-desc">Dedicated account management</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

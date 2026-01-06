@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+      }
+      .header {
+        padding: 40px 60px 0 60px;
+        text-align: center;
+      }
+      .brand-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 100%);
+        padding: 8px 24px;
+        margin-bottom: 12px;
+      }
+      .brand-text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        color: white;
+        letter-spacing: 2px;
+      }
+      .page-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 36px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #e2e8f0;
+      }
+      .journey-section {
+        padding: 30px 60px 20px 60px;
+      }
+      .journey-timeline {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+      }
+      .journey-timeline::before {
+        content: '';
+        position: absolute;
+        top: 32px;
+        left: 80px;
+        right: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #00d4ff 0%, #3b82f6 50%, #fbbf24 100%);
+      }
+      .journey-stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        position: relative;
+        z-index: 1;
+      }
+      .stage-icon {
+        width: 64px;
+        height: 64px;
+        background: #0a1628;
+        border: 3px solid #00d4ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+      .stage-icon i {
+        font-size: 24px;
+        color: #00d4ff;
+      }
+      .stage-icon.gold {
+        border-color: #fbbf24;
+      }
+      .stage-icon.gold i {
+        color: #fbbf24;
+      }
+      .stage-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        margin-bottom: 4px;
+      }
+      .stage-ages {
+        font-size: 12px;
+        color: #fbbf24;
+        margin-bottom: 4px;
+      }
+      .stage-desc {
+        font-size: 11px;
+        color: #94a3b8;
+        text-align: center;
+        line-height: 1.3;
+      }
+      .features-section {
+        padding: 20px 60px;
+      }
+      .features-header {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: #fbbf24;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .feature-item {
+        background: rgba(59, 130, 246, 0.1);
+        border-top: 2px solid #3b82f6;
+        padding: 16px;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .feature-icon {
+        width: 36px;
+        height: 36px;
+        background: rgba(0, 212, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .feature-icon i {
+        font-size: 16px;
+        color: #00d4ff;
+      }
+      .feature-content {
+        flex: 1;
+      }
+      .feature-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 4px;
+      }
+      .feature-desc {
+        font-size: 12px;
+        color: #94a3b8;
+        line-height: 1.4;
+      }
+      .slide-number {
+        position: absolute;
+        bottom: 12px;
+        right: 40px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="brand-badge">
+                <span class="brand-text">ATHLYNX</span>
+            </div>
+            <h1 class="page-title">The Athlete's Playbook</h1>
+            <p class="page-subtitle">One Platform for the ENTIRE Athlete Journey</p>
+        </div>
+        
+        <div class="journey-section">
+            <div class="journey-timeline">
+                <div class="journey-stage">
+                    <div class="stage-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <p class="stage-title">Youth Sports</p>
+                    <p class="stage-ages">Ages 6-14</p>
+                    <p class="stage-desc">Parents pay for exposure and development</p>
+                </div>
+                <div class="journey-stage">
+                    <div class="stage-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <p class="stage-title">High School</p>
+                    <p class="stage-ages">Ages 14-18</p>
+                    <p class="stage-desc">Recruiting and college preparation</p>
+                </div>
+                <div class="journey-stage">
+                    <div class="stage-icon gold">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <p class="stage-title">College</p>
+                    <p class="stage-ages">Ages 18-23</p>
+                    <p class="stage-desc">NIL monetization begins</p>
+                </div>
+                <div class="journey-stage">
+                    <div class="stage-icon gold">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <p class="stage-title">Pro / Post-College</p>
+                    <p class="stage-ages">Ages 23+</p>
+                    <p class="stage-desc">Career management</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features-section">
+            <h3 class="features-header">Key Features</h3>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                    <div class="feature-content">
+                        <p class="feature-title">AI-Powered NIL Valuation</p>
+                        <p class="feature-desc">Know your true market value instantly</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="feature-content">
+                        <p class="feature-title">Transfer Portal Navigation</p>
+                        <p class="feature-desc">Find your perfect fit with AI matching</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="feature-content">
+                        <p class="feature-title">Brand Partnership Matching</p>
+                        <p class="feature-desc">Connect with verified brand opportunities</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                    <div class="feature-content">
+                        <p class="feature-title">Personal Website Builder</p>
+                        <p class="feature-desc">Build your brand with custom domains</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-video"></i></div>
+                    <div class="feature-content">
+                        <p class="feature-title">Highlight Video Hosting</p>
+                        <p class="feature-desc">Showcase your best moments</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="feature-content">
+                        <p class="feature-title">Stats & Analytics</p>
+                        <p class="feature-desc">Track performance and growth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-number">4 / 12</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px; /* keep this per requirements */
+        background: linear-gradient(135deg, #0a1628 0%, #0f2744 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .grid-pattern { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px); background-size: 50px 50px; }
+      .header { padding: 40px 60px 12px; position: relative; z-index: 10; display: flex; align-items: center; justify-content: space-between; }
+      .page-title { font-size: 42px; font-weight: 800; color: #00d4ff; }
+      .live-badge { display: flex; align-items: center; gap: 10px; background: rgba(16,185,129,0.2); border: 2px solid #10b981; padding: 8px 20px; }
+      .live-dot { width: 12px; height: 12px; background: #10b981; }
+      .live-text { font-size: 18px; font-weight: 700; color: #10b981; letter-spacing: 2px; }
+      /* content area compressed: smaller paddings and refreshed layout so it fits within min-height */
+      .content { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 12px 48px 18px; position: relative; z-index: 10; }
+      /* metrics: put four small metrics on a single row and highlight below to reduce vertical height */
+      .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: start; }
+      .metric-card { background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.2); padding: 16px; text-align: center; }
+      .metric-card.highlight { grid-column: 1 / -1; background: rgba(16,185,129,0.1); border-color: #10b981; }
+      .metric-number { font-size: 48px; font-weight: 800; color: #00d4ff; line-height: 1; }
+      .metric-card.highlight .metric-number { color: #10b981; }
+      .metric-label { font-size: 14px; color: #94a3b8; margin-top: 8px; font-family: 'Inter', sans-serif; }
+      .metric-icon { font-size: 22px; color: #f59e0b; margin-bottom: 8px; }
+      /* achievements: reduce padding & gaps */
+      .achievements { display: flex; flex-direction: column; gap: 12px; }
+      .achievement-item { display: flex; align-items: center; gap: 12px; background: rgba(0,212,255,0.05); padding: 10px 14px; border-left: 3px solid #00d4ff; }
+      .achievement-item.amber { border-left-color: #f59e0b; }
+      .achievement-item.emerald { border-left-color: #10b981; }
+      .achievement-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: rgba(0,212,255,0.1); font-size: 18px; color: #00d4ff; }
+      .achievement-item.amber .achievement-icon { color: #f59e0b; background: rgba(245,158,11,0.1); }
+      .achievement-item.emerald .achievement-icon { color: #10b981; background: rgba(16,185,129,0.1); }
+      .achievement-content h4 { font-size: 18px; font-weight: 700; color: #e2e8f0; }
+      .achievement-content p { font-size: 13px; color: #64748b; font-family: 'Inter', sans-serif; }
+      /* timeline moved inside content and compacted to save vertical space */
+      .timeline { grid-column: 1 / -1; display: flex; gap: 12px; align-items: center; justify-content: space-between; background: rgba(0,212,255,0.04); padding: 8px 12px; border-radius: 6px; }
+      .timeline-item { text-align: center; flex: 1; min-width: 0; }
+      .timeline-dot { width: 18px; height: 18px; background: #00d4ff; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #0a1628; font-weight: 700; }
+      .timeline-date { font-size: 12px; color: #f59e0b; font-weight: 600; margin-bottom: 2px; }
+      .timeline-event { font-size: 13px; color: #e2e8f0; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-pattern"></div>
+        <div class="header">
+            <div class="page-title">Traction &amp; Milestones</div>
+            <div class="live-badge">
+                <div class="live-dot"></div>
+                <span class="live-text">PLATFORM LIVE</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-users"></i></div>
+                    <div class="metric-number">2,500+</div>
+                    <div class="metric-label">Early Access Signups</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-university"></i></div>
+                    <div class="metric-number">3</div>
+                    <div class="metric-label">University LOIs</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="metric-number">12</div>
+                    <div class="metric-label">Brand Interests</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-code"></i></div>
+                    <div class="metric-number">50K+</div>
+                    <div class="metric-label">Lines of Code</div>
+                </div>
+                <div class="metric-card highlight">
+                    <div class="metric-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="metric-number">$500K</div>
+                    <div class="metric-label">Projected Year 1 Revenue</div>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <div class="achievement-item">
+                    <div class="achievement-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="achievement-content">
+                        <h4>Platform Launch</h4>
+                        <p>Full platform live at athlynx.ai with core features</p>
+                    </div>
+                </div>
+                <div class="achievement-item amber">
+                    <div class="achievement-icon"><i class="fas fa-brain"></i></div>
+                    <div class="achievement-content">
+                        <h4>AI Engine Complete</h4>
+                        <p>NIL valuation algorithm trained & deployed</p>
+                    </div>
+                </div>
+                <div class="achievement-item emerald">
+                    <div class="achievement-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="achievement-content">
+                        <h4>HIPAA Compliant</h4>
+                        <p>Enterprise security protecting athlete data</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="achievement-content">
+                        <h4>Mobile Ready</h4>
+                        <p>Responsive design works on all devices</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-check"></i></div>
+                    <div class="timeline-date">Q4 2025</div>
+                    <div class="timeline-event">MVP Launch</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-check"></i></div>
+                    <div class="timeline-date">Q1 2026</div>
+                    <div class="timeline-event">Early Access</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-date">Q2 2026</div>
+                    <div class="timeline-event">Series A Close</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">4</div>
+                    <div class="timeline-date">Q4 2026</div>
+                    <div class="timeline-event">10K Users</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

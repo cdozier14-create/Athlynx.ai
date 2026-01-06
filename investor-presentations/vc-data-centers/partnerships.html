@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(180deg, #0f1419 0%, #1a1f2e 50%, #0f1419 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .rack-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(34, 211, 238, 0.03) 39px, rgba(34, 211, 238, 0.03) 40px);
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #22d3ee;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+      }
+      .partners-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .partner-card {
+        background: rgba(34, 211, 238, 0.03);
+        border: 1px solid rgba(34, 211, 238, 0.2);
+        padding: 25px 20px;
+        text-align: center;
+        position: relative;
+      }
+      .partner-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #22d3ee, #a855f7);
+      }
+      .partner-card:nth-child(2)::before { background: linear-gradient(90deg, #a855f7, #22d3ee); }
+      .partner-card:nth-child(3)::before { background: linear-gradient(90deg, #22c55e, #22d3ee); }
+      .partner-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 15px;
+        background: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: #0f1419;
+      }
+      .partner-card:nth-child(2) .partner-icon { background: linear-gradient(135deg, #a855f7 0%, #22d3ee 100%); }
+      .partner-card:nth-child(3) .partner-icon { background: linear-gradient(135deg, #22c55e 0%, #22d3ee 100%); }
+      .partner-name {
+        font-size: 22px;
+        font-weight: 700;
+        color: #f1f5f9;
+        margin-bottom: 8px;
+      }
+      .partner-type {
+        font-size: 12px;
+        color: #22d3ee;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+      }
+      .partner-card:nth-child(2) .partner-type { color: #a855f7; }
+      .partner-card:nth-child(3) .partner-type { color: #22c55e; }
+      .partner-value {
+        font-size: 14px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+        line-height: 1.5;
+      }
+      .partner-highlight {
+        background: rgba(34, 211, 238, 0.1);
+        padding: 10px 15px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #22d3ee;
+      }
+      .partner-card:nth-child(2) .partner-highlight { color: #a855f7; background: rgba(168, 85, 247, 0.1); }
+      .partner-card:nth-child(3) .partner-highlight { color: #22c55e; background: rgba(34, 197, 94, 0.1); }
+      .ecosystem-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 25px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .eco-item {
+        background: rgba(34, 197, 94, 0.05);
+        border-left: 3px solid #22c55e;
+        padding: 15px 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .eco-icon {
+        font-size: 20px;
+        color: #22c55e;
+      }
+      .eco-text {
+        font-size: 14px;
+        color: #f1f5f9;
+        font-weight: 600;
+      }
+      .eco-sub {
+        font-size: 12px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="rack-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">Strategic Partnerships</div>
+            <div class="page-subtitle">World-Class Infrastructure Partners Powering Our Platform</div>
+        </div>
+        
+        <div class="partners-grid">
+            <div class="partner-card">
+                <div class="partner-icon"><i class="fas fa-cloud"></i></div>
+                <div class="partner-name">Nebius AI Cloud</div>
+                <div class="partner-type">Cloud Infrastructure</div>
+                <div class="partner-value">Next-generation AI cloud platform with NVIDIA H100/H200 GPU clusters, global edge locations, and enterprise-grade reliability.</div>
+                <div class="partner-highlight">$3B Meta Partnership</div>
+            </div>
+            
+            <div class="partner-card">
+                <div class="partner-icon"><i class="fas fa-server"></i></div>
+                <div class="partner-name">ICC-USA</div>
+                <div class="partner-type">Hardware Provider</div>
+                <div class="partner-value">Enterprise server solutions, custom rack configurations, and colocation services with 24/7 support and rapid deployment.</div>
+                <div class="partner-highlight">Ben Jawarski Connection</div>
+            </div>
+            
+            <div class="partner-card">
+                <div class="partner-icon"><i class="fas fa-microchip"></i></div>
+                <div class="partner-name">NVIDIA Ecosystem</div>
+                <div class="partner-type">GPU Technology</div>
+                <div class="partner-value">Access to latest Blackwell Ultra architecture, CUDA ecosystem, and AI software stack through our partner network.</div>
+                <div class="partner-highlight">Next-Gen GPU Access</div>
+            </div>
+        </div>
+        
+        <div class="ecosystem-section">
+            <div class="eco-item">
+                <div class="eco-icon"><i class="fas fa-handshake"></i></div>
+                <div>
+                    <div class="eco-text">Preferred Pricing</div>
+                    <div class="eco-sub">Volume discounts passed to clients</div>
+                </div>
+            </div>
+            
+            <div class="eco-item">
+                <div class="eco-icon"><i class="fas fa-rocket"></i></div>
+                <div>
+                    <div class="eco-text">Priority Access</div>
+                    <div class="eco-sub">First in line for new hardware</div>
+                </div>
+            </div>
+            
+            <div class="eco-item">
+                <div class="eco-icon"><i class="fas fa-users"></i></div>
+                <div>
+                    <div class="eco-text">Joint Go-to-Market</div>
+                    <div class="eco-sub">Co-selling opportunities</div>
+                </div>
+            </div>
+            
+            <div class="eco-item">
+                <div class="eco-icon"><i class="fas fa-certificate"></i></div>
+                <div>
+                    <div class="eco-text">Certified Partner</div>
+                    <div class="eco-sub">Official partner status</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

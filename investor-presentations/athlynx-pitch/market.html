@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2744 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .grid-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 50px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .market-visual {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .market-tier {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .market-bar {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+      }
+      .tam-bar {
+        width: 100%;
+        background: linear-gradient(90deg, rgba(0, 212, 255, 0.3) 0%, rgba(0, 212, 255, 0.1) 100%);
+        border-left: 5px solid #00d4ff;
+      }
+      .sam-bar {
+        width: 75%;
+        background: linear-gradient(90deg, rgba(16, 185, 129, 0.3) 0%, rgba(16, 185, 129, 0.1) 100%);
+        border-left: 5px solid #10b981;
+      }
+      .som-bar {
+        width: 40%;
+        background: linear-gradient(90deg, rgba(245, 158, 11, 0.3) 0%, rgba(245, 158, 11, 0.1) 100%);
+        border-left: 5px solid #f59e0b;
+      }
+      .market-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .market-label {
+        font-size: 14px;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 4px;
+      }
+      .market-value {
+        font-size: 36px;
+        font-weight: 800;
+        color: #e2e8f0;
+      }
+      .tam-bar .market-value { color: #00d4ff; }
+      .sam-bar .market-value { color: #10b981; }
+      .som-bar .market-value { color: #f59e0b; }
+      .market-desc {
+        font-size: 13px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+      }
+      .stats-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .stat-box {
+        background: rgba(0, 212, 255, 0.05);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .stat-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #00d4ff 0%, #10b981 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: #0a1628;
+      }
+      .stat-content h3 {
+        font-size: 32px;
+        font-weight: 800;
+        color: #e2e8f0;
+        margin-bottom: 4px;
+      }
+      .stat-content p {
+        font-size: 14px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+      }
+      .growth-highlight {
+        background: rgba(16, 185, 129, 0.1);
+        border: 2px solid #10b981;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .growth-text {
+        font-size: 18px;
+        color: #e2e8f0;
+        font-weight: 600;
+      }
+      .growth-number {
+        font-size: 48px;
+        font-weight: 800;
+        color: #10b981;
+      }
+      .growth-label {
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">Market Opportunity</div>
+            <div class="page-subtitle">Massive Addressable Market with Strong Growth Trajectory</div>
+        </div>
+        
+        <div class="content">
+            <div class="market-visual">
+                <div class="market-tier">
+                    <div class="market-bar tam-bar">
+                        <div class="market-info">
+                            <div class="market-label">Total Addressable Market</div>
+                            <div class="market-value">$40B</div>
+                            <div class="market-desc">Youth Sports Industry</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="market-tier">
+                    <div class="market-bar sam-bar">
+                        <div class="market-info">
+                            <div class="market-label">Serviceable Addressable Market</div>
+                            <div class="market-value">$15B</div>
+                            <div class="market-desc">Travel Ball + Recruiting Services</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="market-tier">
+                    <div class="market-bar som-bar">
+                        <div class="market-info">
+                            <div class="market-label">Serviceable Obtainable Market</div>
+                            <div class="market-value">$500M</div>
+                            <div class="market-desc">Year 1 Target</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-content">
+                        <h3>60M</h3>
+                        <p>Youth Athletes in the United States</p>
+                    </div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="stat-content">
+                        <h3>500K</h3>
+                        <p>College Athletes (NCAA)</p>
+                    </div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="stat-content">
+                        <h3>$1.17B</h3>
+                        <p>NIL Market Size (2024)</p>
+                    </div>
+                </div>
+                
+                <div class="growth-highlight">
+                    <div>
+                        <div class="growth-text">Annual Market Growth</div>
+                        <div class="growth-label">Consistent year-over-year expansion</div>
+                    </div>
+                    <div class="growth-number">8%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

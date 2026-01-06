@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #8b2500 0%, #a52a2a 50%, #8b2500 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Playfair Display', serif;
+      }
+      .texture-shape {
+        position: absolute;
+        bottom: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(ellipse, rgba(244, 228, 188, 0.08) 0%, transparent 70%);
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #f4e4bc;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #d4a574;
+        font-family: 'Inter', sans-serif;
+      }
+      .concept-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .concept-card {
+        background: rgba(244, 228, 188, 0.03);
+        border-top: 3px solid #f4e4bc;
+        padding: 25px;
+        display: flex;
+        gap: 20px;
+      }
+      .concept-card:nth-child(2) { border-top-color: #556b2f; }
+      .concept-card:nth-child(3) { border-top-color: #cd853f; }
+      .concept-card:nth-child(4) { border-top-color: #f4e4bc; }
+      .card-icon {
+        width: 65px;
+        height: 65px;
+        background: linear-gradient(135deg, #f4e4bc 0%, #cd853f 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: #8b2500;
+        flex-shrink: 0;
+      }
+      .concept-card:nth-child(2) .card-icon { background: linear-gradient(135deg, #556b2f 0%, #f4e4bc 100%); color: #faf5eb; }
+      .concept-card:nth-child(3) .card-icon { background: linear-gradient(135deg, #cd853f 0%, #f4e4bc 100%); }
+      .concept-card:nth-child(4) .card-icon { background: linear-gradient(135deg, #f4e4bc 0%, #556b2f 100%); }
+      .card-content h3 {
+        font-size: 22px;
+        color: #faf5eb;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .card-content p {
+        font-size: 14px;
+        color: #d4a574;
+        font-family: 'Inter', sans-serif;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+      .card-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .feature-tag {
+        background: rgba(244, 228, 188, 0.15);
+        border: 1px solid rgba(244, 228, 188, 0.3);
+        padding: 4px 10px;
+        font-size: 11px;
+        color: #f4e4bc;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: 'Inter', sans-serif;
+      }
+      .concept-card:nth-child(2) .feature-tag { background: rgba(85, 107, 47, 0.15); border-color: rgba(85, 107, 47, 0.3); color: #556b2f; }
+      .concept-card:nth-child(3) .feature-tag { background: rgba(205, 133, 63, 0.15); border-color: rgba(205, 133, 63, 0.3); color: #cd853f; }
+      .concept-card:nth-child(4) .feature-tag { background: rgba(244, 228, 188, 0.15); border-color: rgba(244, 228, 188, 0.3); color: #f4e4bc; }
+      .market-bar {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+        background: rgba(244, 228, 188, 0.03);
+        margin: 15px 60px 0;
+      }
+      .market-item {
+        text-align: center;
+      }
+      .market-value {
+        font-size: 28px;
+        font-weight: 700;
+        color: #f4e4bc;
+      }
+      .market-label {
+        font-size: 12px;
+        color: #d4a574;
+        font-family: 'Inter', sans-serif;
+        margin-top: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="texture-shape"></div>
+        
+        <div class="header">
+            <div class="page-title">The Concept</div>
+            <div class="page-subtitle">Where Tradition Meets Innovation</div>
+        </div>
+        
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="card-icon"><i class="fas fa-seedling"></i></div>
+                <div class="card-content">
+                    <h3>Farm-to-Table</h3>
+                    <p>Fresh, locally-sourced ingredients from partner farms, handmade pasta daily, and authentic Italian recipes.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Local</span>
+                        <span class="feature-tag">Fresh</span>
+                        <span class="feature-tag">Handmade</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <div class="card-icon"><i class="fas fa-wine-glass"></i></div>
+                <div class="card-content">
+                    <h3>Wine Program</h3>
+                    <p>Curated selection of 200+ Italian wines, certified sommelier, and exclusive import partnerships.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">200+ Wines</span>
+                        <span class="feature-tag">Sommelier</span>
+                        <span class="feature-tag">Imports</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <div class="card-icon"><i class="fas fa-door-closed"></i></div>
+                <div class="card-content">
+                    <h3>Private Dining</h3>
+                    <p>Intimate private rooms for celebrations, business dinners, and special occasions up to 50 guests.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Private Rooms</span>
+                        <span class="feature-tag">50 Guests</span>
+                        <span class="feature-tag">Events</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <div class="card-icon"><i class="fas fa-truck"></i></div>
+                <div class="card-content">
+                    <h3>Catering Services</h3>
+                    <p>Full-service catering for corporate events, weddings, and private parties with custom menus.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Corporate</span>
+                        <span class="feature-tag">Weddings</span>
+                        <span class="feature-tag">Custom</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="market-bar">
+            <div class="market-item">
+                <div class="market-value">$899B</div>
+                <div class="market-label">US Restaurant Industry</div>
+            </div>
+            <div class="market-item">
+                <div class="market-value">$65</div>
+                <div class="market-label">Average Check Target</div>
+            </div>
+            <div class="market-item">
+                <div class="market-value">150</div>
+                <div class="market-label">Seats Per Location</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

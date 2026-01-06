@@ -6,6 +6,7 @@ import { z } from "zod";
 import * as db from "./db";
 import { createCheckoutSession, getOrCreateCustomer } from "./stripe/checkout";
 import { SUBSCRIPTION_TIERS, ONE_TIME_PRODUCTS, getTiersForRole } from "./stripe/products";
+import { sendEmail, sendCustomEmail, sendTeamEmail, EMAIL_TEMPLATES } from "./services/email";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -425,6 +426,150 @@ export const appRouter = router({
           return { feedback: [], total: 0, error: "Invalid access code" };
         }
         return db.getCommunityFeedback(input.limit);
+      }),
+  }),
+
+  // ==================== STRIPE PAYMENTS ====================
+  stripe: router({
+    // Get available tiers for a role
+    getTiers: publicProcedure
+      .input(z.object({ role: z.enum(["athlete", "brand", "parent", "coach"]) }))
+      .query(({ input }) => {
+        return getTiersForRole(input.role);
+      }),
+    
+    // Get all subscription tiers
+    allTiers: publicProcedure.query(() => {
+      return SUBSCRIPTION_TIERS;
+    }),
+    
+    // Get one-time products
+    products: publicProcedure.query(() => {
+      return ONE_TIME_PRODUCTS;
+    }),
+    
+    // Create checkout session for subscription
+    createCheckout: protectedProcedure
+      .input(z.object({
+        tierId: z.string().optional(),
+        productId: z.string().optional(),
+        billingCycle: z.enum(["monthly", "yearly"]).default("monthly"),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const origin = ctx.req.headers.origin || ctx.req.headers.host || "https://athlynx.ai";
+        
+        const result = await createCheckoutSession({
+          userId: ctx.user.id,
+          userEmail: ctx.user.email || "",
+          userName: ctx.user.name || "",
+          tierId: input.tierId,
+          productId: input.productId,
+          billingCycle: input.billingCycle,
+          origin: origin.startsWith("http") ? origin : `https://${origin}`,
+        });
+        
+        return result;
+      }),
+    
+    // Create customer portal session for subscription management
+    createPortal: protectedProcedure
+      .mutation(async ({ ctx }) => {
+        const origin = ctx.req.headers.origin || ctx.req.headers.host || "https://athlynx.ai";
+        const returnUrl = origin.startsWith("http") ? `${origin}/portal` : `https://${origin}/portal`;
+        
+        // Get or create Stripe customer
+        const customerId = await getOrCreateCustomer(
+          ctx.user.id,
+          ctx.user.email || "",
+          ctx.user.name || ""
+        );
+        
+        const { createPortalSession } = await import("./stripe/checkout");
+        const url = await createPortalSession(customerId, returnUrl);
+        
+        return { url };
+      }),
+  }),
+
+  // ==================== EMAIL SYSTEM ====================
+  email: router({
+    // Get available templates
+    templates: publicProcedure.query(() => {
+      return Object.keys(EMAIL_TEMPLATES);
+    }),
+    
+    // Send welcome email
+    sendWelcome: protectedProcedure
+      .input(z.object({
+        email: z.string().email(),
+        name: z.string(),
+      }))
+      .mutation(async ({ input }) => {
+        return sendEmail(input.email, "welcome", { name: input.name });
+      }),
+    
+    // Send team notification (requires partner access)
+    sendTeamNotification: publicProcedure
+      .input(z.object({
+        accessCode: z.string(),
+        subject: z.string(),
+        message: z.string(),
+        recipients: z.array(z.string().email()),
+      }))
+      .mutation(async ({ input }) => {
+        const partner = await db.validatePartnerAccess(input.accessCode);
+        if (!partner) {
+          return { success: false, error: "Invalid access code" };
+        }
+        return sendTeamEmail(
+          input.subject,
+          input.message,
+          partner.name,
+          input.recipients
+        );
+      }),
+    
+    // Send custom email (requires partner access)
+    sendCustom: publicProcedure
+      .input(z.object({
+        accessCode: z.string(),
+        to: z.union([z.string().email(), z.array(z.string().email())]),
+        subject: z.string(),
+        htmlContent: z.string(),
+        textContent: z.string().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const partner = await db.validatePartnerAccess(input.accessCode);
+        if (!partner) {
+          return { success: false, error: "Invalid access code" };
+        }
+        return sendCustomEmail(
+          input.to,
+          input.subject,
+          input.htmlContent,
+          input.textContent
+        );
+      }),
+    
+    // Send partner invite
+    sendPartnerInvite: publicProcedure
+      .input(z.object({
+        accessCode: z.string(),
+        email: z.string().email(),
+        name: z.string(),
+        newAccessCode: z.string(),
+        role: z.string(),
+      }))
+      .mutation(async ({ input }) => {
+        const partner = await db.validatePartnerAccess(input.accessCode);
+        if (!partner) {
+          return { success: false, error: "Invalid access code" };
+        }
+        return sendEmail(input.email, "partnerInvite", {
+          name: input.name,
+          accessCode: input.newAccessCode,
+          role: input.role,
+        });
       }),
   }),
 });

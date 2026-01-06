@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+      }
+      .header {
+        padding: 40px 60px 0 60px;
+      }
+      .page-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 4px;
+      }
+      .page-subtitle {
+        font-size: 16px;
+        color: #64748b;
+      }
+      .revenue-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        padding: 24px 60px;
+      }
+      .revenue-column {
+        background: rgba(15, 40, 71, 0.6);
+        border-top: 3px solid #3b82f6;
+      }
+      .revenue-column.gold {
+        border-top-color: #fbbf24;
+      }
+      .revenue-column.cyan {
+        border-top-color: #00d4ff;
+      }
+      .column-header {
+        padding: 16px 20px 12px 20px;
+        border-bottom: 1px solid rgba(100, 116, 139, 0.3);
+      }
+      .column-icon {
+        width: 36px;
+        height: 36px;
+        background: rgba(59, 130, 246, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+      .column-icon i {
+        font-size: 16px;
+        color: #3b82f6;
+      }
+      .column-icon.gold { background: rgba(251, 191, 36, 0.2); }
+      .column-icon.gold i { color: #fbbf24; }
+      .column-icon.cyan { background: rgba(0, 212, 255, 0.2); }
+      .column-icon.cyan i { color: #00d4ff; }
+      .column-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+      }
+      .tier-list {
+        padding: 12px 20px;
+      }
+      .tier-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+      }
+      .tier-item:last-child {
+        border-bottom: none;
+      }
+      .tier-name {
+        font-size: 14px;
+        color: #e2e8f0;
+      }
+      .tier-price {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: #00d4ff;
+      }
+      .tier-price.gold { color: #fbbf24; }
+      .tier-price.free { color: #22c55e; }
+      .arr-section {
+        padding: 20px 60px;
+      }
+      .arr-header {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 16px;
+      }
+      .arr-timeline {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+      .arr-item {
+        text-align: center;
+        position: relative;
+      }
+      .arr-bar {
+        height: 60px;
+        background: linear-gradient(180deg, #3b82f6 0%, #1e40af 100%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-top: 8px;
+      }
+      .arr-item:nth-child(1) .arr-bar { height: 30px; }
+      .arr-item:nth-child(2) .arr-bar { height: 45px; }
+      .arr-item:nth-child(3) .arr-bar { height: 60px; }
+      .arr-item:nth-child(4) .arr-bar { height: 80px; background: linear-gradient(180deg, #fbbf24 0%, #d97706 100%); }
+      .arr-value {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        color: white;
+      }
+      .arr-label {
+        font-size: 14px;
+        color: #64748b;
+        margin-top: 8px;
+      }
+      .slide-number {
+        position: absolute;
+        bottom: 12px;
+        right: 40px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1 class="page-title">Revenue Model</h1>
+            <p class="page-subtitle">Multiple streams for sustainable growth</p>
+        </div>
+        
+        <div class="revenue-grid">
+            <div class="revenue-column">
+                <div class="column-header">
+                    <div class="column-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="column-title">Athlete Subscriptions</h3>
+                </div>
+                <div class="tier-list">
+                    <div class="tier-item">
+                        <span class="tier-name">Rookie</span>
+                        <span class="tier-price free">FREE</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-name">All-Star</span>
+                        <span class="tier-price">$19.99/mo</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-name">MVP</span>
+                        <span class="tier-price">$49.99/mo</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="revenue-column gold">
+                <div class="column-header">
+                    <div class="column-icon gold">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="column-title">Brand Partnerships</h3>
+                </div>
+                <div class="tier-list">
+                    <div class="tier-item">
+                        <span class="tier-name">Starter</span>
+                        <span class="tier-price gold">$99/mo</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-name">Pro</span>
+                        <span class="tier-price gold">$299/mo</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-name">Enterprise</span>
+                        <span class="tier-price gold">$999/mo</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="revenue-column cyan">
+                <div class="column-header">
+                    <div class="column-icon cyan">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <h3 class="column-title">Additional Revenue</h3>
+                </div>
+                <div class="tier-list">
+                    <div class="tier-item">
+                        <span class="tier-name">AI Credits</span>
+                        <span class="tier-price">$0.07-0.10/ea</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-name">Website Hosting</span>
+                        <span class="tier-price">$19-49/mo</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-name">Transaction Fees</span>
+                        <span class="tier-price">5-10%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="arr-section">
+            <h3 class="arr-header">Projected Annual Recurring Revenue</h3>
+            <div class="arr-timeline">
+                <div class="arr-item">
+                    <div class="arr-bar">
+                        <span class="arr-value">$500K</span>
+                    </div>
+                    <p class="arr-label">Year 1</p>
+                </div>
+                <div class="arr-item">
+                    <div class="arr-bar">
+                        <span class="arr-value">$2.5M</span>
+                    </div>
+                    <p class="arr-label">Year 2</p>
+                </div>
+                <div class="arr-item">
+                    <div class="arr-bar">
+                        <span class="arr-value">$10M</span>
+                    </div>
+                    <p class="arr-label">Year 3</p>
+                </div>
+                <div class="arr-item">
+                    <div class="arr-bar">
+                        <span class="arr-value">$50M+</span>
+                    </div>
+                    <p class="arr-label">Year 5</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-number">6 / 12</div>
+    </div>
+</body>
+</html>

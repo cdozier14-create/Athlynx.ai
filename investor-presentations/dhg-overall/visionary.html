@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+      }
+      .header {
+        padding: 40px 60px 0 60px;
+      }
+      .page-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 16px;
+        color: #64748b;
+      }
+      .main-content {
+        display: grid;
+        grid-template-columns: 380px 1fr;
+        gap: 60px;
+        padding: 40px 60px;
+      }
+      .profile-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-avatar {
+        width: 180px;
+        height: 180px;
+        background: linear-gradient(135deg, #00d4ff 0%, #3b82f6 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+        box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+      }
+      .profile-avatar i {
+        font-size: 80px;
+        color: white;
+      }
+      .profile-name {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .profile-role {
+        font-size: 16px;
+        color: #fbbf24;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      .profile-badge {
+        background: rgba(0, 212, 255, 0.1);
+        border: 1px solid rgba(0, 212, 255, 0.3);
+        border-radius: 8px;
+        padding: 12px 20px;
+        text-align: center;
+      }
+      .badge-text {
+        font-size: 12px;
+        color: #00d4ff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .credentials-section {
+        padding-top: 20px;
+      }
+      .section-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 20px;
+      }
+      .credential-list {
+        list-style: none;
+        margin-bottom: 30px;
+      }
+      .credential-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+      .credential-icon {
+        width: 32px;
+        height: 32px;
+        background: rgba(59, 130, 246, 0.2);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .credential-icon i {
+        font-size: 14px;
+        color: #3b82f6;
+      }
+      .credential-text {
+        font-size: 16px;
+        color: #e2e8f0;
+        line-height: 1.5;
+      }
+      .philosophy-section {
+        margin-top: 20px;
+      }
+      .philosophy-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .philosophy-item {
+        background: rgba(251, 191, 36, 0.1);
+        border-left: 3px solid #fbbf24;
+        padding: 16px;
+      }
+      .philosophy-text {
+        font-size: 14px;
+        font-style: italic;
+        color: #fbbf24;
+      }
+      .slide-number {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1 class="page-title">The Visionary</h1>
+            <p class="page-subtitle">Leadership that transforms industries</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="profile-section">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h2 class="profile-name">Chad Allen Dozier Sr.</h2>
+                <p class="profile-role">Founder & CEO</p>
+                <div class="profile-badge">
+                    <p class="badge-text">51% Controlling Interest</p>
+                </div>
+            </div>
+            
+            <div class="credentials-section">
+                <h3 class="section-title">Credentials & Experience</h3>
+                <ul class="credential-list">
+                    <li class="credential-item">
+                        <div class="credential-icon"><i class="fas fa-briefcase"></i></div>
+                        <span class="credential-text"><strong>20+ years</strong> in technology and sports industries</span>
+                    </li>
+                    <li class="credential-item">
+                        <div class="credential-icon"><i class="fas fa-certificate"></i></div>
+                        <span class="credential-text"><strong>Patent Holder</strong> - US Patent 20080281518 (Vehicular Communication System, 2007)</span>
+                    </li>
+                    <li class="credential-item">
+                        <div class="credential-icon"><i class="fas fa-lightbulb"></i></div>
+                        <span class="credential-text"><strong>Proven Innovator</strong> - Technology ahead of its time</span>
+                    </li>
+                    <li class="credential-item">
+                        <div class="credential-icon"><i class="fas fa-users"></i></div>
+                        <span class="credential-text"><strong>Community Leader</strong> - Father, mentor, and advocate</span>
+                    </li>
+                </ul>
+                
+                <div class="philosophy-section">
+                    <h3 class="section-title">Philosophy</h3>
+                    <div class="philosophy-grid">
+                        <div class="philosophy-item">
+                            <p class="philosophy-text">"Dreams Do Come True"</p>
+                        </div>
+                        <div class="philosophy-item">
+                            <p class="philosophy-text">"Everyone is an NIL Commodity"</p>
+                        </div>
+                        <div class="philosophy-item">
+                            <p class="philosophy-text">"First or Last - No Participation Trophies"</p>
+                        </div>
+                        <div class="philosophy-item">
+                            <p class="philosophy-text">"When I eat, EVERYONE eats"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-number">2 / 12</div>
+    </div>
+</body>
+</html>

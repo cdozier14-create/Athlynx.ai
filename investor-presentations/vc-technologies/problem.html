@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a0f1a 0%, #0d1526 50%, #0a0f1a 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .circuit-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .problem-statement {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+      .big-stat {
+        font-size: 72px;
+        font-weight: 800;
+        color: #ef4444;
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 18px;
+        color: #e2e8f0;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+      .problem-text {
+        font-size: 18px;
+        color: #94a3b8;
+        line-height: 1.6;
+        font-family: 'Inter', sans-serif;
+      }
+      .pain-points {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .pain-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        background: rgba(239, 68, 68, 0.05);
+        border-left: 4px solid #ef4444;
+        padding: 20px;
+      }
+      .pain-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(239, 68, 68, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #ef4444;
+        flex-shrink: 0;
+      }
+      .pain-content h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e2e8f0;
+        margin-bottom: 6px;
+      }
+      .pain-content p {
+        font-size: 14px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+      }
+      .cost-highlight {
+        background: rgba(239, 68, 68, 0.1);
+        border: 2px solid #ef4444;
+        padding: 20px 30px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .cost-highlight .number {
+        font-size: 36px;
+        font-weight: 800;
+        color: #ef4444;
+      }
+      .cost-highlight .label {
+        font-size: 14px;
+        color: #94a3b8;
+        margin-top: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="circuit-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">The Problem</div>
+            <div class="page-subtitle">Enterprise Technology is Broken</div>
+        </div>
+        
+        <div class="content">
+            <div class="problem-statement">
+                <div>
+                    <div class="big-stat">70%</div>
+                    <div class="stat-label">of digital transformation projects fail</div>
+                </div>
+                <p class="problem-text">
+                    Enterprises struggle with fragmented tech stacks, expensive consultants 
+                    charging $300-500/hour, and digital transformation projects that take 
+                    years instead of months. The result? Wasted budgets, frustrated teams, 
+                    and competitors pulling ahead.
+                </p>
+                <div class="cost-highlight">
+                    <div class="number">$1.3 Trillion</div>
+                    <div class="label">Wasted annually on failed IT projects</div>
+                </div>
+            </div>
+            
+            <div class="pain-points">
+                <div class="pain-item">
+                    <div class="pain-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <div class="pain-content">
+                        <h3>Fragmented Tech Stacks</h3>
+                        <p>Average enterprise uses 900+ applications that don't talk to each other</p>
+                    </div>
+                </div>
+                
+                <div class="pain-item">
+                    <div class="pain-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="pain-content">
+                        <h3>Expensive Consultants</h3>
+                        <p>Big 4 consulting firms charge $300-500/hour with slow delivery</p>
+                    </div>
+                </div>
+                
+                <div class="pain-item">
+                    <div class="pain-icon"><i class="fas fa-clock"></i></div>
+                    <div class="pain-content">
+                        <h3>Slow Digital Transformation</h3>
+                        <p>Average enterprise project takes 2-3 years to complete</p>
+                    </div>
+                </div>
+                
+                <div class="pain-item">
+                    <div class="pain-icon"><i class="fas fa-brain"></i></div>
+                    <div class="pain-content">
+                        <h3>AI Integration Challenges</h3>
+                        <p>85% of AI projects never make it to production</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

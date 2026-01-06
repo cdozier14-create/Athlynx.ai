@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(180deg, #0f1419 0%, #1a1f2e 50%, #0f1419 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .rack-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(34, 211, 238, 0.03) 39px, rgba(34, 211, 238, 0.03) 40px);
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #22d3ee;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #94a3b8;
+        font-family: 'Inter', sans-serif;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .opportunity-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .big-stat {
+        background: rgba(34, 211, 238, 0.05);
+        border-left: 4px solid #22d3ee;
+        padding: 20px 25px;
+      }
+      .stat-number {
+        font-size: 56px;
+        font-weight: 700;
+        color: #22d3ee;
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 16px;
+        color: #f1f5f9;
+        margin-top: 8px;
+        font-weight: 600;
+      }
+      .stat-desc {
+        font-size: 14px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+        margin-top: 5px;
+      }
+      .crisis-box {
+        background: rgba(239, 68, 68, 0.1);
+        border: 2px solid #ef4444;
+        padding: 20px;
+        text-align: center;
+      }
+      .crisis-icon {
+        font-size: 32px;
+        color: #ef4444;
+        margin-bottom: 10px;
+      }
+      .crisis-text {
+        font-size: 20px;
+        font-weight: 700;
+        color: #ef4444;
+      }
+      .crisis-sub {
+        font-size: 14px;
+        color: #94a3b8;
+        margin-top: 8px;
+        font-family: 'Inter', sans-serif;
+      }
+      .market-section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .market-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: rgba(34, 211, 238, 0.03);
+        padding: 18px 20px;
+      }
+      .market-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #0f1419;
+      }
+      .market-content h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #f1f5f9;
+      }
+      .market-content p {
+        font-size: 14px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+      }
+      .growth-bar {
+        background: rgba(34, 197, 94, 0.1);
+        border: 1px solid #22c55e;
+        padding: 18px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .growth-label {
+        font-size: 16px;
+        color: #f1f5f9;
+        font-weight: 600;
+      }
+      .growth-value {
+        font-size: 36px;
+        font-weight: 700;
+        color: #22c55e;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="rack-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">The Opportunity</div>
+            <div class="page-subtitle">Massive Demand for GPU Compute & AI Infrastructure</div>
+        </div>
+        
+        <div class="content">
+            <div class="opportunity-section">
+                <div class="big-stat">
+                    <div class="stat-number">$500B</div>
+                    <div class="stat-label">Data Center Market by 2030</div>
+                    <div class="stat-desc">Growing at 10.9% CAGR annually</div>
+                </div>
+                
+                <div class="big-stat" style="border-left-color: #a855f7;">
+                    <div class="stat-number" style="color: #a855f7;">$200B</div>
+                    <div class="stat-label">AI Infrastructure Spending</div>
+                    <div class="stat-desc">Enterprises racing to build AI capabilities</div>
+                </div>
+                
+                <div class="crisis-box">
+                    <div class="crisis-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="crisis-text">GPU SHORTAGE CRISIS</div>
+                    <div class="crisis-sub">Wait times of 6-12 months for enterprise GPU clusters</div>
+                </div>
+            </div>
+            
+            <div class="market-section">
+                <div class="market-item">
+                    <div class="market-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="market-content">
+                        <h3>1,000%</h3>
+                        <p>Increase in GPU demand since ChatGPT launch</p>
+                    </div>
+                </div>
+                
+                <div class="market-item">
+                    <div class="market-icon"><i class="fas fa-building"></i></div>
+                    <div class="market-content">
+                        <h3>85%</h3>
+                        <p>Enterprises planning AI infrastructure investment</p>
+                    </div>
+                </div>
+                
+                <div class="market-item">
+                    <div class="market-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="market-content">
+                        <h3>2.5x</h3>
+                        <p>Power demand growth for AI data centers</p>
+                    </div>
+                </div>
+                
+                <div class="growth-bar">
+                    <div class="growth-label">AI Compute Demand Growth</div>
+                    <div class="growth-value">+37% YoY</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

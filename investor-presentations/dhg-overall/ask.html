@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+      }
+      .geometric-accent-1 {
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        border-radius: 50%;
+      }
+      .geometric-accent-2 {
+        position: absolute;
+        bottom: -150px;
+        left: -150px;
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(0, 212, 255, 0.03) 100%);
+        border-radius: 50%;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 60px 40px 60px;
+      }
+      .page-label {
+        font-size: 14px;
+        color: #fbbf24;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 8px;
+      }
+      .page-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 44px;
+        font-weight: 900;
+        color: #00d4ff;
+        text-align: center;
+        margin-bottom: 24px;
+        text-shadow: 0 0 60px rgba(0, 212, 255, 0.5);
+      }
+      .ask-amount {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 72px;
+        font-weight: 900;
+        color: #fbbf24;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .ask-label {
+        font-size: 18px;
+        color: #e2e8f0;
+        margin-bottom: 24px;
+      }
+      .terms-row {
+        display: flex;
+        justify-content: center;
+        gap: 48px;
+        margin-bottom: 28px;
+      }
+      .term-item {
+        text-align: center;
+      }
+      .term-value {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #00d4ff;
+        margin-bottom: 4px;
+      }
+      .term-label {
+        font-size: 12px;
+        color: #94a3b8;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .why-now-section {
+        background: rgba(251, 191, 36, 0.1);
+        border-left: 4px solid #fbbf24;
+        padding: 16px 24px;
+        margin-bottom: 28px;
+        max-width: 700px;
+      }
+      .why-now-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: #fbbf24;
+        margin-bottom: 12px;
+      }
+      .why-now-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 24px;
+      }
+      .why-now-item {
+        font-size: 14px;
+        color: #e2e8f0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .why-now-item i {
+        color: #fbbf24;
+        font-size: 12px;
+      }
+      .contact-section {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .contact-name {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 8px;
+      }
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: #00d4ff;
+      }
+      .contact-item i {
+        font-size: 14px;
+      }
+      .closing-quote {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+      .quote-text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        font-style: italic;
+        color: #fbbf24;
+      }
+      .slide-number {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="geometric-accent-1"></div>
+        <div class="geometric-accent-2"></div>
+        
+        <div class="content-wrapper">
+            <p class="page-label">The Ask</p>
+            <h1 class="page-title">Join The Perfect Storm</h1>
+            
+            <p class="ask-amount">$1,000,000</p>
+            <p class="ask-label">Seed Round</p>
+            
+            <div class="terms-row">
+                <div class="term-item">
+                    <p class="term-value">$5M</p>
+                    <p class="term-label">Pre-Money Valuation</p>
+                </div>
+                <div class="term-item">
+                    <p class="term-value">SAFE</p>
+                    <p class="term-label">Investment Terms</p>
+                </div>
+                <div class="term-item">
+                    <p class="term-value">$25K</p>
+                    <p class="term-label">Minimum Investment</p>
+                </div>
+            </div>
+            
+            <div class="why-now-section">
+                <h3 class="why-now-title">Why Now?</h3>
+                <div class="why-now-grid">
+                    <div class="why-now-item">
+                        <i class="fas fa-check"></i>
+                        <span>NIL market exploding</span>
+                    </div>
+                    <div class="why-now-item">
+                        <i class="fas fa-check"></i>
+                        <span>Youth sports at all-time high</span>
+                    </div>
+                    <div class="why-now-item">
+                        <i class="fas fa-check"></i>
+                        <span>AI technology mature</span>
+                    </div>
+                    <div class="why-now-item">
+                        <i class="fas fa-check"></i>
+                        <span>First-mover window closing</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <p class="contact-name">Chad Allen Dozier Sr.</p>
+                <div class="contact-info">
+                    <span class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        cdozier14@athlynx.ai
+                    </span>
+                    <span class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        athlynx.ai
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="closing-quote">
+            <p class="quote-text">"Dreams Do Come True"</p>
+        </div>
+        
+        <div class="slide-number">12 / 12</div>
+    </div>
+</body>
+</html>

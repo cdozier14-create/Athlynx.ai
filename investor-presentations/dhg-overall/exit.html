@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+      }
+      .header {
+        padding: 40px 60px 0 60px;
+      }
+      .page-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        color: #00d4ff;
+        margin-bottom: 4px;
+      }
+      .page-subtitle {
+        font-size: 16px;
+        color: #fbbf24;
+      }
+      .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 24px 60px;
+      }
+      .section-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 16px;
+      }
+      .targets-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .target-box {
+        background: rgba(59, 130, 246, 0.08);
+        border-left: 3px solid #3b82f6;
+        padding: 12px 16px;
+      }
+      .target-category {
+        font-size: 11px;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
+      }
+      .target-names {
+        font-size: 13px;
+        color: #e2e8f0;
+        line-height: 1.5;
+      }
+      .comparables-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .comparable-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(251, 191, 36, 0.08);
+        border-left: 3px solid #fbbf24;
+        padding: 12px 16px;
+      }
+      .comparable-name {
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+      }
+      .comparable-detail {
+        font-size: 12px;
+        color: #94a3b8;
+      }
+      .comparable-value {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #fbbf24;
+      }
+      .exit-target {
+        margin: 20px 60px;
+        background: linear-gradient(90deg, rgba(0, 212, 255, 0.15) 0%, rgba(251, 191, 36, 0.15) 100%);
+        padding: 24px 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .exit-metric {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .exit-label {
+        font-size: 12px;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+      }
+      .exit-value {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+        font-weight: 800;
+        color: #00d4ff;
+      }
+      .exit-value.gold {
+        color: #fbbf24;
+      }
+      .exit-note {
+        font-size: 12px;
+        color: #94a3b8;
+        margin-top: 4px;
+      }
+      .slide-number {
+        position: absolute;
+        bottom: 12px;
+        right: 40px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1 class="page-title">Exit Strategy</h1>
+            <p class="page-subtitle">Multiple Paths to Liquidity</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="targets-section">
+                <h3 class="section-title">Acquisition Targets</h3>
+                <div class="targets-grid">
+                    <div class="target-box">
+                        <p class="target-category">Sports Media</p>
+                        <p class="target-names">ESPN, Fox Sports, Turner Sports</p>
+                    </div>
+                    <div class="target-box">
+                        <p class="target-category">Tech Giants</p>
+                        <p class="target-names">Google, Meta, Apple, Amazon</p>
+                    </div>
+                    <div class="target-box">
+                        <p class="target-category">Sports Betting</p>
+                        <p class="target-names">DraftKings, FanDuel, BetMGM</p>
+                    </div>
+                    <div class="target-box">
+                        <p class="target-category">Athletic Apparel</p>
+                        <p class="target-names">Nike, Under Armour, Adidas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comparables-section">
+                <h3 class="section-title">Comparable Exits</h3>
+                <div class="comparables-list">
+                    <div class="comparable-item">
+                        <div>
+                            <p class="comparable-name">Overtime</p>
+                            <p class="comparable-detail">Sports media network</p>
+                        </div>
+                        <span class="comparable-value">$500M</span>
+                    </div>
+                    <div class="comparable-item">
+                        <div>
+                            <p class="comparable-name">INFLCR</p>
+                            <p class="comparable-detail">Acquired by Teamworks</p>
+                        </div>
+                        <span class="comparable-value">$100M+</span>
+                    </div>
+                    <div class="comparable-item">
+                        <div>
+                            <p class="comparable-name">Opendorse</p>
+                            <p class="comparable-detail">NIL platform</p>
+                        </div>
+                        <span class="comparable-value">$150M+</span>
+                    </div>
+                    <div class="comparable-item">
+                        <div>
+                            <p class="comparable-name">Cameo</p>
+                            <p class="comparable-detail">Celebrity platform</p>
+                        </div>
+                        <span class="comparable-value">$1B+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="exit-target">
+            <div class="exit-metric">
+                <p class="exit-label">Timeline</p>
+                <p class="exit-value">5-7</p>
+                <p class="exit-note">Year Horizon</p>
+            </div>
+            <div class="exit-metric">
+                <p class="exit-label">Target Valuation</p>
+                <p class="exit-value gold">$500M - $2B</p>
+                <p class="exit-note">Strategic Acquisition or IPO</p>
+            </div>
+            <div class="exit-metric">
+                <p class="exit-label">Exit Multiple</p>
+                <p class="exit-value">10-20x</p>
+                <p class="exit-note">Revenue Multiple</p>
+            </div>
+        </div>
+        
+        <div class="slide-number">11 / 12</div>
+    </div>
+</body>
+</html>

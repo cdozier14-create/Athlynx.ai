@@ -1,0 +1,92 @@
+{
+  "project_info": {
+    "title": "ATHLYNX - The Athlete's Playbook",
+    "created": 1767737685.8259206,
+    "last_updated": 1767737956.621062,
+    "total_slides": 10
+  },
+  "slides": {
+    "title": "edited",
+    "problem": "edited",
+    "solution": "edited",
+    "market": "edited",
+    "business_model": "edited",
+    "traction": "edited",
+    "advantage": "edited",
+    "team": "edited",
+    "financials": "edited",
+    "ask": "edited"
+  },
+  "outline": [
+    {
+      "id": "title",
+      "title": "ATHLYNX - The Athlete's Playbook",
+      "summary": "Title slide with logo, tagline, and Series A funding ask of $5M",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "problem",
+      "title": "The $40B Problem",
+      "summary": "Youth sports spending crisis - parents spending $3K-$35K/year, 83% believe kids will play college but only 7% do",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "solution",
+      "title": "Our Solution",
+      "summary": "ATHLYNX one platform for entire athlete journey - AI NIL valuation, transfer portal, recruiting, content generation",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "market",
+      "title": "Market Opportunity",
+      "summary": "TAM $40B, SAM $15B, SOM $500M Year 1, 60M youth athletes, growing 8% annually",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "business_model",
+      "title": "Business Model",
+      "summary": "Multiple revenue streams - subscriptions, brand partnerships, university licenses, transaction fees, hosting",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "traction",
+      "title": "Traction & Milestones",
+      "summary": "Platform LIVE, 2,500+ signups, 3 university LOIs, 12 brand interests, $500K projected Year 1",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "advantage",
+      "title": "Competitive Advantage",
+      "summary": "AI-first, full journey coverage, parent-focused, proprietary algorithm, first-mover advantage",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "team",
+      "title": "Leadership Team",
+      "summary": "Chad Dozier CEO, Glenn Tse COO, Lee Mayes CRO, David Ford Sr. Legal Advisor",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "financials",
+      "title": "Financial Projections",
+      "summary": "Revenue growth from $500K to $500M over 5 years, path to profitability",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "ask",
+      "title": "The Ask",
+      "summary": "Seeking $5M Series A at $25M pre-money, use of funds, contact information",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    }
+  ]
+}

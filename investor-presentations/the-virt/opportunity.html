@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px; /* keep as required */
+        background: linear-gradient(180deg, #0a0a12 0%, #12121f 50%, #0a0a12 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .grid-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(rgba(0, 255, 136, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 255, 136, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
+      .header {
+        padding: 40px 60px 20px; /* keep upper padding intact */
+        position: relative;
+        z-index: 10;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #00ff88;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+      }
+      /* Reduced vertical padding/gaps to fit under 720px */
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px; /* slightly smaller gap */
+        padding: 8px 60px; /* reduced vertical padding from 20px to 8px */
+        position: relative;
+        z-index: 10;
+      }
+      .stats-section {
+        display: flex;
+        flex-direction: column;
+        gap: 8px; /* reduced from 18px */
+      }
+      .big-stat {
+        background: rgba(0, 255, 136, 0.05);
+        border-left: 4px solid #00ff88;
+        padding: 12px 18px; /* reduced from 20px 25px */
+      }
+      .big-stat:nth-child(2) { border-left-color: #8b5cf6; }
+      .big-stat:nth-child(3) { border-left-color: #00d4ff; }
+      .stat-number {
+        font-size: 52px;
+        font-weight: 700;
+        color: #00ff88;
+        line-height: 1;
+      }
+      .big-stat:nth-child(2) .stat-number { color: #8b5cf6; }
+      .big-stat:nth-child(3) .stat-number { color: #00d4ff; }
+      .stat-label {
+        font-size: 16px;
+        color: #e2e8f0;
+        margin-top: 8px;
+        font-weight: 600;
+      }
+      .stat-desc {
+        font-size: 13px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+        margin-top: 5px;
+      }
+      .trends-section {
+        display: flex;
+        flex-direction: column;
+        gap: 8px; /* reduced from 15px */
+      }
+      .trends-section h3 {
+        font-size: 20px;
+        color: #00ff88;
+        margin-bottom: 5px;
+      }
+      .trend-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(139, 92, 246, 0.05);
+        padding: 12px 16px; /* reduced from 16px 20px */
+        border-left: 3px solid #8b5cf6;
+      }
+      .trend-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #8b5cf6 0%, #00d4ff 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #0a0a12;
+      }
+      .trend-content h4 {
+        font-size: 16px;
+        color: #e2e8f0;
+        margin-bottom: 4px;
+      }
+      .trend-content p {
+        font-size: 13px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+      }
+      .growth-bar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 10px 60px; /* reduced vertical padding from 20px to 10px */
+        position: relative;
+        z-index: 10;
+        margin-top: 6px; /* reduced gap between content and growth-bar from 10px to 6px */
+      }
+      .growth-item {
+        background: rgba(0, 212, 255, 0.08);
+        border-top: 2px solid #00d4ff;
+        padding: 10px 12px; /* reduced from 15px 18px */
+        text-align: center;
+      }
+      .growth-value {
+        font-size: 32px;
+        font-weight: 700;
+        color: #00d4ff;
+      }
+      .growth-label {
+        font-size: 13px;
+        color: #64748b;
+        font-family: 'Inter', sans-serif;
+        margin-top: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-pattern"></div>
+        
+        <div class="header">
+            <div class="page-title">The Opportunity</div>
+            <div class="page-subtitle">Web3 is Transforming Finance, Assets & Digital Ownership</div>
+        </div>
+        
+        <div class="content">
+            <div class="stats-section">
+                <div class="big-stat">
+                    <div class="stat-number">$81.5B</div>
+                    <div class="stat-label">Web3 Market Size by 2030</div>
+                    <div class="stat-desc">Growing at 43.7% CAGR</div>
+                </div>
+                
+                <div class="big-stat">
+                    <div class="stat-number">$16T</div>
+                    <div class="stat-label">Tokenized Assets by 2030</div>
+                    <div class="stat-desc">Real estate, art, securities, commodities</div>
+                </div>
+                
+                <div class="big-stat">
+                    <div class="stat-number">$200B+</div>
+                    <div class="stat-label">DeFi Total Value Locked</div>
+                    <div class="stat-desc">Decentralized finance revolution</div>
+                </div>
+            </div>
+            
+            <div class="trends-section">
+                <h3>Key Trends</h3>
+                
+                <div class="trend-item">
+                    <div class="trend-icon"><i class="fas fa-building"></i></div>
+                    <div class="trend-content">
+                        <h4>Institutional Adoption</h4>
+                        <p>BlackRock, Fidelity, Goldman entering crypto</p>
+                    </div>
+                </div>
+                
+                <div class="trend-item">
+                    <div class="trend-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="trend-content">
+                        <h4>Regulatory Clarity</h4>
+                        <p>SEC approving Bitcoin ETFs, clearer frameworks</p>
+                    </div>
+                </div>
+                
+                <div class="trend-item">
+                    <div class="trend-icon"><i class="fas fa-coins"></i></div>
+                    <div class="trend-content">
+                        <h4>Real-World Asset Tokenization</h4>
+                        <p>$10T+ in assets moving on-chain by 2030</p>
+                    </div>
+                </div>
+                
+                <div class="trend-item">
+                    <div class="trend-icon"><i class="fas fa-users"></i></div>
+                    <div class="trend-content">
+                        <h4>Mass Consumer Adoption</h4>
+                        <p>420M+ crypto users globally</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="growth-bar">
+            <div class="growth-item">
+                <div class="growth-value">+156%</div>
+                <div class="growth-label">Bitcoin ETF inflows (2024)</div>
+            </div>
+            
+            <div class="growth-item">
+                <div class="growth-value">$35B</div>
+                <div class="growth-label">NFT market size by 2027</div>
+            </div>
+            
+            <div class="growth-item">
+                <div class="growth-value">83%</div>
+                <div class="growth-label">Institutions planning crypto allocation</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

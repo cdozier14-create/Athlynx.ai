@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1f1a 0%, #0f2d25 50%, #0a1f1a 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .organic-shape-1 {
+        position: absolute;
+        top: -150px;
+        right: -150px;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(ellipse, rgba(34, 197, 94, 0.1) 0%, transparent 70%);
+      }
+      .organic-shape-2 {
+        position: absolute;
+        bottom: -100px;
+        left: -100px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(ellipse, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+      }
+      .sun-rays {
+        position: absolute;
+        top: 80px;
+        right: 120px;
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(circle, rgba(251, 191, 36, 0.3) 0%, rgba(251, 191, 36, 0.1) 40%, transparent 70%);
+      }
+      .content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .icon-container {
+        width: 110px;
+        height: 110px;
+        background: linear-gradient(135deg, #22c55e 0%, #3b82f6 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+        font-size: 50px;
+        color: #0a1f1a;
+      }
+      .company-name {
+        font-size: 72px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #22c55e 0%, #3b82f6 50%, #fbbf24 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+      }
+      .tagline {
+        font-size: 24px;
+        color: #f0fdf4;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        margin-bottom: 35px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .parent-company {
+        font-size: 14px;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-family: 'Inter', sans-serif;
+      }
+      .parent-company span {
+        color: #22c55e;
+        font-weight: 500;
+      }
+      .energy-bar {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 40px;
+        z-index: 10;
+      }
+      .energy-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .energy-icon {
+        font-size: 20px;
+        color: #22c55e;
+      }
+      .energy-text {
+        font-size: 12px;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="organic-shape-1"></div>
+        <div class="organic-shape-2"></div>
+        <div class="sun-rays"></div>
+        
+        <div class="content">
+            <div class="icon-container">
+                <i class="fas fa-solar-panel"></i>
+            </div>
+            <div class="company-name">VC Energy</div>
+            <div class="tagline">Powering a Sustainable Future</div>
+            <div class="parent-company">A <span>Dozier Holdings Group</span> Company</div>
+        </div>
+        
+        <div class="energy-bar">
+            <div class="energy-item">
+                <i class="fas fa-sun energy-icon"></i>
+                <span class="energy-text">Solar</span>
+            </div>
+            <div class="energy-item">
+                <i class="fas fa-wind energy-icon" style="color: #3b82f6;"></i>
+                <span class="energy-text">Wind</span>
+            </div>
+            <div class="energy-item">
+                <i class="fas fa-battery-full energy-icon" style="color: #fbbf24;"></i>
+                <span class="energy-text">Storage</span>
+            </div>
+            <div class="energy-item">
+                <i class="fas fa-charging-station energy-icon"></i>
+                <span class="energy-text">EV Charging</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #1a1814 0%, #2a2520 50%, #1a1814 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Playfair Display', serif;
+      }
+      .organic-shape {
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(ellipse, rgba(212, 165, 116, 0.08) 0%, transparent 70%);
+      }
+      .header {
+        padding: 40px 60px 15px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #d4a574;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+      }
+      .revenue-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .revenue-stream {
+        background: rgba(212, 165, 116, 0.04);
+        border-top: 3px solid #d4a574;
+        padding: 20px 15px;
+        text-align: center;
+      }
+      .revenue-stream:nth-child(2) { border-top-color: #7c9885; }
+      .revenue-stream:nth-child(3) { border-top-color: #c9a87c; }
+      .revenue-stream:nth-child(4) { border-top-color: #7c9885; }
+      .stream-icon {
+        width: 55px;
+        height: 55px;
+        margin: 0 auto 12px;
+        background: linear-gradient(135deg, #d4a574 0%, #c9a87c 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #1a1814;
+      }
+      .revenue-stream:nth-child(2) .stream-icon { background: linear-gradient(135deg, #7c9885 0%, #d4a574 100%); }
+      .revenue-stream:nth-child(3) .stream-icon { background: linear-gradient(135deg, #c9a87c 0%, #7c9885 100%); }
+      .revenue-stream:nth-child(4) .stream-icon { background: linear-gradient(135deg, #7c9885 0%, #c9a87c 100%); }
+      .stream-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #f5f0eb;
+        margin-bottom: 10px;
+      }
+      .stream-pricing {
+        font-size: 22px;
+        font-weight: 700;
+        color: #d4a574;
+        margin-bottom: 6px;
+      }
+      .revenue-stream:nth-child(2) .stream-pricing { color: #7c9885; }
+      .revenue-stream:nth-child(3) .stream-pricing { color: #c9a87c; }
+      .revenue-stream:nth-child(4) .stream-pricing { color: #7c9885; }
+      .stream-unit {
+        font-size: 11px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+        margin-bottom: 12px;
+      }
+      .stream-features {
+        list-style: none;
+        text-align: left;
+      }
+      .stream-features li {
+        font-size: 11px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+        margin-bottom: 5px;
+        padding-left: 12px;
+        position: relative;
+      }
+      .stream-features li::before {
+        content: "◆";
+        position: absolute;
+        left: 0;
+        color: #d4a574;
+        font-size: 6px;
+      }
+      .projections {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .projection-box {
+        background: rgba(124, 152, 133, 0.08);
+        border: 1px solid rgba(124, 152, 133, 0.3);
+        padding: 18px 20px;
+        text-align: center;
+      }
+      .projection-year {
+        font-size: 13px;
+        color: #a09080;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+        font-family: 'Lato', sans-serif;
+      }
+      .projection-value {
+        font-size: 34px;
+        font-weight: 700;
+        color: #7c9885;
+      }
+      .projection-label {
+        font-size: 12px;
+        color: #a09080;
+        font-family: 'Lato', sans-serif;
+        margin-top: 5px;
+      }
+      .margin-note {
+        position: relative;
+        z-index: 10;
+        margin: 15px 60px 0;
+        background: rgba(212, 165, 116, 0.08);
+        border: 1px solid rgba(212, 165, 116, 0.3);
+        padding: 14px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+      .margin-note i {
+        color: #d4a574;
+        font-size: 18px;
+      }
+      .margin-note span {
+        font-size: 15px;
+        color: #f5f0eb;
+        font-family: 'Lato', sans-serif;
+      }
+      .margin-note strong {
+        color: #d4a574;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="organic-shape"></div>
+        
+        <div class="header">
+            <div class="page-title">Revenue Model</div>
+            <div class="page-subtitle">Multiple Premium Revenue Streams</div>
+        </div>
+        
+        <div class="revenue-grid">
+            <div class="revenue-stream">
+                <div class="stream-icon"><i class="fas fa-bed"></i></div>
+                <div class="stream-title">Room Rates</div>
+                <div class="stream-pricing">$2K - $10K</div>
+                <div class="stream-unit">per night</div>
+                <ul class="stream-features">
+                    <li>Luxury suites & villas</li>
+                    <li>All-inclusive packages</li>
+                    <li>Concierge service</li>
+                    <li>75% occupancy target</li>
+                </ul>
+            </div>
+            
+            <div class="revenue-stream">
+                <div class="stream-icon"><i class="fas fa-spa"></i></div>
+                <div class="stream-title">Treatment Packages</div>
+                <div class="stream-pricing">$5K - $100K</div>
+                <div class="stream-unit">per program</div>
+                <ul class="stream-features">
+                    <li>Medical spa treatments</li>
+                    <li>Mental health programs</li>
+                    <li>Recovery packages</li>
+                    <li>85% gross margin</li>
+                </ul>
+            </div>
+            
+            <div class="revenue-stream">
+                <div class="stream-icon"><i class="fas fa-crown"></i></div>
+                <div class="stream-title">Memberships</div>
+                <div class="stream-pricing">$25K - $250K</div>
+                <div class="stream-unit">per year</div>
+                <ul class="stream-features">
+                    <li>Priority access</li>
+                    <li>Unlimited treatments</li>
+                    <li>Exclusive events</li>
+                    <li>90% renewal rate</li>
+                </ul>
+            </div>
+            
+            <div class="revenue-stream">
+                <div class="stream-icon"><i class="fas fa-building"></i></div>
+                <div class="stream-title">Corporate Retreats</div>
+                <div class="stream-pricing">$50K - $500K</div>
+                <div class="stream-unit">per event</div>
+                <ul class="stream-features">
+                    <li>Executive wellness</li>
+                    <li>Team building</li>
+                    <li>Leadership programs</li>
+                    <li>70% gross margin</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="projections">
+            <div class="projection-box">
+                <div class="projection-year">Year 1</div>
+                <div class="projection-value">$5M</div>
+                <div class="projection-label">Annual Revenue</div>
+            </div>
+            
+            <div class="projection-box">
+                <div class="projection-year">Year 3</div>
+                <div class="projection-value">$25M</div>
+                <div class="projection-label">Annual Revenue</div>
+            </div>
+            
+            <div class="projection-box">
+                <div class="projection-year">Year 5</div>
+                <div class="projection-value">$75M</div>
+                <div class="projection-label">Annual Revenue</div>
+            </div>
+        </div>
+        
+        <div class="margin-note">
+            <i class="fas fa-chart-line"></i>
+            <span>Blended Gross Margin: <strong>78%</strong> | Average Stay Value: <strong>$45,000</strong></span>
+        </div>
+    </div>
+</body>
+</html>

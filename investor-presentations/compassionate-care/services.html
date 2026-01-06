@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0f4c5c 0%, #1a6373 50%, #0f4c5c 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Lato', sans-serif;
+      }
+      .soft-shape {
+        position: absolute;
+        bottom: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(ellipse, rgba(232, 180, 184, 0.1) 0%, transparent 70%);
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #e8b4b8;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #8fb8c7;
+        font-family: 'Inter', sans-serif;
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .service-card {
+        background: rgba(232, 180, 184, 0.05);
+        border-top: 3px solid #e8b4b8;
+        padding: 25px;
+        display: flex;
+        gap: 20px;
+      }
+      .service-card:nth-child(2) { border-top-color: #f8f4e3; }
+      .service-card:nth-child(3) { border-top-color: #5fa8d3; }
+      .service-card:nth-child(4) { border-top-color: #e8b4b8; }
+      .card-icon {
+        width: 65px;
+        height: 65px;
+        background: linear-gradient(135deg, #e8b4b8 0%, #f8f4e3 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: #0f4c5c;
+        flex-shrink: 0;
+      }
+      .service-card:nth-child(2) .card-icon { background: linear-gradient(135deg, #f8f4e3 0%, #e8b4b8 100%); }
+      .service-card:nth-child(3) .card-icon { background: linear-gradient(135deg, #5fa8d3 0%, #f8f4e3 100%); }
+      .service-card:nth-child(4) .card-icon { background: linear-gradient(135deg, #e8b4b8 0%, #5fa8d3 100%); }
+      .card-content h3 {
+        font-size: 22px;
+        color: #fafafa;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .card-content p {
+        font-size: 14px;
+        color: #8fb8c7;
+        font-family: 'Inter', sans-serif;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+      .card-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .feature-tag {
+        background: rgba(232, 180, 184, 0.15);
+        border: 1px solid rgba(232, 180, 184, 0.3);
+        padding: 4px 10px;
+        font-size: 11px;
+        color: #e8b4b8;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .service-card:nth-child(2) .feature-tag { background: rgba(248, 244, 227, 0.1); border-color: rgba(248, 244, 227, 0.3); color: #f8f4e3; }
+      .service-card:nth-child(3) .feature-tag { background: rgba(95, 168, 211, 0.15); border-color: rgba(95, 168, 211, 0.3); color: #5fa8d3; }
+      .service-card:nth-child(4) .feature-tag { background: rgba(232, 180, 184, 0.15); border-color: rgba(232, 180, 184, 0.3); color: #e8b4b8; }
+      .market-bar {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+        background: rgba(232, 180, 184, 0.03);
+        margin: 15px 60px 0;
+      }
+      .market-item {
+        text-align: center;
+      }
+      .market-value {
+        font-size: 28px;
+        font-weight: 700;
+        color: #e8b4b8;
+      }
+      .market-label {
+        font-size: 12px;
+        color: #8fb8c7;
+        font-family: 'Inter', sans-serif;
+        margin-top: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="soft-shape"></div>
+        
+        <div class="header">
+            <div class="page-title">Our Services</div>
+            <div class="page-subtitle">Comprehensive Care for Every Stage of Life</div>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-home"></i></div>
+                <div class="card-content">
+                    <h3>Home Health</h3>
+                    <p>Skilled nursing, physical therapy, and medical care delivered in the comfort of home.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Nursing</span>
+                        <span class="feature-tag">Therapy</span>
+                        <span class="feature-tag">Medicare</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-hands-holding-heart"></i></div>
+                <div class="card-content">
+                    <h3>Hospice Care</h3>
+                    <p>Compassionate end-of-life care focused on comfort, dignity, and family support.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Palliative</span>
+                        <span class="feature-tag">Family</span>
+                        <span class="feature-tag">Spiritual</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-brain"></i></div>
+                <div class="card-content">
+                    <h3>Memory Care</h3>
+                    <p>Specialized care for dementia and Alzheimer's patients with trained caregivers.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Dementia</span>
+                        <span class="feature-tag">Alzheimer's</span>
+                        <span class="feature-tag">24/7</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-user-friends"></i></div>
+                <div class="card-content">
+                    <h3>Companion Care</h3>
+                    <p>Non-medical assistance with daily activities, transportation, and companionship.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Daily Living</span>
+                        <span class="feature-tag">Transport</span>
+                        <span class="feature-tag">Social</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="market-bar">
+            <div class="market-item">
+                <div class="market-value">$173B</div>
+                <div class="market-label">Home Healthcare Market by 2026</div>
+            </div>
+            <div class="market-item">
+                <div class="market-value">10,000</div>
+                <div class="market-label">Baby Boomers Turn 65 Daily</div>
+            </div>
+            <div class="market-item">
+                <div class="market-value">7.5%</div>
+                <div class="market-label">Annual Market Growth</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(180deg, #0c2340 0%, #1a3a5c 50%, #0c2340 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Cormorant Garamond', serif;
+      }
+      .wave-shape {
+        position: absolute;
+        bottom: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(ellipse, rgba(0, 180, 216, 0.08) 0%, transparent 70%);
+      }
+      .header {
+        padding: 40px 60px 20px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+      }
+      .page-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: #00b4d8;
+        margin-bottom: 8px;
+      }
+      .page-subtitle {
+        font-size: 18px;
+        color: #6b8fa3;
+        font-family: 'Inter', sans-serif;
+      }
+      .concept-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+      }
+      .concept-card {
+        background: rgba(0, 180, 216, 0.03);
+        border-top: 3px solid #00b4d8;
+        padding: 25px;
+        display: flex;
+        gap: 20px;
+      }
+      .concept-card:nth-child(2) { border-top-color: #f4e8c1; }
+      .concept-card:nth-child(3) { border-top-color: #ff6b35; }
+      .concept-card:nth-child(4) { border-top-color: #00b4d8; }
+      .card-icon {
+        width: 65px;
+        height: 65px;
+        background: linear-gradient(135deg, #00b4d8 0%, #f4e8c1 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: #0c2340;
+        flex-shrink: 0;
+      }
+      .concept-card:nth-child(2) .card-icon { background: linear-gradient(135deg, #f4e8c1 0%, #00b4d8 100%); }
+      .concept-card:nth-child(3) .card-icon { background: linear-gradient(135deg, #ff6b35 0%, #f4e8c1 100%); }
+      .concept-card:nth-child(4) .card-icon { background: linear-gradient(135deg, #00b4d8 0%, #ff6b35 100%); }
+      .card-content h3 {
+        font-size: 22px;
+        color: #f8f9fa;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .card-content p {
+        font-size: 14px;
+        color: #6b8fa3;
+        font-family: 'Inter', sans-serif;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+      .card-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .feature-tag {
+        background: rgba(0, 180, 216, 0.15);
+        border: 1px solid rgba(0, 180, 216, 0.3);
+        padding: 4px 10px;
+        font-size: 11px;
+        color: #00b4d8;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: 'Inter', sans-serif;
+      }
+      .concept-card:nth-child(2) .feature-tag { background: rgba(244, 232, 193, 0.1); border-color: rgba(244, 232, 193, 0.3); color: #f4e8c1; }
+      .concept-card:nth-child(3) .feature-tag { background: rgba(255, 107, 53, 0.15); border-color: rgba(255, 107, 53, 0.3); color: #ff6b35; }
+      .concept-card:nth-child(4) .feature-tag { background: rgba(0, 180, 216, 0.15); border-color: rgba(0, 180, 216, 0.3); color: #00b4d8; }
+      .market-bar {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        padding: 20px 60px;
+        position: relative;
+        z-index: 10;
+        background: rgba(0, 180, 216, 0.03);
+        margin: 15px 60px 0;
+      }
+      .market-item {
+        text-align: center;
+      }
+      .market-value {
+        font-size: 28px;
+        font-weight: 700;
+        color: #00b4d8;
+      }
+      .market-label {
+        font-size: 12px;
+        color: #6b8fa3;
+        font-family: 'Inter', sans-serif;
+        margin-top: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="wave-shape"></div>
+        
+        <div class="header">
+            <div class="page-title">The Concept</div>
+            <div class="page-subtitle">A Complete Luxury Waterfront Experience</div>
+        </div>
+        
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="card-icon"><i class="fas fa-bed"></i></div>
+                <div class="card-content">
+                    <h3>Boutique Resort</h3>
+                    <p>50 luxury oceanfront suites with private balconies, premium amenities, and personalized concierge service.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Oceanfront</span>
+                        <span class="feature-tag">Suites</span>
+                        <span class="feature-tag">Concierge</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <div class="card-icon"><i class="fas fa-ship"></i></div>
+                <div class="card-content">
+                    <h3>Full-Service Marina</h3>
+                    <p>75-slip marina accommodating vessels up to 150ft with fuel, maintenance, and yacht charter services.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">75 Slips</span>
+                        <span class="feature-tag">Fuel</span>
+                        <span class="feature-tag">Charters</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <div class="card-icon"><i class="fas fa-spa"></i></div>
+                <div class="card-content">
+                    <h3>Spa & Wellness</h3>
+                    <p>10,000 sq ft spa featuring ocean-inspired treatments, fitness center, yoga studio, and meditation gardens.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Treatments</span>
+                        <span class="feature-tag">Fitness</span>
+                        <span class="feature-tag">Yoga</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <div class="card-icon"><i class="fas fa-utensils"></i></div>
+                <div class="card-content">
+                    <h3>Dining & Entertainment</h3>
+                    <p>Three signature restaurants, rooftop bar, private event spaces, and live entertainment venue.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Restaurants</span>
+                        <span class="feature-tag">Bar</span>
+                        <span class="feature-tag">Events</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="market-bar">
+            <div class="market-item">
+                <div class="market-value">$1.1T</div>
+                <div class="market-label">Global Luxury Travel Market</div>
+            </div>
+            <div class="market-item">
+                <div class="market-value">$500+</div>
+                <div class="market-label">Average Daily Rate</div>
+            </div>
+            <div class="market-item">
+                <div class="market-value">75%</div>
+                <div class="market-label">Target Occupancy</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

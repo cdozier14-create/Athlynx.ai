@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { trpc } from "@/lib/trpc";
 
 /**
  * ATHLYNX PRICING PAGE
@@ -141,16 +142,42 @@ export default function Pricing() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
   const [userType, setUserType] = useState<"athlete" | "brand">("athlete");
 
+  const checkoutMutation = trpc.stripe.createCheckout.useMutation({
+    onSuccess: (data) => {
+      if (data.url) {
+        window.location.href = data.url;
+      }
+    },
+    onError: (error) => {
+      if (error.message.includes("UNAUTHORIZED")) {
+        toast.error("Please sign in to subscribe");
+        // Redirect to login
+        window.location.href = "/portal";
+      } else {
+        toast.error(error.message || "Checkout failed. Please try again.");
+      }
+    },
+  });
+
   const handleCheckout = async (tierId: string, tierName: string) => {
-    toast.success(`Redirecting to checkout for ${tierName}...`);
-    // In production, this calls the Stripe checkout API
-    // For now, show coming soon
-    toast.info("Payment system launching tomorrow! Sign up for early access.");
+    if (tierId === "free") {
+      toast.success("Welcome to ATHLYNX! Sign up to get started.");
+      window.location.href = "/";
+      return;
+    }
+    
+    toast.loading(`Preparing checkout for ${tierName}...`);
+    checkoutMutation.mutate({
+      tierId,
+      billingCycle,
+    });
   };
 
   const handleCreditPurchase = (packId: string, credits: number) => {
-    toast.success(`Purchasing ${credits} AI credits...`);
-    toast.info("Credit purchases launching tomorrow!");
+    toast.loading(`Preparing checkout for ${credits} AI credits...`);
+    checkoutMutation.mutate({
+      productId: `credit_pack_${packId}`,
+    });
   };
 
   const tiers = userType === "athlete" ? ATHLETE_TIERS : BRAND_TIERS;

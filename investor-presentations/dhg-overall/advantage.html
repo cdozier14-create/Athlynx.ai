@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+      }
+      .header {
+        padding: 40px 60px 0 60px;
+        text-align: center;
+      }
+      .page-label {
+        font-size: 14px;
+        color: #fbbf24;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+      }
+      .page-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        color: #00d4ff;
+      }
+      .advantages-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        padding: 40px 60px;
+      }
+      .advantage-box {
+        background: rgba(59, 130, 246, 0.08);
+        border-top: 4px solid #3b82f6;
+        padding: 28px;
+      }
+      .advantage-box:nth-child(2) {
+        border-top-color: #00d4ff;
+        background: rgba(0, 212, 255, 0.08);
+      }
+      .advantage-box:nth-child(3) {
+        border-top-color: #fbbf24;
+        background: rgba(251, 191, 36, 0.08);
+      }
+      .advantage-box:nth-child(4) {
+        border-top-color: #22c55e;
+        background: rgba(34, 197, 94, 0.08);
+      }
+      .advantage-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+      .advantage-icon {
+        width: 48px;
+        height: 48px;
+        background: rgba(59, 130, 246, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .advantage-box:nth-child(2) .advantage-icon { background: rgba(0, 212, 255, 0.2); }
+      .advantage-box:nth-child(3) .advantage-icon { background: rgba(251, 191, 36, 0.2); }
+      .advantage-box:nth-child(4) .advantage-icon { background: rgba(34, 197, 94, 0.2); }
+      .advantage-icon i {
+        font-size: 22px;
+        color: #3b82f6;
+      }
+      .advantage-box:nth-child(2) .advantage-icon i { color: #00d4ff; }
+      .advantage-box:nth-child(3) .advantage-icon i { color: #fbbf24; }
+      .advantage-box:nth-child(4) .advantage-icon i { color: #22c55e; }
+      .advantage-number {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: #64748b;
+      }
+      .advantage-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+      }
+      .advantage-description {
+        font-size: 15px;
+        color: #e2e8f0;
+        line-height: 1.6;
+        margin-bottom: 12px;
+      }
+      .advantage-bullet {
+        font-size: 14px;
+        color: #94a3b8;
+        padding-left: 16px;
+        position: relative;
+      }
+      .advantage-bullet::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #3b82f6;
+      }
+      .advantage-box:nth-child(2) .advantage-bullet::before { color: #00d4ff; }
+      .advantage-box:nth-child(3) .advantage-bullet::before { color: #fbbf24; }
+      .advantage-box:nth-child(4) .advantage-bullet::before { color: #22c55e; }
+      .slide-number {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        font-size: 14px;
+        color: #64748b;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <p class="page-label">Why DHG Wins</p>
+            <h1 class="page-title">Competitive Advantage</h1>
+        </div>
+        
+        <div class="advantages-grid">
+            <div class="advantage-box">
+                <div class="advantage-header">
+                    <div class="advantage-icon"><i class="fas fa-rocket"></i></div>
+                    <div>
+                        <p class="advantage-number">01</p>
+                        <h3 class="advantage-title">First-Mover in Youth-to-Pro Pipeline</h3>
+                    </div>
+                </div>
+                <p class="advantage-description">No competitor covers the entire athlete journey from youth sports to professional career.</p>
+                <p class="advantage-bullet">Capture athletes at age 6, keep them for life</p>
+            </div>
+            
+            <div class="advantage-box">
+                <div class="advantage-header">
+                    <div class="advantage-icon"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <p class="advantage-number">02</p>
+                        <h3 class="advantage-title">AI-Powered Everything</h3>
+                    </div>
+                </div>
+                <p class="advantage-description">Strategic Manus AI partnership enables automated valuation, matching, and content generation.</p>
+                <p class="advantage-bullet">Technology advantage that scales infinitely</p>
+            </div>
+            
+            <div class="advantage-box">
+                <div class="advantage-header">
+                    <div class="advantage-icon"><i class="fas fa-heart"></i></div>
+                    <div>
+                        <p class="advantage-number">03</p>
+                        <h3 class="advantage-title">Founder's Authenticity</h3>
+                    </div>
+                </div>
+                <p class="advantage-description">Real sports background, proven patent holder, and community-first approach builds trust.</p>
+                <p class="advantage-bullet">"When I eat, EVERYONE eats" philosophy</p>
+            </div>
+            
+            <div class="advantage-box">
+                <div class="advantage-header">
+                    <div class="advantage-icon"><i class="fas fa-th-large"></i></div>
+                    <div>
+                        <p class="advantage-number">04</p>
+                        <h3 class="advantage-title">Diversified Portfolio</h3>
+                    </div>
+                </div>
+                <p class="advantage-description">Not dependent on single product with multiple revenue streams and cross-selling opportunities.</p>
+                <p class="advantage-bullet">12 companies under one umbrella</p>
+            </div>
+        </div>
+        
+        <div class="slide-number">8 / 12</div>
+    </div>
+</body>
+</html>
