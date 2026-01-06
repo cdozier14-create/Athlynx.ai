@@ -13,6 +13,7 @@ import BlueCollar from "@/pages/BlueCollar";
 import CRMDashboard from "@/pages/CRMDashboard";
 import ManusPartnership from "@/pages/ManusPartnership";
 import Pricing from "@/pages/Pricing";
+import TransferPortal from "@/pages/TransferPortal";
 
 function Router() {
   return (
@@ -35,6 +36,9 @@ function Router() {
       <Route path="/partnership" component={ManusPartnership} />
       <Route path="/ai-partner" component={ManusPartnership} />
       <Route path="/pricing" component={Pricing} />
+      <Route path="/transfer-portal" component={TransferPortal} />
+      <Route path="/portal-search" component={TransferPortal} />
+      <Route path="/find-players" component={TransferPortal} />
       <Route path="/plans" component={Pricing} />
       <Route path="/subscribe" component={Pricing} />
       <Route path="/404" component={NotFound} />

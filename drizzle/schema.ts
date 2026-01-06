@@ -540,3 +540,219 @@ export const payments = mysqlTable("payments", {
 
 export type Payment = typeof payments.$inferSelect;
 export type InsertPayment = typeof payments.$inferInsert;
+
+
+// ==================== TRANSFER PORTAL ====================
+
+// Football positions
+export const footballPositions = [
+  "QB", "RB", "FB", "WR", "TE", "OT", "OG", "C", "IOL", "OL",
+  "DE", "DT", "NT", "DL", "Edge", "ILB", "OLB", "LB", "CB", "FS", "SS", "S", "DB",
+  "K", "P", "LS", "ATH"
+] as const;
+
+// Basketball positions
+export const basketballPositions = [
+  "PG", "SG", "SF", "PF", "C", "G", "F", "G/F", "F/C"
+] as const;
+
+// Transfer status
+export const transferStatuses = [
+  "available", "entered", "committed", "withdrawn", "signed"
+] as const;
+
+// Sports enum
+export const portalSports = [
+  "football", "basketball", "baseball", "softball", "soccer", 
+  "volleyball", "track", "swimming", "golf", "tennis", "wrestling",
+  "lacrosse", "hockey", "gymnastics", "other"
+] as const;
+
+// Divisions
+export const divisions = [
+  "D1-FBS", "D1-FCS", "D1", "D2", "D3", "NAIA", "JUCO"
+] as const;
+
+// Transfer Portal Entries
+export const transferPortalEntries = mysqlTable("transfer_portal_entries", {
+  id: int("id").autoincrement().primaryKey(),
+  
+  // Player info
+  athleteProfileId: int("athleteProfileId"),
+  userId: int("userId"),
+  fullName: varchar("fullName", { length: 128 }).notNull(),
+  
+  // Sport & Position
+  sport: varchar("sport", { length: 32 }).notNull(),
+  position: varchar("position", { length: 16 }).notNull(),
+  secondaryPosition: varchar("secondaryPosition", { length: 16 }),
+  
+  // Physical attributes
+  height: varchar("height", { length: 10 }), // "6-2"
+  weight: int("weight"), // in lbs
+  
+  // Academic
+  graduationYear: int("graduationYear"),
+  eligibilityRemaining: int("eligibilityRemaining"), // years
+  gpa: decimal("gpa", { precision: 3, scale: 2 }),
+  major: varchar("major", { length: 128 }),
+  
+  // Current/Previous School
+  currentSchool: varchar("currentSchool", { length: 128 }).notNull(),
+  currentConference: varchar("currentConference", { length: 64 }),
+  currentDivision: varchar("currentDivision", { length: 16 }),
+  
+  // Transfer Status
+  status: mysqlEnum("status", ["available", "entered", "committed", "withdrawn", "signed"]).default("entered").notNull(),
+  newSchool: varchar("newSchool", { length: 128 }),
+  newConference: varchar("newConference", { length: 64 }),
+  
+  // Ratings & Valuations
+  playerRating: decimal("playerRating", { precision: 4, scale: 4 }), // 0.8500 format
+  nilValuation: int("nilValuation"), // estimated annual NIL value
+  starRating: int("starRating"), // 1-5 stars
+  
+  // Stats & Highlights
+  statsJson: text("statsJson"), // JSON of career stats
+  highlightVideoUrl: text("highlightVideoUrl"),
+  hudlProfileUrl: text("hudlProfileUrl"),
+  
+  // Contact & Social
+  email: varchar("email", { length: 320 }),
+  phone: varchar("phone", { length: 20 }),
+  instagramHandle: varchar("instagramHandle", { length: 64 }),
+  twitterHandle: varchar("twitterHandle", { length: 64 }),
+  tiktokHandle: varchar("tiktokHandle", { length: 64 }),
+  
+  // Social metrics
+  totalFollowers: int("totalFollowers"),
+  engagementRate: decimal("engagementRate", { precision: 4, scale: 2 }),
+  
+  // Agent/Rep
+  hasAgent: boolean("hasAgent").default(false),
+  agentName: varchar("agentName", { length: 128 }),
+  agentContact: varchar("agentContact", { length: 320 }),
+  
+  // Preferences
+  preferredRegions: text("preferredRegions"), // JSON array
+  preferredDivisions: text("preferredDivisions"), // JSON array
+  openToAllOffers: boolean("openToAllOffers").default(true),
+  
+  // Timestamps
+  enteredPortalAt: timestamp("enteredPortalAt").defaultNow(),
+  committedAt: timestamp("committedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+  
+  // Visibility
+  isPublic: boolean("isPublic").default(true).notNull(),
+  isVerified: boolean("isVerified").default(false).notNull(),
+});
+
+export type TransferPortalEntry = typeof transferPortalEntries.$inferSelect;
+export type InsertTransferPortalEntry = typeof transferPortalEntries.$inferInsert;
+
+// Coach Profiles (for schools searching)
+export const coachProfiles = mysqlTable("coach_profiles", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(),
+  
+  // School info
+  schoolName: varchar("schoolName", { length: 128 }).notNull(),
+  conference: varchar("conference", { length: 64 }),
+  division: varchar("division", { length: 16 }),
+  sport: varchar("sport", { length: 32 }).notNull(),
+  
+  // Coach info
+  title: varchar("title", { length: 128 }), // "Head Coach", "Recruiting Coordinator"
+  positionCoached: varchar("positionCoached", { length: 32 }), // Position they recruit for
+  
+  // Contact
+  email: varchar("email", { length: 320 }),
+  phone: varchar("phone", { length: 20 }),
+  
+  // Verification
+  isVerified: boolean("isVerified").default(false).notNull(),
+  verifiedAt: timestamp("verifiedAt"),
+  
+  // Subscription
+  subscriptionTier: mysqlEnum("subscriptionTier", ["free", "basic", "pro", "enterprise"]).default("free"),
+  
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type CoachProfile = typeof coachProfiles.$inferSelect;
+export type InsertCoachProfile = typeof coachProfiles.$inferInsert;
+
+// Coach Watchlists
+export const coachWatchlists = mysqlTable("coach_watchlists", {
+  id: int("id").autoincrement().primaryKey(),
+  coachProfileId: int("coachProfileId").notNull(),
+  transferPortalEntryId: int("transferPortalEntryId").notNull(),
+  notes: text("notes"),
+  priority: mysqlEnum("priority", ["low", "medium", "high", "top"]).default("medium"),
+  status: mysqlEnum("status", ["watching", "contacted", "visited", "offered", "committed", "passed"]).default("watching"),
+  addedAt: timestamp("addedAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type CoachWatchlist = typeof coachWatchlists.$inferSelect;
+export type InsertCoachWatchlist = typeof coachWatchlists.$inferInsert;
+
+// Saved Searches for Coaches
+export const savedSearches = mysqlTable("saved_searches", {
+  id: int("id").autoincrement().primaryKey(),
+  coachProfileId: int("coachProfileId").notNull(),
+  name: varchar("name", { length: 128 }).notNull(),
+  filtersJson: text("filtersJson").notNull(), // JSON of search filters
+  alertsEnabled: boolean("alertsEnabled").default(false),
+  lastRunAt: timestamp("lastRunAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type SavedSearch = typeof savedSearches.$inferSelect;
+export type InsertSavedSearch = typeof savedSearches.$inferInsert;
+
+// Transfer Portal Messages
+export const portalMessages = mysqlTable("portal_messages", {
+  id: int("id").autoincrement().primaryKey(),
+  fromUserId: int("fromUserId").notNull(),
+  toUserId: int("toUserId").notNull(),
+  transferPortalEntryId: int("transferPortalEntryId"),
+  subject: varchar("subject", { length: 256 }),
+  message: text("message").notNull(),
+  isRead: boolean("isRead").default(false).notNull(),
+  readAt: timestamp("readAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type PortalMessage = typeof portalMessages.$inferSelect;
+export type InsertPortalMessage = typeof portalMessages.$inferInsert;
+
+// Transfer Offers
+export const transferOffers = mysqlTable("transfer_offers", {
+  id: int("id").autoincrement().primaryKey(),
+  transferPortalEntryId: int("transferPortalEntryId").notNull(),
+  coachProfileId: int("coachProfileId").notNull(),
+  
+  // Offer details
+  schoolName: varchar("schoolName", { length: 128 }).notNull(),
+  scholarshipType: mysqlEnum("scholarshipType", ["full", "partial", "walk-on", "preferred-walk-on"]),
+  nilOffered: int("nilOffered"), // Annual NIL amount
+  
+  // Status
+  status: mysqlEnum("status", ["pending", "accepted", "declined", "expired", "withdrawn"]).default("pending"),
+  
+  // Notes
+  offerDetails: text("offerDetails"),
+  playerNotes: text("playerNotes"),
+  
+  // Timestamps
+  offeredAt: timestamp("offeredAt").defaultNow().notNull(),
+  respondedAt: timestamp("respondedAt"),
+  expiresAt: timestamp("expiresAt"),
+});
+
+export type TransferOffer = typeof transferOffers.$inferSelect;
+export type InsertTransferOffer = typeof transferOffers.$inferInsert;

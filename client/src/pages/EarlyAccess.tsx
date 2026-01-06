@@ -158,6 +158,11 @@ export default function EarlyAccess() {
                   <span>❤️</span> Our Story
                 </button>
               </Link>
+              <Link href="/transfer-portal">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg animate-pulse">
+                  <span>🏈</span> Transfer Portal
+                </button>
+              </Link>
               <Link href="/pricing">
                 <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
                   <span>💰</span> Pricing
