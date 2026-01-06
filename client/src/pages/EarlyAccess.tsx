@@ -168,8 +168,13 @@ export default function EarlyAccess() {
                   <span>💰</span> Pricing
                 </button>
               </Link>
+              <Link href="/wizards">
+                <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
+                  <span>🧙</span> AI Wizards
+                </button>
+              </Link>
               <Link href="/manus">
-                <button className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-400 hover:to-purple-600 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
+                <button className="bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-500 hover:to-slate-600 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 transition-all shadow-lg">
                   <span>🤖</span> Manus AI
                 </button>
               </Link>

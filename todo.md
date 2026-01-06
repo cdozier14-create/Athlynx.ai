@@ -281,3 +281,16 @@
 - [x] Integrate with existing ATHLYNX platform
 - [x] Dead period / quiet period / contact period indicator
 - [x] Added to main navigation (pulsing button!)
+
+
+## AI TUTORING & WIZARD SYSTEM
+- [x] Agent Wizard - Finding/vetting agents, contract negotiation (/wizard/agent)
+- [x] Lawyer Bot - Legal guidance, contract review, NIL compliance (/wizard/lawyer)
+- [x] Financial Advisor AI - Money management, taxes, investments (/wizard/financial)
+- [x] Scout Simulator - What scouts look for, profile improvement (/wizard/scout)
+- [x] Scholarship Navigator - NCAA rules, academic requirements, eligibility (/wizard/scholarship)
+- [x] Transfer Guide - Step-by-step portal process, deadlines (/wizard/transfer)
+- [x] Life Coach AI - Balancing athletics, academics, real life (/wizard/life)
+- [x] Career Transition Planning - Post-college preparation (/wizard/career)
+- [x] AI Chat Interface Component - Unified wizard chat UI (AIWizardChat.tsx)
+- [x] Wizard Hub Page - Central access to all AI assistants (/wizards)

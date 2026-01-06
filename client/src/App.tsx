@@ -14,6 +14,17 @@ import CRMDashboard from "@/pages/CRMDashboard";
 import ManusPartnership from "@/pages/ManusPartnership";
 import Pricing from "@/pages/Pricing";
 import TransferPortal from "@/pages/TransferPortal";
+import WizardHub from "@/pages/WizardHub";
+import AgentWizard from "@/pages/wizards/AgentWizard";
+import { 
+  LawyerWizard, 
+  FinancialWizard, 
+  ScholarshipWizard, 
+  ScoutWizard, 
+  TransferWizard, 
+  LifeWizard, 
+  CareerWizard 
+} from "@/pages/wizards";
 
 function Router() {
   return (
@@ -41,6 +52,19 @@ function Router() {
       <Route path="/find-players" component={TransferPortal} />
       <Route path="/plans" component={Pricing} />
       <Route path="/subscribe" component={Pricing} />
+      
+      {/* AI Wizard Hub & Individual Wizards */}
+      <Route path="/wizards" component={WizardHub} />
+      <Route path="/ai-hub" component={WizardHub} />
+      <Route path="/wizard/agent" component={AgentWizard} />
+      <Route path="/wizard/lawyer" component={LawyerWizard} />
+      <Route path="/wizard/financial" component={FinancialWizard} />
+      <Route path="/wizard/scholarship" component={ScholarshipWizard} />
+      <Route path="/wizard/scout" component={ScoutWizard} />
+      <Route path="/wizard/transfer" component={TransferWizard} />
+      <Route path="/wizard/life" component={LifeWizard} />
+      <Route path="/wizard/career" component={CareerWizard} />
+      
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
