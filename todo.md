@@ -468,3 +468,62 @@
 - Primary Email: cdozier14@athlynx.ai (ATHLYNX business)
 - Corporate Email: cdozier14@dozier-holdingsgroup.com.mx (DHG/Nebius)
 - Personal Email: chad.dozier@icloud.com (iCloud/Manus)
+
+
+## Phase 16: FIX APP LOGOS (January 6, 2026)
+- [ ] Copy correct Portal logo (nil_portal_app_icon_standard)
+- [ ] Copy correct Messenger logo (nil_portal_app_icon_messenger)
+- [ ] Copy correct Diamond Grind logo (final_crab_logo_no_text)
+- [ ] Copy Transfer Portal image (athlete silhouette)
+- [ ] Copy NIL Vault logo (crab with icons)
+- [ ] Update EarlyAccess app grid with correct logos
+- [ ] Verify correct order of apps
+
+
+## Phase 17: DIGITAL TWINS AUDIT (January 6, 2026)
+- [x] Add video to athlynx.ai site
+- [x] Add video gallery section with 6 videos
+- [ ] Ensure dark theme on athlynx.ai
+- [ ] Ensure light theme on athlynx.manus.space
+- [ ] Audit all functionality on both sites
+- [ ] Verify app icons match on both
+- [ ] Verify footer links work on both
+- [ ] Verify all pages accessible on both
+
+
+## CRITICAL: FIX SIGNUP SYSTEM (January 6, 2026)
+- [ ] Test and fix waitlist signup endpoint
+- [ ] Ensure database saves signups correctly
+- [ ] Add email notification on signup
+- [ ] Add SMS notification on signup
+- [ ] Test end-to-end signup flow
+- [ ] Add Chad and partners as test signups
+
+
+## FOUNDING MEMBER SIGNUPS (January 6, 2026)
+- [x] Chad A. Dozier - FOUNDER #1 (3:07:16 PM CST)
+- [ ] Mom - #2 (Chad will set up)
+- [ ] Glenn Tse - #3
+- [ ] Jimmy Boyd - #4
+- [ ] Lee Marshall - #5
+- [ ] Andrew Kustes - #6
+- [ ] David R. Ford Sr. - #7
+
+## SCHEDULED DAILY REPORTS
+- [x] Daily Report at 6 PM CST (end of day)
+- [x] Daily Report at 9 AM CST (morning strategy)
+
+## VIP CODES CREATED (January 6, 2026)
+- [x] HANBERY2026 (David & Kendal Hanbery - 2 uses)
+- [x] DEEPSOUTH (Deep South Spirit Cheer - 10 uses)
+
+## PARTNER ONBOARDING EMAIL
+- [x] Created URGENT_PARTNER_EMAIL.md with simple instructions
+- [x] Updated to show both sites (athlynx.ai + athlynx.manus.space)
+- [ ] Send to all partners
+
+## FEBRUARY 1, 2026 CONSOLIDATION PLAN
+- [ ] Merge both sites into athlynx.ai
+- [ ] Move to Netlify + GitHub hosting
+- [ ] Remove all dev servers and subdomains
+- [ ] ONE UNITED PLATFORM

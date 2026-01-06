@@ -264,7 +264,7 @@ export default function EarlyAccess() {
                     className="w-full aspect-video bg-black"
                     poster="/athlynx-logo-icon.png"
                   >
-                    <source src="/NIL_Portal_Epic_Launch.mp4" type="video/mp4" />
+                    <source src="/videos/NIL_Portal_Epic_Launch.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -528,6 +528,74 @@ export default function EarlyAccess() {
                   <img src="/icons/ai-content.png" alt="AI Content" className="w-16 h-16 rounded-xl object-cover" />
                 </div>
                 <p className="text-slate-300 text-sm mt-3 text-center font-medium">AI Content</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Gallery Section */}
+        <section className="py-16 px-4 bg-gradient-to-b from-slate-900 to-blue-950">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-amber-400 text-sm tracking-widest mb-2">🎬 MEDIA GALLERY 🎬</p>
+              <h2 className="text-white font-black text-3xl mb-2">See The Vision</h2>
+              <p className="text-cyan-400 text-sm">Watch our journey unfold</p>
+            </div>
+            
+            {/* Video Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* NIL Portal Launch */}
+              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-cyan-400 transition-all">
+                <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
+                  <source src="/videos/nil-portal-football.mp4" type="video/mp4" />
+                </video>
+                <h4 className="text-white font-bold">NIL Portal - Football</h4>
+                <p className="text-slate-400 text-sm">The future of athlete recruitment</p>
+              </div>
+              
+              {/* Diamond Grind */}
+              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-purple-400 transition-all">
+                <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
+                  <source src="/videos/diamond-grind-baseball.mp4" type="video/mp4" />
+                </video>
+                <h4 className="text-white font-bold">Diamond Grind - Baseball</h4>
+                <p className="text-slate-400 text-sm">Training excellence for athletes</p>
+              </div>
+              
+              {/* Softmor AI */}
+              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-blue-400 transition-all">
+                <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
+                  <source src="/videos/softmor-ai.mp4" type="video/mp4" />
+                </video>
+                <h4 className="text-white font-bold">Softmor AI</h4>
+                <p className="text-slate-400 text-sm">Powering the future with AI</p>
+              </div>
+              
+              {/* DHG Corporate */}
+              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-amber-400 transition-all">
+                <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
+                  <source src="/videos/dhg-corporate.mov" type="video/mp4" />
+                </video>
+                <h4 className="text-white font-bold">DHG Empire</h4>
+                <p className="text-slate-400 text-sm">The parent company behind it all</p>
+              </div>
+              
+              {/* NIL Youth */}
+              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-green-400 transition-all">
+                <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
+                  <source src="/videos/nil-portal-youth.mp4" type="video/mp4" />
+                </video>
+                <h4 className="text-white font-bold">NIL Portal - Youth</h4>
+                <p className="text-slate-400 text-sm">Building tomorrow's champions</p>
+              </div>
+              
+              {/* ATHLYNX Intro */}
+              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-cyan-400 transition-all">
+                <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
+                  <source src="/videos/athlynx-intro-1.mp4" type="video/mp4" />
+                </video>
+                <h4 className="text-white font-bold">ATHLYNX Introduction</h4>
+                <p className="text-slate-400 text-sm">The Athlete's Playbook</p>
               </div>
             </div>
           </div>
