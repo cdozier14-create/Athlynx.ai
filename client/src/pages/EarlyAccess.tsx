@@ -128,24 +128,24 @@ export default function EarlyAccess() {
   const sports = ["Baseball", "Football", "Basketball", "Soccer", "Track & Field", "Volleyball"];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-blue-50 to-white text-slate-900">
       {/* STICKY HEADER */}
       <header className="sticky top-0 z-50">
         {/* Top Bar */}
-        <div className="bg-slate-800 text-cyan-400 text-center py-2 text-xs tracking-[0.2em] font-medium">
+        <div className="bg-blue-600 text-white text-center py-2 text-xs tracking-[0.2em] font-medium">
           THE FUTURE OF ATHLETE SUCCESS
         </div>
         
         {/* Main Header Row */}
-        <div className="bg-gradient-to-r from-slate-900 to-blue-900 border-b border-slate-700">
+        <div className="bg-white border-b border-slate-200 shadow-sm">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
             {/* ATHLYNX Logo Box - THE ATHLETE'S PLAYBOOK */}
             <Link href="/">
               <div className="relative cursor-pointer group">
-                <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500 rounded-xl px-5 py-3 flex items-center gap-4 shadow-xl hover:shadow-cyan-500/30 transition-all border border-cyan-400/30">
+                <div className="bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl px-5 py-3 flex items-center gap-4 shadow-lg hover:shadow-blue-500/40 transition-all">
                   <img src="/athlynx-playbook-logo.png" alt="ATHLYNX - The Athlete's Playbook" className="h-14 md:h-16 rounded-lg shadow-lg" />
                 </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full border-2 border-slate-900 animate-pulse"></div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-cyan-400 rounded-full border-2 border-slate-900 animate-pulse"></div>
                 {/* Shine effect */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700 overflow-hidden"></div>
               </div>
@@ -153,9 +153,9 @@ export default function EarlyAccess() {
 
             {/* Parent Company Text */}
             <div className="hidden md:flex items-center gap-6">
-              <span className="text-slate-400 text-sm flex items-center gap-2">
-                <span>🏢</span> PARENT COMPANY: <span className="text-white font-medium">Dozier Holdings Group</span>
-              </span>
+              <a href="https://dozier-holdingsgroup.com.mx" target="_blank" rel="noopener noreferrer" className="text-slate-600 text-sm flex items-center gap-2 hover:text-blue-600 transition-colors">
+                <span>🏢</span> PARENT COMPANY: <span className="text-blue-600 font-bold">Dozier Holdings Group</span>
+              </a>
             </div>
 
             {/* Navigation Buttons - Desktop */}
@@ -193,14 +193,14 @@ export default function EarlyAccess() {
         </div>
 
         {/* Blue Status Bar */}
-        <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-2.5 px-4 flex items-center justify-center gap-4 text-sm font-medium">
+        <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-2.5 px-4 flex items-center justify-center gap-4 text-sm font-medium">
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
             LIVE PLATFORM
           </span>
-          <span className="text-blue-300">•</span>
+          <span className="text-white/70">•</span>
           <span>HIPAA-compliant</span>
-          <span className="text-blue-300">•</span>
+          <span className="text-white/70">•</span>
           <span>Protecting our precious cargo</span>
         </div>
       </header>
@@ -208,9 +208,9 @@ export default function EarlyAccess() {
       {/* MAIN CONTENT */}
       <main className="relative">
         {/* Site Updating Notice */}
-        <div className="bg-amber-400 py-3 px-4 text-center">
-          <span className="text-slate-900 font-medium text-sm">
-            ⚠️ SITE UPDATING LIVE DAILY - Please be patient with us while we add future updates and apps!
+        <div className="bg-blue-600 py-3 px-4 text-center">
+          <span className="text-white font-medium text-sm">
+            SITE UPDATING LIVE DAILY - Please be patient with us while we add future updates and apps!
           </span>
         </div>
 
@@ -222,12 +222,12 @@ export default function EarlyAccess() {
               {/* Outer glow on hover */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-60 transition-all duration-500 scale-110"></div>
               
-              <div className="relative bg-gradient-to-br from-blue-700 via-blue-600 to-cyan-500 rounded-3xl p-8 text-center shadow-2xl overflow-hidden border-2 border-cyan-400/30 group-hover:border-cyan-300 group-hover:scale-[1.02] transition-all duration-300">
+              <div className="relative bg-white rounded-3xl p-8 text-center shadow-2xl overflow-hidden border-2 border-blue-200 group-hover:border-blue-400 group-hover:scale-[1.02] transition-all duration-300">
                 {/* Animated sparkles */}
-                <div className="absolute top-3 right-3 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+                <div className="absolute top-3 right-3 w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
                 <div className="absolute top-6 left-6 w-2 h-2 bg-white rounded-full animate-ping"></div>
                 <div className="absolute bottom-6 right-8 w-2 h-2 bg-white rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
-                <div className="absolute bottom-8 left-10 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
+                <div className="absolute bottom-8 left-10 w-1.5 h-1.5 bg-cyan-300 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
                 
                 {/* Crown icon on hover */}
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-3xl opacity-0 group-hover:opacity-100 group-hover:-top-4 transition-all duration-300">👑</div>
@@ -247,8 +247,8 @@ export default function EarlyAccess() {
                 </div>
                 
                 {/* Tagline */}
-                <p className="text-white/90 text-sm mb-1">The mastermind behind the champion.</p>
-                <p className="text-cyan-300 text-sm font-semibold">Building champions, training winners, and creating empires.</p>
+                <p className="text-slate-600 text-sm mb-1">The mastermind behind the champion.</p>
+                <p className="text-blue-600 text-sm font-semibold">Building champions, training winners, and creating empires.</p>
                 
                 {/* Shine effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
@@ -326,9 +326,9 @@ export default function EarlyAccess() {
         {/* Heavyweight Champion Banner */}
         <section className="py-4 px-4">
           <div className="max-w-2xl mx-auto">
-            <div className="bg-gradient-to-r from-amber-500 to-yellow-500 rounded-2xl py-4 px-6 text-center shadow-xl">
-              <p className="text-slate-900 font-bold text-lg tracking-wide">
-                🏆 HEAVYWEIGHT CHAMPION OF THE WORLD 🏆
+            <div className="bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl py-4 px-6 text-center shadow-xl">
+              <p className="text-white font-bold text-lg tracking-wide">
+                HEAVYWEIGHT CHAMPION OF THE WORLD
               </p>
             </div>
           </div>
@@ -344,10 +344,10 @@ export default function EarlyAccess() {
               {/* Main card */}
               <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 rounded-3xl p-8 border-2 border-cyan-400/50 group-hover:border-cyan-400 transition-all duration-300 shadow-2xl">
                 {/* Stars decoration */}
-                <div className="absolute top-4 left-4 text-yellow-400 text-2xl animate-pulse">⭐</div>
-                <div className="absolute top-4 right-4 text-yellow-400 text-2xl animate-pulse delay-100">⭐</div>
-                <div className="absolute bottom-4 left-4 text-yellow-400 text-xl animate-pulse delay-200">✨</div>
-                <div className="absolute bottom-4 right-4 text-yellow-400 text-xl animate-pulse delay-300">✨</div>
+                <div className="absolute top-4 left-4 text-cyan-400 text-2xl animate-pulse">◆</div>
+                <div className="absolute top-4 right-4 text-cyan-400 text-2xl animate-pulse delay-100">◆</div>
+                <div className="absolute bottom-4 left-4 text-blue-400 text-xl animate-pulse delay-200">◇</div>
+                <div className="absolute bottom-4 right-4 text-blue-400 text-xl animate-pulse delay-300">◇</div>
                 
                 {/* Logo container with glow */}
                 <div className="flex flex-col items-center">
@@ -367,18 +367,18 @@ export default function EarlyAccess() {
                   
                   {/* Star rating */}
                   <div className="flex items-center gap-1 mb-4">
-                    <span className="text-yellow-400 text-3xl drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">★</span>
-                    <span className="text-yellow-400 text-3xl drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">★</span>
-                    <span className="text-yellow-400 text-3xl drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">★</span>
-                    <span className="text-yellow-400 text-3xl drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">★</span>
-                    <span className="text-yellow-400 text-3xl drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">★</span>
+                    <span className="text-cyan-400 text-3xl drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">★</span>
+                    <span className="text-cyan-400 text-3xl drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">★</span>
+                    <span className="text-cyan-400 text-3xl drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">★</span>
+                    <span className="text-cyan-400 text-3xl drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">★</span>
+                    <span className="text-cyan-400 text-3xl drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">★</span>
                   </div>
                   
                   {/* Tagline */}
                   <p className="text-slate-300 text-center text-sm">
                     <span className="text-cyan-400 font-semibold">Dreams</span> • 
-                    <span className="text-amber-400 font-semibold"> Do</span> • 
-                    <span className="text-green-400 font-semibold"> Come True</span>
+                    <span className="text-white font-semibold"> Do</span> • 
+                    <span className="text-blue-400 font-semibold"> Come True</span>
                   </p>
                 </div>
               </div>
@@ -389,10 +389,12 @@ export default function EarlyAccess() {
         {/* Parent Company Badge */}
         <section className="py-4 px-4">
           <div className="max-w-sm mx-auto">
-            <div className="bg-gradient-to-r from-amber-100 to-yellow-100 rounded-xl py-3 px-6 text-center border border-amber-300">
-              <p className="text-slate-600 text-xs font-medium">PARENT COMPANY</p>
-              <p className="text-amber-700 font-bold text-lg">Dozier Holdings Group</p>
-            </div>
+            <a href="https://dozier-holdingsgroup.com.mx" target="_blank" rel="noopener noreferrer" className="block">
+              <div className="bg-gradient-to-r from-slate-800 to-blue-900 rounded-xl py-3 px-6 text-center border-2 border-cyan-400/50 hover:border-cyan-400 transition-all cursor-pointer">
+                <p className="text-slate-400 text-xs font-medium">PARENT COMPANY</p>
+                <p className="text-cyan-400 font-bold text-lg">Dozier Holdings Group</p>
+              </div>
+            </a>
           </div>
         </section>
 
@@ -419,15 +421,15 @@ export default function EarlyAccess() {
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="bg-slate-900/50 rounded-xl p-3 border border-green-500/30">
                     <p className="text-green-400 font-black text-2xl">∞</p>
-                    <p className="text-slate-400 text-xs">UNDEFEATED</p>
+                    <p className="text-slate-500 text-xs">UNDEFEATED</p>
                   </div>
                   <div className="bg-slate-900/50 rounded-xl p-3 border border-red-500/30">
                     <p className="text-red-400 font-black text-2xl">100%</p>
-                    <p className="text-slate-400 text-xs">KNOCKOUTS</p>
+                    <p className="text-slate-500 text-xs">KNOCKOUTS</p>
                   </div>
                   <div className="bg-slate-900/50 rounded-xl p-3 border border-amber-500/30">
                     <p className="text-amber-400 font-black text-2xl">🏆</p>
-                    <p className="text-slate-400 text-xs">CHAMPION</p>
+                    <p className="text-slate-500 text-xs">CHAMPION</p>
                   </div>
                 </div>
                 
@@ -448,7 +450,7 @@ export default function EarlyAccess() {
                     <span className="hover:scale-125 transition-transform cursor-pointer">🏢</span>
                     <span className="hover:scale-125 transition-transform cursor-pointer">📈</span>
                   </div>
-                  <p className="text-slate-400 text-xs">PASSIVE INCOME EMPIRE</p>
+                  <p className="text-slate-500 text-xs">PASSIVE INCOME EMPIRE</p>
                   <p className="text-amber-400/70 text-[10px] mt-1">12 Companies • Global Reach • Infinite Potential</p>
                 </div>
               </div>
@@ -457,9 +459,9 @@ export default function EarlyAccess() {
         </section>
 
         {/* 10 Apps Section */}
-        <section className="py-12 px-4 bg-gradient-to-b from-slate-900/50 to-blue-950/50">
+        <section className="py-12 px-4 bg-white">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-center text-cyan-400 font-medium text-lg mb-10 tracking-wide">
+            <h2 className="text-center text-blue-600 font-bold text-lg mb-10 tracking-wide">
               10 Powerful Apps. One Platform. Unlimited Potential.
             </h2>
             
@@ -467,223 +469,223 @@ export default function EarlyAccess() {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-8">
               {/* Portal */}
               <div className="flex flex-col items-center group cursor-pointer" onClick={() => window.location.href='/portal'}>
-                <div className="bg-slate-700/80 rounded-2xl p-4 shadow-lg border border-slate-600 group-hover:border-cyan-400 transition-all">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-slate-200 group-hover:border-blue-500 group-hover:shadow-blue-200 transition-all">
                   <img src="/app-icons-v3/portal.jpeg" alt="Portal" className="w-20 h-20 rounded-xl object-cover" />
                 </div>
-                <p className="text-slate-300 text-sm mt-3 text-center font-medium">Portal</p>
+                <p className="text-slate-700 text-sm mt-3 text-center font-semibold">Portal</p>
               </div>
               
               {/* Messenger */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="bg-slate-700/80 rounded-2xl p-4 shadow-lg border border-slate-600 group-hover:border-cyan-400 transition-all">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-slate-200 group-hover:border-blue-500 group-hover:shadow-blue-200 transition-all">
                   <img src="/app-icons-v3/messenger.jpeg" alt="Messenger" className="w-20 h-20 rounded-xl object-cover" />
                 </div>
-                <p className="text-slate-300 text-sm mt-3 text-center font-medium">Messenger</p>
+                <p className="text-slate-700 text-sm mt-3 text-center font-semibold">Messenger</p>
               </div>
               
               {/* Diamond Grind */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="bg-slate-700/80 rounded-2xl p-4 shadow-lg border border-slate-600 group-hover:border-purple-400 transition-all">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-slate-200 group-hover:border-purple-500 group-hover:shadow-purple-200 transition-all">
                   <img src="/app-icons-v3/diamondgrind.png" alt="Diamond Grind" className="w-20 h-20 rounded-xl object-cover" />
                 </div>
-                <p className="text-slate-300 text-sm mt-3 text-center font-medium">Diamond Grind</p>
+                <p className="text-slate-700 text-sm mt-3 text-center font-semibold">Diamond Grind</p>
               </div>
               
               {/* Warriors Playbook */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="bg-slate-700/80 rounded-2xl p-4 shadow-lg border border-slate-600 group-hover:border-blue-400 transition-all">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-slate-200 group-hover:border-blue-500 group-hover:shadow-blue-200 transition-all">
                   <img src="/app-icons-v3/warriors.png" alt="Warriors Playbook" className="w-20 h-20 rounded-xl object-cover" />
                 </div>
-                <p className="text-slate-300 text-sm mt-3 text-center font-medium">Warriors Playbook</p>
+                <p className="text-slate-700 text-sm mt-3 text-center font-semibold">Warriors Playbook</p>
               </div>
               
               {/* Transfer Portal */}
               <div className="flex flex-col items-center group cursor-pointer" onClick={() => window.location.href='/transfer-portal'}>
-                <div className="bg-slate-700/80 rounded-2xl p-4 shadow-lg border border-slate-600 group-hover:border-green-400 transition-all">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-slate-200 group-hover:border-green-500 group-hover:shadow-green-200 transition-all">
                   <img src="/app-icons-v3/transfer.png" alt="Transfer Portal" className="w-20 h-20 rounded-xl object-cover" />
                 </div>
-                <p className="text-slate-300 text-sm mt-3 text-center font-medium">Transfer Portal</p>
+                <p className="text-slate-700 text-sm mt-3 text-center font-semibold">Transfer Portal</p>
               </div>
               
               {/* NIL Vault */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="bg-slate-700/80 rounded-2xl p-4 shadow-lg border border-slate-600 group-hover:border-emerald-400 transition-all">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-slate-200 group-hover:border-emerald-500 group-hover:shadow-emerald-200 transition-all">
                   <img src="/app-icons-v3/nilvault.png" alt="NIL Vault" className="w-20 h-20 rounded-xl object-cover" />
                 </div>
-                <p className="text-slate-300 text-sm mt-3 text-center font-medium">NIL Vault</p>
+                <p className="text-slate-700 text-sm mt-3 text-center font-semibold">NIL Vault</p>
               </div>
               
               {/* AI Sales */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="bg-slate-700/80 rounded-2xl p-4 shadow-lg border border-slate-600 group-hover:border-violet-400 transition-all">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-slate-200 group-hover:border-violet-500 group-hover:shadow-violet-200 transition-all">
                   <img src="/app-icons-v3/aisales.png" alt="AI Sales" className="w-20 h-20 rounded-xl object-cover" />
                 </div>
-                <p className="text-slate-300 text-sm mt-3 text-center font-medium">AI Sales</p>
+                <p className="text-slate-700 text-sm mt-3 text-center font-semibold">AI Sales</p>
               </div>
               
               {/* Faith */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="bg-slate-700/80 rounded-2xl p-4 shadow-lg border border-slate-600 group-hover:border-pink-400 transition-all">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-slate-200 group-hover:border-pink-500 group-hover:shadow-pink-200 transition-all">
                   <img src="/app-icons-v3/faith.png" alt="Faith" className="w-20 h-20 rounded-xl object-cover" />
                 </div>
-                <p className="text-slate-300 text-sm mt-3 text-center font-medium">Faith</p>
+                <p className="text-slate-700 text-sm mt-3 text-center font-semibold">Faith</p>
               </div>
               
               {/* AI Recruiter */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="bg-slate-700/80 rounded-2xl p-4 shadow-lg border border-slate-600 group-hover:border-rose-400 transition-all">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-slate-200 group-hover:border-rose-500 group-hover:shadow-rose-200 transition-all">
                   <img src="/app-icons-v3/airecruiter.png" alt="AI Recruiter" className="w-20 h-20 rounded-xl object-cover" />
                 </div>
-                <p className="text-slate-300 text-sm mt-3 text-center font-medium">AI Recruiter</p>
+                <p className="text-slate-700 text-sm mt-3 text-center font-semibold">AI Recruiter</p>
               </div>
               
               {/* AI Content */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <div className="bg-slate-700/80 rounded-2xl p-4 shadow-lg border border-slate-600 group-hover:border-amber-400 transition-all">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-slate-200 group-hover:border-cyan-500 group-hover:shadow-cyan-200 transition-all">
                   <img src="/app-icons-v3/aicontent.png" alt="AI Content" className="w-20 h-20 rounded-xl object-cover" />
                 </div>
-                <p className="text-slate-300 text-sm mt-3 text-center font-medium">AI Content</p>
+                <p className="text-slate-700 text-sm mt-3 text-center font-semibold">AI Content</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Video Gallery Section */}
-        <section className="py-16 px-4 bg-gradient-to-b from-slate-900 to-blue-950">
+        <section className="py-16 px-4 bg-slate-50">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-amber-400 text-sm tracking-widest mb-2">🎬 MEDIA GALLERY 🎬</p>
-              <h2 className="text-white font-black text-3xl mb-2">See The Vision</h2>
-              <p className="text-cyan-400 text-sm">Watch our journey unfold</p>
+              <p className="text-blue-600 text-sm tracking-widest mb-2">MEDIA GALLERY</p>
+              <h2 className="text-slate-900 font-black text-3xl mb-2">See The Vision</h2>
+              <p className="text-blue-600 text-sm">Watch our journey unfold</p>
             </div>
             
             {/* Video Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* NIL Portal Launch */}
-              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-cyan-400 transition-all">
+              <div className="bg-white rounded-2xl p-4 border-2 border-slate-200 hover:border-blue-400 shadow-lg transition-all">
                 <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
                   <source src="/videos/nil-portal-football.mp4" type="video/mp4" />
                 </video>
-                <h4 className="text-white font-bold">NIL Portal - Football</h4>
-                <p className="text-slate-400 text-sm">The future of athlete recruitment</p>
+                <h4 className="text-slate-900 font-bold">NIL Portal - Football</h4>
+                <p className="text-slate-600 text-sm">The future of athlete recruitment</p>
               </div>
               
               {/* Diamond Grind */}
-              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-purple-400 transition-all">
+              <div className="bg-white rounded-2xl p-4 border-2 border-slate-200 hover:border-purple-400 shadow-lg transition-all">
                 <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
                   <source src="/videos/diamond-grind-baseball.mp4" type="video/mp4" />
                 </video>
-                <h4 className="text-white font-bold">Diamond Grind - Baseball</h4>
-                <p className="text-slate-400 text-sm">Training excellence for athletes</p>
+                <h4 className="text-slate-900 font-bold">Diamond Grind - Baseball</h4>
+                <p className="text-slate-600 text-sm">Training excellence for athletes</p>
               </div>
               
               {/* Softmor AI */}
-              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-blue-400 transition-all">
+              <div className="bg-white rounded-2xl p-4 border-2 border-slate-200 hover:border-blue-400 shadow-lg transition-all">
                 <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
                   <source src="/videos/softmor-ai.mp4" type="video/mp4" />
                 </video>
-                <h4 className="text-white font-bold">Softmor AI</h4>
-                <p className="text-slate-400 text-sm">Powering the future with AI</p>
+                <h4 className="text-slate-900 font-bold">Softmor AI</h4>
+                <p className="text-slate-600 text-sm">Powering the future with AI</p>
               </div>
               
               {/* DHG Corporate */}
-              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-amber-400 transition-all">
+              <div className="bg-white rounded-2xl p-4 border-2 border-slate-200 hover:border-cyan-400 shadow-lg transition-all">
                 <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
                   <source src="/videos/dhg-corporate.mov" type="video/mp4" />
                 </video>
-                <h4 className="text-white font-bold">DHG Empire</h4>
-                <p className="text-slate-400 text-sm">The parent company behind it all</p>
+                <h4 className="text-slate-900 font-bold">DHG Empire</h4>
+                <p className="text-slate-600 text-sm">The parent company behind it all</p>
               </div>
               
               {/* NIL Youth */}
-              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-green-400 transition-all">
+              <div className="bg-white rounded-2xl p-4 border-2 border-slate-200 hover:border-green-400 shadow-lg transition-all">
                 <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
                   <source src="/videos/nil-portal-youth.mp4" type="video/mp4" />
                 </video>
-                <h4 className="text-white font-bold">NIL Portal - Youth</h4>
-                <p className="text-slate-400 text-sm">Building tomorrow's champions</p>
+                <h4 className="text-slate-900 font-bold">NIL Portal - Youth</h4>
+                <p className="text-slate-600 text-sm">Building tomorrow's champions</p>
               </div>
               
               {/* ATHLYNX Intro */}
-              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700 hover:border-cyan-400 transition-all">
+              <div className="bg-white rounded-2xl p-4 border-2 border-slate-200 hover:border-blue-400 shadow-lg transition-all">
                 <video controls className="w-full aspect-video rounded-xl mb-3 bg-black" poster="/athlynx-logo-icon.png">
                   <source src="/videos/athlynx-intro-1.mp4" type="video/mp4" />
                 </video>
-                <h4 className="text-white font-bold">ATHLYNX Introduction</h4>
-                <p className="text-slate-400 text-sm">The Athlete's Playbook</p>
+                <h4 className="text-slate-900 font-bold">ATHLYNX Introduction</h4>
+                <p className="text-slate-600 text-sm">The Athlete's Playbook</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Countdown Section */}
-        <section className="py-12 px-4 bg-gradient-to-b from-blue-950 to-slate-900">
+        <section className="py-12 px-4 bg-gradient-to-b from-blue-50 to-white">
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-cyan-400 text-sm tracking-wider mb-2">THE FUTURE OF ATHLETE SUCCESS</p>
-            <h2 className="text-white font-black text-4xl mb-2">ATHLYNX</h2>
-            <p className="text-cyan-400 font-semibold tracking-wider mb-8">THE ATHLETE'S PLAYBOOK</p>
+            <p className="text-blue-600 text-sm tracking-wider mb-2">THE FUTURE OF ATHLETE SUCCESS</p>
+            <h2 className="text-slate-900 font-black text-4xl mb-2">ATHLYNX</h2>
+            <p className="text-blue-600 font-semibold tracking-wider mb-8">THE ATHLETE'S PLAYBOOK</p>
             
-            <p className="text-slate-400 text-sm mb-2">LAUNCHING IN</p>
-            <p className="text-amber-400 font-bold text-xl mb-6">FEBRUARY 1, 2026</p>
+            <p className="text-slate-600 text-sm mb-2">LAUNCHING IN</p>
+            <p className="text-blue-600 font-bold text-xl mb-6">FEBRUARY 1, 2026</p>
             
             {/* Countdown Timer */}
             <div className="flex justify-center gap-4 mb-8">
-              <div className="bg-slate-800 rounded-xl px-6 py-4 border border-slate-700">
-                <p className="text-white font-black text-3xl">{timeLeft.days}</p>
-                <p className="text-slate-400 text-xs">DAYS</p>
+              <div className="bg-white rounded-xl px-6 py-4 border-2 border-blue-200 shadow-lg">
+                <p className="text-blue-600 font-black text-3xl">{timeLeft.days}</p>
+                <p className="text-slate-500 text-xs">DAYS</p>
               </div>
-              <div className="bg-slate-800 rounded-xl px-6 py-4 border border-slate-700">
-                <p className="text-white font-black text-3xl">{timeLeft.hours}</p>
-                <p className="text-slate-400 text-xs">HRS</p>
+              <div className="bg-white rounded-xl px-6 py-4 border-2 border-blue-200 shadow-lg">
+                <p className="text-blue-600 font-black text-3xl">{timeLeft.hours}</p>
+                <p className="text-slate-500 text-xs">HRS</p>
               </div>
-              <div className="bg-slate-800 rounded-xl px-6 py-4 border border-slate-700">
-                <p className="text-white font-black text-3xl">{timeLeft.minutes}</p>
-                <p className="text-slate-400 text-xs">MIN</p>
+              <div className="bg-white rounded-xl px-6 py-4 border-2 border-blue-200 shadow-lg">
+                <p className="text-blue-600 font-black text-3xl">{timeLeft.minutes}</p>
+                <p className="text-slate-500 text-xs">MIN</p>
               </div>
-              <div className="bg-slate-800 rounded-xl px-6 py-4 border border-slate-700">
-                <p className="text-white font-black text-3xl">{timeLeft.seconds}</p>
-                <p className="text-slate-400 text-xs">SEC</p>
+              <div className="bg-white rounded-xl px-6 py-4 border-2 border-blue-200 shadow-lg">
+                <p className="text-blue-600 font-black text-3xl">{timeLeft.seconds}</p>
+                <p className="text-slate-500 text-xs">SEC</p>
               </div>
             </div>
             
-            <p className="text-slate-500 text-sm">FOUNDING MEMBER SPOTS</p>
-            <p className="text-amber-400 font-bold text-2xl">LIMITED TO 10,000</p>
+            <p className="text-slate-600 text-sm">FOUNDING MEMBER SPOTS</p>
+            <p className="text-blue-600 font-bold text-2xl">LIMITED TO 10,000</p>
           </div>
         </section>
 
         {/* THE DYNASTY SECTION - Kraft/Belichick/Brady Story */}
-        <section className="py-16 px-4 bg-gradient-to-b from-slate-900 via-blue-950/50 to-slate-900">
+        <section className="py-16 px-4 bg-white">
           <div className="max-w-5xl mx-auto">
             {/* Dynasty Header */}
             <div className="text-center mb-12">
-              <p className="text-amber-400 text-sm tracking-widest mb-2">🏆 THE PERFECT STORM 🏆</p>
-              <h2 className="text-white font-black text-4xl md:text-5xl mb-4">Building a Dynasty</h2>
-              <p className="text-cyan-400 font-semibold tracking-wider">FROM NOTHING TO EVERYTHING</p>
+              <p className="text-blue-600 text-sm tracking-widest mb-2">THE PERFECT STORM</p>
+              <h2 className="text-slate-900 font-black text-4xl md:text-5xl mb-4">Building a Dynasty</h2>
+              <p className="text-blue-600 font-semibold tracking-wider">FROM NOTHING TO EVERYTHING</p>
             </div>
 
             {/* Dynasty Story Cards */}
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               {/* The Owner - Kraft = Chad */}
-              <div className="bg-gradient-to-br from-amber-900/30 to-slate-900 rounded-2xl p-6 border border-amber-500/30 hover:border-amber-400 transition-all group">
+              <div className="bg-white rounded-2xl p-6 border-2 border-blue-200 hover:border-blue-400 shadow-lg transition-all group">
                 <div className="text-4xl mb-4">👔</div>
-                <h3 className="text-amber-400 font-bold text-xl mb-2">The Visionary Owner</h3>
-                <p className="text-slate-300 text-sm mb-4">Robert Kraft bought a struggling franchise and built an empire. <span className="text-amber-400 font-semibold">Chad A. Dozier</span> is doing the same with ATHLYNX.</p>
+                <h3 className="text-blue-600 font-bold text-xl mb-2">The Visionary Owner</h3>
+                <p className="text-slate-600 text-sm mb-4">Robert Kraft bought a struggling franchise and built an empire. <span className="text-blue-600 font-semibold">Chad A. Dozier</span> is doing the same with ATHLYNX.</p>
                 <p className="text-slate-500 text-xs italic">"I saw what others couldn't see. A platform that serves athletes, not exploits them."</p>
               </div>
 
               {/* The System - Belichick = Manus AI */}
-              <div className="bg-gradient-to-br from-blue-900/30 to-slate-900 rounded-2xl p-6 border border-blue-500/30 hover:border-blue-400 transition-all group">
+              <div className="bg-white rounded-2xl p-6 border-2 border-cyan-200 hover:border-cyan-400 shadow-lg transition-all group">
                 <div className="text-4xl mb-4">🧠</div>
-                <h3 className="text-blue-400 font-bold text-xl mb-2">The System</h3>
-                <p className="text-slate-300 text-sm mb-4">Bill Belichick's system made average players elite. <span className="text-blue-400 font-semibold">Manus AI</span> is our system—executing strategy with precision.</p>
+                <h3 className="text-cyan-600 font-bold text-xl mb-2">The System</h3>
+                <p className="text-slate-600 text-sm mb-4">Bill Belichick's system made average players elite. <span className="text-cyan-600 font-semibold">Manus AI</span> is our system—executing strategy with precision.</p>
                 <p className="text-slate-500 text-xs italic">"Do your job." — Our AI does exactly that, 24/7.</p>
               </div>
 
               {/* The GOAT - Brady = ATHLYNX */}
-              <div className="bg-gradient-to-br from-cyan-900/30 to-slate-900 rounded-2xl p-6 border border-cyan-500/30 hover:border-cyan-400 transition-all group">
+              <div className="bg-white rounded-2xl p-6 border-2 border-blue-200 hover:border-blue-400 shadow-lg transition-all group">
                 <div className="text-4xl mb-4">🐐</div>
-                <h3 className="text-cyan-400 font-bold text-xl mb-2">The Underdog</h3>
-                <p className="text-slate-300 text-sm mb-4">Tom Brady was pick #199. Irrelevant. Now he's the GOAT. <span className="text-cyan-400 font-semibold">ATHLYNX</span> is our Tom Brady—the underdog becoming legendary.</p>
+                <h3 className="text-blue-600 font-bold text-xl mb-2">The Underdog</h3>
+                <p className="text-slate-600 text-sm mb-4">Tom Brady was pick #199. Irrelevant. Now he's the GOAT. <span className="text-blue-600 font-semibold">ATHLYNX</span> is our Tom Brady—the underdog becoming legendary.</p>
                 <p className="text-slate-500 text-xs italic">"Everyone counted us out. That was their mistake."</p>
               </div>
             </div>
@@ -691,78 +693,78 @@ export default function EarlyAccess() {
             {/* Mission & Vision */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Mission Statement */}
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+              <div className="bg-white rounded-2xl p-8 border-2 border-slate-200 shadow-lg">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
                     <span className="text-2xl">🎯</span>
                   </div>
-                  <h3 className="text-white font-bold text-2xl">Our Mission</h3>
+                  <h3 className="text-slate-900 font-bold text-2xl">Our Mission</h3>
                 </div>
-                <p className="text-slate-300 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   To democratize athlete success by providing every athlete—from high school to professional—with the same tools, connections, and opportunities that were once reserved for the elite few. We are the great equalizer in sports.
                 </p>
               </div>
 
               {/* Vision Statement */}
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+              <div className="bg-white rounded-2xl p-8 border-2 border-slate-200 shadow-lg">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center">
                     <span className="text-2xl">🔮</span>
                   </div>
-                  <h3 className="text-white font-bold text-2xl">Our Vision</h3>
+                  <h3 className="text-slate-900 font-bold text-2xl">Our Vision</h3>
                 </div>
-                <p className="text-slate-300 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   By 2030, ATHLYNX will be the operating system for every athlete's career—from recruitment to retirement. A world where talent is discovered, developed, and rewarded fairly, powered by AI that works for athletes, not against them.
                 </p>
               </div>
             </div>
 
             {/* Executive Summary */}
-            <div className="bg-gradient-to-r from-blue-900/30 via-slate-900 to-cyan-900/30 rounded-2xl p-8 border border-cyan-500/30 mb-12">
+            <div className="bg-gradient-to-r from-blue-50 via-white to-cyan-50 rounded-2xl p-8 border-2 border-blue-200 shadow-lg mb-12">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
                   <span className="text-2xl">📊</span>
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-2xl">Executive Summary</h3>
-                  <p className="text-cyan-400 text-sm">The $50B Opportunity</p>
+                  <h3 className="text-slate-900 font-bold text-2xl">Executive Summary</h3>
+                  <p className="text-blue-600 text-sm">The $50B Opportunity</p>
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <p className="text-slate-300 leading-relaxed mb-4">
-                    <span className="text-cyan-400 font-semibold">ATHLYNX</span> is a comprehensive AI-powered platform serving the $50B+ athlete services market. We combine NIL management, transfer portal intelligence, training optimization, and career planning into one unified ecosystem.
+                    <span className="text-blue-600 font-semibold">ATHLYNX</span> is a comprehensive AI-powered platform serving the $50B+ athlete services market. We combine NIL management, transfer portal intelligence, training optimization, and career planning into one unified ecosystem.
                   </p>
-                  <p className="text-slate-300 leading-relaxed">
-                    Backed by <span className="text-blue-400 font-semibold">Dozier Holdings Group</span>, powered by <span className="text-purple-400 font-semibold">Manus AI</span>, and built on <span className="text-green-400 font-semibold">Nebius AI Cloud</span> infrastructure with NVIDIA H200/H100 GPUs.
+                  <p className="text-slate-600 leading-relaxed">
+                    Backed by <span className="text-blue-700 font-semibold">Dozier Holdings Group</span>, powered by <span className="text-purple-600 font-semibold">Manus AI</span>, and built on <span className="text-green-600 font-semibold">Nebius AI Cloud</span> infrastructure with NVIDIA H200/H100 GPUs.
                   </p>
                 </div>
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center bg-slate-800/50 rounded-lg px-4 py-2">
-                    <span className="text-slate-400">Target Market</span>
-                    <span className="text-white font-bold">$50B+</span>
+                  <div className="flex justify-between items-center bg-slate-100 rounded-lg px-4 py-2">
+                    <span className="text-slate-600">Target Market</span>
+                    <span className="text-slate-900 font-bold">$50B+</span>
                   </div>
-                  <div className="flex justify-between items-center bg-slate-800/50 rounded-lg px-4 py-2">
-                    <span className="text-slate-400">Athletes Served</span>
-                    <span className="text-white font-bold">8M+ NCAA</span>
+                  <div className="flex justify-between items-center bg-slate-100 rounded-lg px-4 py-2">
+                    <span className="text-slate-600">Athletes Served</span>
+                    <span className="text-slate-900 font-bold">8M+ NCAA</span>
                   </div>
-                  <div className="flex justify-between items-center bg-slate-800/50 rounded-lg px-4 py-2">
-                    <span className="text-slate-400">Launch Date</span>
-                    <span className="text-amber-400 font-bold">Feb 1, 2026</span>
+                  <div className="flex justify-between items-center bg-slate-100 rounded-lg px-4 py-2">
+                    <span className="text-slate-600">Launch Date</span>
+                    <span className="text-blue-600 font-bold">Feb 1, 2026</span>
                   </div>
-                  <div className="flex justify-between items-center bg-slate-800/50 rounded-lg px-4 py-2">
-                    <span className="text-slate-400">Founding Spots</span>
-                    <span className="text-cyan-400 font-bold">10,000</span>
+                  <div className="flex justify-between items-center bg-slate-100 rounded-lg px-4 py-2">
+                    <span className="text-slate-600">Founding Spots</span>
+                    <span className="text-blue-600 font-bold">10,000</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Community Co-Design CTA */}
-            <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/30 text-center">
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-200 shadow-lg text-center">
               <div className="text-4xl mb-4">🤝</div>
-              <h3 className="text-white font-bold text-2xl mb-2">Help Us Build YOUR Platform</h3>
-              <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+              <h3 className="text-slate-900 font-bold text-2xl mb-2">Help Us Build YOUR Platform</h3>
+              <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
                 This isn't just our platform—it's YOURS. We're building ATHLYNX with the community, for the community. 
                 Your feedback shapes every feature. Your voice matters. Together, we're creating the future of athlete success.
               </p>
@@ -791,10 +793,10 @@ export default function EarlyAccess() {
         </section>
 
         {/* Signup Form Section */}
-        <section className="py-12 px-4 bg-slate-900">
+        <section className="py-12 px-4 bg-slate-50">
           <div className="max-w-md mx-auto">
-            <div className="bg-slate-800 rounded-2xl p-8 border border-slate-700">
-              <h3 className="text-white font-bold text-xl text-center mb-6">Join the VIP Waitlist</h3>
+            <div className="bg-white rounded-2xl p-8 border-2 border-slate-200 shadow-lg">
+              <h3 className="text-slate-900 font-bold text-xl text-center mb-6">Join the VIP Waitlist</h3>
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
@@ -802,21 +804,21 @@ export default function EarlyAccess() {
                   placeholder="Full Name"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400"
+                  className="w-full bg-slate-50 border-2 border-slate-200 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500"
                 />
                 <input
                   type="email"
                   placeholder="Email Address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400"
+                  className="w-full bg-slate-50 border-2 border-slate-200 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500"
                 />
                 <input
                   type="tel"
                   placeholder="Phone Number"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400"
+                  className="w-full bg-slate-50 border-2 border-slate-200 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500"
                 />
                 <select
                   value={role}
@@ -855,10 +857,10 @@ export default function EarlyAccess() {
         </section>
 
         {/* Already VIP Member Section */}
-        <section className="py-8 px-4 bg-slate-900">
+        <section className="py-8 px-4 bg-slate-50">
           <div className="max-w-md mx-auto">
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-cyan-500/30 text-center">
-              <h3 className="text-white font-bold text-lg mb-2">ALREADY A VIP MEMBER?</h3>
+            <div className="bg-white rounded-2xl p-6 border-2 border-blue-200 shadow-lg text-center">
+              <h3 className="text-slate-900 font-bold text-lg mb-2">ALREADY A VIP MEMBER?</h3>
               <p className="text-slate-400 text-sm mb-4">Enter your access code to unlock all 6 apps</p>
               <button 
                 onClick={() => setShowVipModal(true)}
@@ -871,31 +873,31 @@ export default function EarlyAccess() {
         </section>
 
         {/* Preview the App Section */}
-        <section className="py-8 px-4 bg-slate-900">
+        <section className="py-8 px-4 bg-slate-50">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-slate-400 text-sm mb-4">Preview the App →</p>
             <div className="flex justify-center gap-6 flex-wrap">
-              <div className="flex items-center gap-2 text-slate-300 text-sm">
+              <div className="flex items-center gap-2 text-slate-700 text-sm">
                 <span>👥</span>
                 <span className="text-green-400">✓</span>
                 <span>Social Network</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-300 text-sm">
+              <div className="flex items-center gap-2 text-slate-700 text-sm">
                 <span>🤝</span>
                 <span className="text-green-400">✓</span>
                 <span>NIL Deals</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-300 text-sm">
+              <div className="flex items-center gap-2 text-slate-700 text-sm">
                 <span>💬</span>
                 <span className="text-green-400">✓</span>
                 <span>Messaging</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-300 text-sm">
+              <div className="flex items-center gap-2 text-slate-700 text-sm">
                 <span>📊</span>
                 <span className="text-green-400">✓</span>
                 <span>Analytics</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-300 text-sm">
+              <div className="flex items-center gap-2 text-slate-700 text-sm">
                 <span>🛡️</span>
                 <span className="text-green-400">✓</span>
                 <span>Compliance</span>
@@ -905,7 +907,7 @@ export default function EarlyAccess() {
         </section>
 
         {/* VOTE FOR YOUR FAVORITE - Campaign Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-slate-900 to-purple-950">
+        <section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-purple-50">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
               <img src="/community-vote-logo.png" alt="Community Vote" className="w-20 h-20 rounded-2xl shadow-lg" />
@@ -913,10 +915,10 @@ export default function EarlyAccess() {
             <div className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-white text-sm font-bold mb-6 animate-pulse">
               🗳️ HELP US DECIDE!
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
               VOTE FOR YOUR <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">FAVORITE</span>
             </h2>
-            <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
               We're building TWO amazing versions of ATHLYNX! Visit both sites and tell us which one you love more. Your vote shapes the future!
             </p>
             
@@ -949,8 +951,8 @@ export default function EarlyAccess() {
             </div>
             
             {/* Social Share */}
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-              <p className="text-white font-bold mb-4">📢 Share Your Vote on Social Media!</p>
+            <div className="bg-white rounded-xl p-6 border-2 border-slate-200 shadow-lg">
+              <p className="text-slate-900 font-bold mb-4">Share Your Vote on Social Media!</p>
               <p className="text-slate-400 text-sm mb-4">Tag us @ATHLYNX and use #ATHLYNXVote to let us know which site you prefer!</p>
               <div className="flex justify-center gap-4">
                 <a href="https://twitter.com/intent/tweet?text=I%20just%20voted%20for%20my%20favorite%20ATHLYNX%20design!%20Check%20out%20both%20sites%20and%20vote%20%23ATHLYNXVote%20%40ATHLYNX" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-bold hover:bg-blue-400 transition-colors">
@@ -965,8 +967,8 @@ export default function EarlyAccess() {
             <p className="text-slate-500 text-sm mt-6">Voting ends February 1, 2026 • The winning design becomes the official ATHLYNX!</p>
             
             {/* Community Feedback Form */}
-            <div className="mt-12 bg-slate-800/80 rounded-2xl p-8 border border-slate-700">
-              <h3 className="text-2xl font-bold text-white mb-2">💬 COMMUNITY FEEDBACK</h3>
+            <div className="mt-12 bg-white rounded-2xl p-8 border-2 border-slate-200 shadow-lg">
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">COMMUNITY FEEDBACK</h3>
               <p className="text-slate-400 mb-6">Help us build the perfect platform! Tell us what you think.</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -974,14 +976,14 @@ export default function EarlyAccess() {
                   <label className="text-cyan-400 font-semibold text-sm mb-2 block">What do you LOVE? 💚</label>
                   <textarea 
                     placeholder="Tell us what features or designs you love..."
-                    className="w-full bg-slate-900 border border-slate-600 rounded-xl p-4 text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none resize-none h-24"
+                    className="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-4 text-slate-900 placeholder-slate-400 focus:border-cyan-400 focus:outline-none resize-none h-24"
                   />
                 </div>
                 <div>
                   <label className="text-pink-400 font-semibold text-sm mb-2 block">What could be BETTER? 💡</label>
                   <textarea 
                     placeholder="Share your suggestions for improvements..."
-                    className="w-full bg-slate-900 border border-slate-600 rounded-xl p-4 text-white placeholder-slate-500 focus:border-pink-400 focus:outline-none resize-none h-24"
+                    className="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-4 text-slate-900 placeholder-slate-400 focus:border-pink-400 focus:outline-none resize-none h-24"
                   />
                 </div>
               </div>
@@ -1006,9 +1008,9 @@ export default function EarlyAccess() {
             </div>
             
             {/* Discussion Teaser */}
-            <div className="mt-8 p-6 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-xl border border-amber-500/30">
-              <p className="text-amber-400 font-bold text-lg">🚀 COMING SOON: Community Discussion Forum</p>
-              <p className="text-slate-300 text-sm mt-2">A dedicated space for athletes, coaches, and brands to discuss features, share ideas, and connect!</p>
+            <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border-2 border-blue-200">
+              <p className="text-blue-600 font-bold text-lg">COMING SOON: Community Discussion Forum</p>
+              <p className="text-slate-600 text-sm mt-2">A dedicated space for athletes, coaches, and brands to discuss features, share ideas, and connect!</p>
             </div>
           </div>
         </section>
@@ -1148,6 +1150,83 @@ export default function EarlyAccess() {
             </div>
           </div>
 
+          {/* Technology Partners */}
+          <div className="border-t border-gray-800 pt-8 mb-8">
+            <h4 className="text-white font-bold text-center mb-6">Technology Partners & Integrations</h4>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center mb-8">
+              {/* Core Partners */}
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-green-400 font-bold text-sm">Nebius AI</p>
+                <p className="text-gray-500 text-xs">Cloud Infrastructure</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-purple-400 font-bold text-sm">Manus AI</p>
+                <p className="text-gray-500 text-xs">AI Development</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-blue-400 font-bold text-sm">ICC-USA</p>
+                <p className="text-gray-500 text-xs">Sports Compliance</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-green-500 font-bold text-sm">NVIDIA</p>
+                <p className="text-gray-500 text-xs">H200/H100 GPUs</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-cyan-400 font-bold text-sm">Twilio</p>
+                <p className="text-gray-500 text-xs">SMS & Voice</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-pink-400 font-bold text-sm">Resend</p>
+                <p className="text-gray-500 text-xs">Email Platform</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-indigo-400 font-bold text-sm">Stripe</p>
+                <p className="text-gray-500 text-xs">Payments</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-blue-500 font-bold text-sm">Netlify</p>
+                <p className="text-gray-500 text-xs">Hosting & Domains</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-orange-400 font-bold text-sm">Cloudflare</p>
+                <p className="text-gray-500 text-xs">Security & CDN</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-red-400 font-bold text-sm">Google Maps</p>
+                <p className="text-gray-500 text-xs">Location Services</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-yellow-400 font-bold text-sm">OpenAI</p>
+                <p className="text-gray-500 text-xs">AI Models</p>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 hover:bg-gray-800 transition-colors">
+                <p className="text-teal-400 font-bold text-sm">Anthropic</p>
+                <p className="text-gray-500 text-xs">Claude AI</p>
+              </div>
+            </div>
+            
+            {/* Connector Apps */}
+            <h5 className="text-gray-400 font-semibold text-center mb-4 text-sm">Connector Apps & Integrations</h5>
+            <div className="flex flex-wrap justify-center gap-3">
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Zapier</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Make (Integromat)</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">n8n</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Slack</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Discord</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Notion</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Airtable</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">HubSpot</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Salesforce</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">DocuSign</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Calendly</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Zoom</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Google Workspace</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Microsoft 365</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">Dropbox</span>
+              <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">AWS S3</span>
+            </div>
+          </div>
+
           {/* Contact Info */}
           <div className="border-t border-gray-800 pt-8 mb-8">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
@@ -1199,27 +1278,27 @@ export default function EarlyAccess() {
 
       {/* VIP Code Modal */}
       {showVipModal && (
-        <div className="fixed inset-0 bg-gradient-to-b from-slate-900/95 via-blue-950/95 to-slate-900/95 flex items-center justify-center z-50 p-4">
-          <div className="bg-gradient-to-b from-slate-800 to-slate-900 rounded-3xl p-8 max-w-md w-full border border-cyan-500/30 shadow-2xl shadow-cyan-500/20">
+        <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-3xl p-8 max-w-md w-full border-2 border-blue-200 shadow-2xl">
             {/* Logo at top */}
             <div className="flex justify-center mb-6">
               <img src="/athlynx-playbook-logo.png" alt="ATHLYNX" className="h-16 rounded-xl shadow-lg" />
             </div>
             
-            <h3 className="text-white font-black text-2xl text-center mb-2">HAVE A VIP CODE?</h3>
-            <p className="text-cyan-400 text-sm text-center mb-6 tracking-wider">TAP HERE TO ENTER</p>
+            <h3 className="text-slate-900 font-black text-2xl text-center mb-2">HAVE A VIP CODE?</h3>
+            <p className="text-blue-600 text-sm text-center mb-6 tracking-wider">ENTER YOUR CODE BELOW</p>
             
             <input
               type="text"
               placeholder="Enter your VIP code"
               value={vipCode}
               onChange={(e) => setVipCode(e.target.value.toUpperCase())}
-              className="w-full bg-slate-700/50 border-2 border-cyan-500/30 rounded-xl px-4 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 text-center text-xl tracking-widest mb-6 font-bold"
+              className="w-full bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-4 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 text-center text-xl tracking-widest mb-6 font-bold"
             />
             <div className="flex gap-3">
               <button
                 onClick={() => setShowVipModal(false)}
-                className="flex-1 bg-slate-700 hover:bg-slate-600 text-white font-semibold py-4 rounded-xl transition-colors border border-slate-600"
+                className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-4 rounded-xl transition-colors border-2 border-slate-200"
               >
                 Cancel
               </button>
@@ -1232,8 +1311,8 @@ export default function EarlyAccess() {
             </div>
             
             {/* Tagline */}
-            <p className="text-center text-slate-400 text-xs mt-6">The mastermind behind the champion.</p>
-            <p className="text-center text-cyan-400 text-xs font-semibold">Building champions, training winners, and creating empires.</p>
+            <p className="text-center text-slate-500 text-xs mt-6">The mastermind behind the champion.</p>
+            <p className="text-center text-blue-600 text-xs font-semibold">Building champions, training winners, and creating empires.</p>
           </div>
         </div>
       )}

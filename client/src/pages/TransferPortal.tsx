@@ -301,7 +301,7 @@ function PlayerCard({ player }: { player: typeof fallbackPlayers[0] }) {
           <div className="flex items-center gap-3">
             <div>
               <p className="text-slate-400 text-xs">Rating</p>
-              <p className="text-cyan-400 font-bold">{player.playerRating.toFixed(4)}</p>
+              <p className="text-cyan-400 font-bold">{typeof player.playerRating === 'number' ? player.playerRating.toFixed(4) : player.playerRating || 'N/A'}</p>
             </div>
             <StarRating rating={player.starRating} />
           </div>
