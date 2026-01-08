@@ -7,6 +7,7 @@ import * as db from "./db";
 import { createCheckoutSession, getOrCreateCustomer } from "./stripe/checkout";
 import { SUBSCRIPTION_TIERS, ONE_TIME_PRODUCTS, getTiersForRole } from "./stripe/products";
 import { sendEmail, sendCustomEmail, sendTeamEmail, EMAIL_TEMPLATES } from "./services/email";
+import { sendVerificationCode, verifyCode } from "./services/verification";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -43,6 +44,27 @@ export const appRouter = router({
         }
         await db.useVipCode(input.code);
         return { success: true };
+      }),
+  }),
+
+  // ==================== VERIFICATION ====================
+  verification: router({    sendCode: publicProcedure
+      .input(z.object({
+        email: z.string().email(),
+        phone: z.string().optional(),
+        type: z.enum(["signup", "login", "password_reset"]).default("signup"),
+      }))
+      .mutation(async ({ input }) => {
+        return sendVerificationCode(input.email, input.phone, input.type);
+      }),
+    
+    verifyCode: publicProcedure
+      .input(z.object({
+        email: z.string().email(),
+        code: z.string(),
+      }))
+      .mutation(async ({ input }) => {
+        return verifyCode(input.email, input.code);
       }),
   }),
 

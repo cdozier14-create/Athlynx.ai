@@ -182,6 +182,22 @@ export const messages = mysqlTable("messages", {
 export type Message = typeof messages.$inferSelect;
 export type InsertMessage = typeof messages.$inferInsert;
 
+// ==================== VERIFICATION CODES ====================
+
+export const verificationCodes = mysqlTable("verification_codes", {
+  id: int("id").autoincrement().primaryKey(),
+  email: varchar("email", { length: 320 }).notNull(),
+  phone: varchar("phone", { length: 20 }),
+  code: varchar("code", { length: 10 }).notNull(),
+  type: mysqlEnum("type", ["signup", "login", "password_reset"]).default("signup").notNull(),
+  verified: boolean("verified").default(false).notNull(),
+  expiresAt: timestamp("expiresAt").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type VerificationCode = typeof verificationCodes.$inferSelect;
+export type InsertVerificationCode = typeof verificationCodes.$inferInsert;
+
 // ==================== WAITLIST / EARLY ACCESS ====================
 
 export const waitlist = mysqlTable("waitlist", {
