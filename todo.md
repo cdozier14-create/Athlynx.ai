@@ -797,3 +797,13 @@
 - [ ] Chad signs up as User #1
 
 **BUG DISCOVERED:** Manus Publish button doesn't properly deploy environment variables to production!
+
+
+## URGENT: Fix "Unable to transform response from server" Error (January 9, 2026)
+- [ ] Deploy working backend API to Netlify
+- [ ] Set DATABASE_URL in Netlify environment variables
+- [ ] Set AWS credentials in Netlify environment (AWS_REGION, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SES_FROM_EMAIL)
+- [ ] Push code to GitHub to trigger Netlify auto-deploy
+- [ ] Test signup form end-to-end at athlynx.ai
+- [ ] Verify AWS SES email sending works
+- [ ] Verify database connection works from Netlify serverless function

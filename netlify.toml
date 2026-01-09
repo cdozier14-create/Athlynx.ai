@@ -1,14 +1,10 @@
 [build]
   command = "pnpm build"
   publish = "dist/public"
-  functions = "dist"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "22.13.0"
-  AWS_REGION = "us-east-1"
-  AWS_ACCESS_KEY_ID = "AKIAWLLNO5ITXIAJKYVP"
-  AWS_SECRET_ACCESS_KEY = "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"
-  AWS_SES_FROM_EMAIL = "noreply@athlynx.ai"
 
 [[redirects]]
   from = "/api/*"

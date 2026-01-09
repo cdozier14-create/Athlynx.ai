@@ -8,8 +8,8 @@
 
 import { getDb } from '../db';
 import { verificationCodes } from '../../drizzle/schema';
-import { sendVerificationCode as sendSMS } from './twilio';
-import { sendVerificationEmail } from './resend';
+import { sendSMS } from './aws-sns';
+import { sendVerificationEmail } from './aws-ses';
 import { eq, and, gt, sql } from 'drizzle-orm';
 
 /**
