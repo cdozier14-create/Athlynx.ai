@@ -1,17 +1,18 @@
+functionsDirectory = "/home/ubuntu/athlynx-perfect-storm/dist"
+functionsDirectoryOrigin = "config-v1"
+redirectsOrigin = "config"
 plugins = []
 headers = []
 
-[functions]
-
-[functions."*"]
-
 [build]
-publish = "/home/ubuntu/athlynx-perfect-storm/dist"
-publishOrigin = "ui"
-commandOrigin = "ui"
-command = "pnpm run build"
+publish = "/home/ubuntu/athlynx-perfect-storm/dist/public"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "pnpm build"
+functions = "/home/ubuntu/athlynx-perfect-storm/dist"
 
 [build.environment]
+NODE_VERSION = "22.13.0"
 
 [build.processing]
 
@@ -24,6 +25,22 @@ command = "pnpm run build"
 [build.processing.js]
 
 [build.services]
+
+[functions]
+
+[functions."*"]
+
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/index/:splat"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
 
 [[redirects]]
 from = "/*"
